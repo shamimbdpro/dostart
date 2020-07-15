@@ -1,0 +1,80 @@
+== Dostart==
+Contributors: codepopular, shamimtpi
+Tags:  blog, right-sidebar, custom-background, featured-images
+Requires at least: 5.4
+Tested up to: 5.4
+Requires PHP: 7.0
+Version: 1.0.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Free Multipurpose WordPress theme
+
+== Description ==
+Dostart theme is providing outstanding solutions for making business, blog, consultancy and personal website. dostart them is fully responsive and mobile frinedly layouts. easy to use and fast loading wordpress theme.
+
+
+== Installation ==
+
+1. After login wordpress go to Appearance > Themes and click the Add New button.
+2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
+3. Click Activate to use your new theme right away.
+
+= Theme Features Usage =
+All available options can be used from Appearance->Customize
+
+
+== RESOURCES ==
+
+
+Image for theme screenshot, Copyright pexels
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://www.pexels.com/photo/man-using-laptop-on-table-against-white-background-257897/
+
+
+= Twitter Bootstrap =
+License: MIT License 
+Source - http://getbootstrap.com 
+
+=glyphicons=
+Code licensed MIT, docs CC BY 3.0.
+Source - https://getbootstrap.com/docs/3.3/components/
+
+= FontAwesome Icons =
+License: SIL Open Font License, 1.1,
+https://opensource.org/licenses/OFL-1.1
+Source: https://www.fontawesome.io
+Code licensed under MIT License
+
+= HC Off-canvas Nav =
+License: MIT License 
+Source:https://github.com/somewebmedia/hc-offcanvas-nav
+
+All other resources and theme elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/gpl-2.0.txt), version 2 or later.
+
+
+== Changelog ==
+
+= Version 1.0.4 =
+* Woocommerce Support Added
+* Box layout added
+* Dynamic widget background color
+
+= Version 1.0.3 =
+* Mobile Menu Keyboard Navigation Fixed
+
+= Version 1.0.2 =
+* Theme URL Removed
+* Customizer Fixed
+* Menu Fixed on focus.
+
+= Version 1.0.1 =
+* Customizer Fixed
+* Footer Copyright Fixed
+* Footer Copyright Fixed
+* Tested up to & Requires PHP set in style css
+* jquery.slicknav.js License and screenshot image License added
+* keyboard navigation fixed
+
+= Version 1.0.0 =
+* Initial release
