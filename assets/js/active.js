@@ -34,7 +34,7 @@
         var $toggle = $('.toggle');
         
         var defaultData = {
-            disableAt: false,
+            disableAt: 991,
             customToggle: $toggle,
             disableBody: true,
             levelTitles: false,

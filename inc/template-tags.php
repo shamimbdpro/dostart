@@ -133,24 +133,23 @@ endif;
  */
 if ( ! function_exists('dostart_dynamic_styles') ) {
     function dostart_dynamic_styles() {
-        global $dostart_option;
         // parimary color
-        $dostart_primary_color = dostart_theme_option('primary_color');
+        $dostart_primary_color    = empty(get_theme_mod('dostart_theme_primary_color')) ? '' : get_theme_mod('dostart_theme_primary_color');
+        $dostart_title_color = empty(get_theme_mod('dostart_theme_title_color')) ? '' : get_theme_mod('dostart_theme_title_color');
 
         // footer widget background
-        $footer_widget_bg = empty($dostart_option['footer_widget_bg']) ? '' : $dostart_option['footer_widget_bg'];
+        $footer_widget_bg = empty(get_theme_mod('dostart_footer_widget_bg')) ? '' : get_theme_mod('dostart_footer_widget_bg');
 
         // footer background color
-        $footer_background = empty($dostart_option['footer-background']) ? '' : $dostart_option['footer-background'];
+        $footer_bg = empty(get_theme_mod('dostart_footer_bg')) ? '' : get_theme_mod('dostart_footer_bg');
 
         // footer top background color
-        $back_to_top_bg = empty($dostart_option['backtotop-button-bg']) ? '' : $dostart_option['backtotop-button-bg'];
-
-        // back to top hover color
-        $back_to_top_hover = empty($dostart_option['backtotop-button-hover-bg']) ? '' : $dostart_option['backtotop-button-hover-bg'];
+        $back_to_top_bg = empty(get_theme_mod('dostart_backtotop_bg')) ? '' : get_theme_mod('dostart_backtotop_bg');
 
         ob_start();?>
-
+        h1, h2, h3, h4, h5, h6{
+            color: <?php echo esc_attr($dostart_title_color); ?>
+        }
         .dostart-breadcrumb-area,
         .dostart-breadcrumb-bg,
         article a.dostart-btn,
@@ -176,14 +175,11 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
             background: <?php echo esc_attr($footer_widget_bg); ?>;
         }
         .dostart-footer-area{
-            background-color: <?php echo esc_attr($footer_background); ?>;
+            background-color: <?php echo esc_attr($footer_bg); ?>;
         }
         div.back-to-top{
             background: <?php echo esc_attr($back_to_top_bg); ?>
          }
-        div.back-to-top:hover{
-            background: <?php echo esc_attr($back_to_top_hover); ?>
-        }
 
     <?php
 $output = ob_get_clean();

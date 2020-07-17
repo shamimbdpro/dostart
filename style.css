@@ -3,13 +3,13 @@ Theme Name: Dostart
 Theme URI: https://wordpress.org/themes/dostart
 Author: codepopular
 Author URI: https://profiles.wordpress.org/codepopular/
-Description: dostart theme is providing outstanding solutions for making business, blog, consultancy and personal website. dostart them is fully responsive and mobile frinedly layouts. easy to use and fast loading wordpress theme.
-Version: 1.0.4
+Description: Dostart Multipurpose theme is providing outstanding solutions for making business, blog, consultancy and personal website. dostart them is fully responsive and mobile frinedly layouts. easy to use and fast loading wordpress theme.
+Version: 1.0.5
 Requires at least: 5.4
 Tested up to: 5.4
 Requires PHP: 7.0
 Text Domain: dostart
-Tags: blog, right-sidebar, custom-background, custom-logo, featured-images, translation-ready
+Tags: custom-menu,blog, e-commerce, custom-colors, theme-options, right-sidebar, custom-background, custom-logo, featured-images, translation-ready
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -315,7 +315,6 @@ blockquote {
     position: absolute;
     right: 23px;
     top: -62px;
-    display: block;
 }
 .hc-nav.hc-nav-1{
     display: block !important
@@ -408,6 +407,27 @@ body.hc-nav-open{
     font-size: 14px;
     color: #7E7E7E;
 }
+.footer-social-icon ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social-icon ul li a {
+    color: #a5a0a0;
+    border: 1px solid #403d3d;
+    height: 35px;
+    width: 37px;
+    display: inline-block;
+    line-height: 35px;
+    border-radius: 50%;
+    font-size: 16px;
+}
+.footer-social-icon ul li {
+    padding: 10px 8px 20px 8px;
+}
+
 div.back-to-top {
     display: none;
     width: 45px;

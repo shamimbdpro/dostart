@@ -218,16 +218,4 @@ require get_template_directory() . '/inc/custom-header.php';
 /**
  * customizer
  */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * theme option
- */
-require get_template_directory() . '/inc/theme-options.php';
-
-function dostart_theme_option( $index ) {
-    $dostart_theme_option = get_option( 'dostart_option' );
-    if ( $dostart_theme_option ) {
-      return $dostart_theme_option[ $index ];
-    }
-}
+require get_template_directory() . '/inc/customizer/customizer.php';

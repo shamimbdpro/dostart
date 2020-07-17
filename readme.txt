@@ -4,14 +4,14 @@ Tags:  blog, right-sidebar, custom-background, featured-images
 Requires at least: 5.4
 Tested up to: 5.4
 Requires PHP: 7.0
-Version: 1.0.4
+Version: 1.0.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Free Multipurpose WordPress theme
 
 == Description ==
-Dostart theme is providing outstanding solutions for making business, blog, consultancy and personal website. dostart them is fully responsive and mobile frinedly layouts. easy to use and fast loading wordpress theme.
+Dostart Multipurpose theme is providing outstanding solutions for making business, blog, consultancy and personal website. dostart them is fully responsive and mobile frinedly layouts. easy to use and fast loading wordpress theme.
 
 
 == Installation ==
@@ -54,6 +54,10 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 
 == Changelog ==
+
+= Version 1.0.5 =
+* Redux framework removed and Customizer API added
+* Social icon added
 
 = Version 1.0.4 =
 * Woocommerce Support Added
