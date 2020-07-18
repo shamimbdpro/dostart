@@ -4,7 +4,7 @@ Theme URI: https://wordpress.org/themes/dostart
 Author: codepopular
 Author URI: https://profiles.wordpress.org/codepopular/
 Description: Dostart Multipurpose theme is providing outstanding solutions for making business, blog, consultancy and personal website. dostart them is fully responsive and mobile frinedly layouts. easy to use and fast loading wordpress theme.
-Version: 1.0.5
+Version: 1.0.6
 Requires at least: 5.4
 Tested up to: 5.4
 Requires PHP: 7.0
@@ -103,6 +103,11 @@ button[type="submit"] {
 }
 input[type="submit"]:hover, button[type="submit"]:hover {
     background-color: #333333;
+}
+
+.button {
+    background: #0052a5 !important;
+    color: #fff !important;
 }
 
 .dostart-page-content .wpb_text_column ul {
@@ -1434,4 +1439,20 @@ section.error-404 {
 
 .mainmenu li ul li ul li a{
    border-bottom: 1px solid rgba(255,255,255,.05);
+}
+
+/*------------------------------------------------------------------------*/
+/* [ Woocommerce Style ]
+/*------------------------------------------------------------------------*/
+.woocommerce #content table.cart td.actions .input-text, .woocommerce table.cart td.actions .input-text, .woocommerce-page #content table.cart td.actions .input-text, .woocommerce-page table.cart td.actions .input-text{
+    width: 200px
+}
+.woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1{
+    max-width: 48%
+}
+.woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2{
+    max-width: 48%;
+}
+.woocommerce-input-wrapper{
+    width: 100% !important; 
 }

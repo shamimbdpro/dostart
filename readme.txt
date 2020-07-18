@@ -4,7 +4,7 @@ Tags:  blog, right-sidebar, custom-background, featured-images
 Requires at least: 5.4
 Tested up to: 5.4
 Requires PHP: 7.0
-Version: 1.0.5
+Version: 1.0.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

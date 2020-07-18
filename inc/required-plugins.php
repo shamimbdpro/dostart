@@ -10,6 +10,11 @@ function dostart_register_required_plugins() {
 	$plugins = array(
 		
 		array(
+			'name'     => 'Kirki Customizer Framework',
+			'slug'     => 'kirki',
+			'required' => true,
+		),
+		array(
 			'name'     => 'Contact Form 7',
 			'slug'     => 'contact-form-7',
 			'required' => false,

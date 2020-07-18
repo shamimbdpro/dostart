@@ -135,7 +135,10 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
     function dostart_dynamic_styles() {
         // parimary color
         $dostart_primary_color    = empty(get_theme_mod('dostart_theme_primary_color')) ? '' : get_theme_mod('dostart_theme_primary_color');
+
         $dostart_title_color = empty(get_theme_mod('dostart_theme_title_color')) ? '' : get_theme_mod('dostart_theme_title_color');
+        
+        $primary_menu_color = empty(get_theme_mod('dostart_primary_menu_color')) ? '' : get_theme_mod('dostart_primary_menu_color');
 
         // footer widget background
         $footer_widget_bg = empty(get_theme_mod('dostart_footer_widget_bg')) ? '' : get_theme_mod('dostart_footer_widget_bg');
@@ -150,6 +153,9 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
         h1, h2, h3, h4, h5, h6{
             color: <?php echo esc_attr($dostart_title_color); ?>
         }
+        .mainmenu ul li a{
+            color: <?php echo $primary_menu_color; ?>
+        }
         .dostart-breadcrumb-area,
         .dostart-breadcrumb-bg,
         article a.dostart-btn,
@@ -157,9 +163,10 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
         .widgettitle:after,
         .search-form:after,
         .dostart-single-blog-breadcrumb:before,
-        .comment-form p > input[type="submit"]
+        .comment-form p > input[type="submit"],
+        .button
             {
-             background-color: <?php echo esc_attr($dostart_primary_color); ?>
+             background-color: <?php echo esc_attr($dostart_primary_color); ?> !important;
             }
             article.post a{
              color: <?php echo esc_attr($dostart_primary_color); ?>

@@ -7,6 +7,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
 
+/**
+ * Define Constants
+ */
+define( 'DOSTART_THEME_VERSION', '1.0.6' );
+define( 'DOSTART_THEME_DIR', trailingslashit( get_template_directory() ) );
+define( 'DOSTART_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
+
 if ( ! function_exists('dostart_theme_setup') ) :
     /**
      * Sets up theme defaults and registers support for various WordPress features.
@@ -175,19 +182,19 @@ add_action('widgets_init', 'dostart_widgets_setup');
  */
 function dostart_load_style_and_scripts() {
     
-    wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css', array(), '3.3.7');
-    wp_enqueue_style('font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.css', array(), '4.7');
-    wp_enqueue_style('hc-offcanvas', get_template_directory_uri() . '/assets/css/hc-offcanvas-nav.css',  array(), '4.2.3');
-    wp_enqueue_style('dostart-default', get_template_directory_uri() . '/assets/css/default.css', array(), '1.0');
+    wp_enqueue_style('bootstrap', DOSTART_THEME_URI . '/assets/css/bootstrap.css', array(), '3.3.7');
+    wp_enqueue_style('font-awesome', DOSTART_THEME_URI . '/assets/css/font-awesome.css', array(), '4.7');
+    wp_enqueue_style('hc-offcanvas', DOSTART_THEME_URI . '/assets/css/hc-offcanvas-nav.css',  array(), '4.2.3');
+    wp_enqueue_style('dostart-default', DOSTART_THEME_URI . '/assets/css/dostart-default.css', array(), '1.0');
 
     wp_enqueue_style('dostart-style', get_stylesheet_uri());
     
-    wp_enqueue_script('bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.js', array( 'jquery' ), '3.3.7', true);
-    wp_enqueue_script('skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array( 'jquery' ), '1.0.2', true);
-    wp_enqueue_script('navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '3.3.7', true);
-    wp_enqueue_script('hc-offcanvas', get_template_directory_uri() . '/assets/js/hc-offcanvas-nav.js', array( 'jquery' ), '4.2.3', true);
+    wp_enqueue_script('bootstrap', DOSTART_THEME_URI . '/assets/js/bootstrap.js', array( 'jquery' ), '3.3.7', true);
+    wp_enqueue_script('skip-link-focus-fix', DOSTART_THEME_URI . '/assets/js/skip-link-focus-fix.js', array( 'jquery' ), '1.0.2', true);
+    wp_enqueue_script('navigation', DOSTART_THEME_URI . '/assets/js/navigation.js', array( 'jquery' ), '3.3.7', true);
+    wp_enqueue_script('hc-offcanvas', DOSTART_THEME_URI . '/assets/js/hc-offcanvas-nav.js', array( 'jquery' ), '4.2.3', true);
    
-    wp_enqueue_script('dostart-active', get_template_directory_uri() . '/assets/js/active.js', array( 'jquery' ), '1.0', true);
+    wp_enqueue_script('dostart-active', DOSTART_THEME_URI . '/assets/js/active.js', array( 'jquery' ), '1.0', true);
     
     if ( is_singular() && comments_open() && get_option('thread_comments') ) {
         wp_enqueue_script('comment-reply');
@@ -200,22 +207,23 @@ add_action('wp_enqueue_scripts', 'dostart_load_style_and_scripts');
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+require DOSTART_THEME_DIR . '/inc/template-tags.php';
 
 
 /**
  * Required plugin installer
  */
-require get_template_directory() . '/inc/required-plugins.php';
+require DOSTART_THEME_DIR . '/inc/required-plugins.php';
 
 
 /**
  * Custom Header
  */
 
-require get_template_directory() . '/inc/custom-header.php';
+require DOSTART_THEME_DIR . '/inc/custom-header.php';
 
 /**
  * customizer
  */
-require get_template_directory() . '/inc/customizer/customizer.php';
+require DOSTART_THEME_DIR . '/inc/customizer/customizer.php';
+
