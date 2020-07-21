@@ -3,18 +3,19 @@
  * dostart functions and definitions
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
 /**
  * Define Constants
  */
-define( 'DOSTART_THEME_VERSION', '1.0.6' );
-define( 'DOSTART_THEME_DIR', trailingslashit( get_template_directory() ) );
-define( 'DOSTART_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
 
-if ( ! function_exists('dostart_theme_setup') ) :
+define('DOSTART_THEME_VERSION', '1.0.6');
+define('DOSTART_THEME_DIR', trailingslashit(get_template_directory()));
+define('DOSTART_THEME_URI', trailingslashit(esc_url(get_template_directory_uri())));
+
+if (!function_exists('dostart_theme_setup')):
     /**
      * Sets up theme defaults and registers support for various WordPress features.
      *
@@ -22,31 +23,32 @@ if ( ! function_exists('dostart_theme_setup') ) :
      * runs before the init hook. The init hook is too late for some features, such
      * as indicating support for post thumbnails.
      */
-    function dostart_theme_setup() {
+    function dostart_theme_setup()
+{
         /*
-        * Make theme available for translation.
-        * Translations can be filed in the /languages/ directory.
-        * If you're building a theme based on dostart, use a find and replace
-        * to change 'dostart to the name of your theme in all the template files.
-        */
+         * Make theme available for translation.
+         * Translations can be filed in the /languages/ directory.
+         * If you're building a theme based on dostart, use a find and replace
+         * to change 'dostart to the name of your theme in all the template files.
+         */
         load_theme_textdomain('dostart', get_template_directory() . '/languages');
 
         // Add default posts and comments RSS feed links to head.
         add_theme_support('automatic-feed-links');
 
         /*
-        * Let WordPress manage the document title.
-        * By adding theme support, we declare that this theme does not use a
-        * hard-coded <title> tag in the document head, and expect WordPress to
-        * provide it for us.
-        */
+         * Let WordPress manage the document title.
+         * By adding theme support, we declare that this theme does not use a
+         * hard-coded <title> tag in the document head, and expect WordPress to
+         * provide it for us.
+         */
         add_theme_support('title-tag');
 
         /*
-        * Enable support for Post Thumbnails on posts and pages.
-        *
-        * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-        */
+         * Enable support for Post Thumbnails on posts and pages.
+         *
+         * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+         */
         add_theme_support('post-thumbnails');
         add_image_size('dostart-thumb', 740, 367, true);
 
@@ -58,9 +60,9 @@ if ( ! function_exists('dostart_theme_setup') ) :
         );
 
         /*
-        * Switch default core markup for search form, comment form, and comments
-        * to output valid HTML5.
-        */
+         * Switch default core markup for search form, comment form, and comments
+         * to output valid HTML5.
+         */
         add_theme_support(
             'html5',
             [
@@ -86,12 +88,12 @@ if ( ! function_exists('dostart_theme_setup') ) :
 
         // Add theme support for selective refresh for widgets.
         add_theme_support('customize-selective-refresh-widgets');
-        
+
         // This theme styles the visual editor to resemble the theme style.
         add_editor_style('assets/css/editor-style.css');
 
-        add_theme_support( "custom-header");
-        
+        add_theme_support("custom-header");
+
         /**
          * Add support for core custom logo.
          *
@@ -111,17 +113,18 @@ if ( ! function_exists('dostart_theme_setup') ) :
          * Woocommerce Support.
          * Product Gallery | Product Lightbox | Product Slider
          */
-        add_theme_support( 'woocommerce' );
-        add_theme_support( 'wc-product-gallery-zoom' );
-        add_theme_support( 'wc-product-gallery-lightbox' );
-        add_theme_support( 'wc-product-gallery-slider' );
-        
+        add_theme_support('woocommerce');
+        add_theme_support('wc-product-gallery-zoom');
+        add_theme_support('wc-product-gallery-lightbox');
+        add_theme_support('wc-product-gallery-slider');
+
         /**
          * Post Excerpt Length
          **/
 
-        function dostart_custom_excerpt_length( $length ) {
-            if ( is_admin() ) {
+        function dostart_custom_excerpt_length($length)
+    {
+            if (is_admin()) {
                 return $length;
             }
 
@@ -139,7 +142,8 @@ add_action('after_setup_theme', 'dostart_theme_setup');
  *
  * @global int $content_width
  */
-function dostart_content_width() {
+function dostart_content_width()
+{
     $GLOBALS['content_width'] = apply_filters('dostart_content_width', 640);
 }
 add_action('after_setup_theme', 'dostart_content_width', 0);
@@ -149,7 +153,8 @@ add_action('after_setup_theme', 'dostart_content_width', 0);
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function dostart_widgets_setup() {
+function dostart_widgets_setup()
+{
     register_sidebar(
         array(
             'name'          => esc_html__('Sidebar', 'dostart'),
@@ -161,8 +166,7 @@ function dostart_widgets_setup() {
             'after_title'   => '</h2>',
         )
     );
-    
-    
+
     register_sidebar(
         array(
             'name'          => esc_html__('Footer Widgets', 'dostart'),
@@ -180,41 +184,42 @@ add_action('widgets_init', 'dostart_widgets_setup');
 /**
  * Enqueue scripts and styles.
  */
-function dostart_load_style_and_scripts() {
-    
-    wp_enqueue_style('bootstrap', DOSTART_THEME_URI . '/assets/css/bootstrap.css', array(), '3.3.7');
-    wp_enqueue_style('font-awesome', DOSTART_THEME_URI . '/assets/css/font-awesome.css', array(), '4.7');
-    wp_enqueue_style('hc-offcanvas', DOSTART_THEME_URI . '/assets/css/hc-offcanvas-nav.css',  array(), '4.2.3');
-    wp_enqueue_style('dostart-default', DOSTART_THEME_URI . '/assets/css/dostart-default.css', array(), '1.0');
+function dostart_load_style_and_scripts()
+{
+
+    // Define Direcotry URI
+    $dir = DOSTART_THEME_URI;
+
+    wp_enqueue_style('bootstrap', $dir . '/assets/css/bootstrap.css', array(), '3.3.7');
+    wp_enqueue_style('font-awesome', $dir . '/assets/css/font-awesome.css', array(), '4.7');
+    wp_enqueue_style('hc-offcanvas', $dir . '/assets/css/hc-offcanvas-nav.css', array(), '4.2.3');
+    wp_enqueue_style('dostart-default', $dir . '/assets/css/dostart-default.css', array(), '1.0');
 
     wp_enqueue_style('dostart-style', get_stylesheet_uri());
-    
-    wp_enqueue_script('bootstrap', DOSTART_THEME_URI . '/assets/js/bootstrap.js', array( 'jquery' ), '3.3.7', true);
-    wp_enqueue_script('skip-link-focus-fix', DOSTART_THEME_URI . '/assets/js/skip-link-focus-fix.js', array( 'jquery' ), '1.0.2', true);
-    wp_enqueue_script('navigation', DOSTART_THEME_URI . '/assets/js/navigation.js', array( 'jquery' ), '3.3.7', true);
-    wp_enqueue_script('hc-offcanvas', DOSTART_THEME_URI . '/assets/js/hc-offcanvas-nav.js', array( 'jquery' ), '4.2.3', true);
-   
-    wp_enqueue_script('dostart-active', DOSTART_THEME_URI . '/assets/js/active.js', array( 'jquery' ), '1.0', true);
-    
-    if ( is_singular() && comments_open() && get_option('thread_comments') ) {
+
+    wp_enqueue_script('bootstrap', $dir . '/assets/js/bootstrap.js', array('jquery'), '3.3.7', true);
+    wp_enqueue_script('skip-link-focus-fix', $dir . '/assets/js/skip-link-focus-fix.js', array('jquery'), '1.0.2', true);
+    wp_enqueue_script('navigation', $dir . '/assets/js/navigation.js', array('jquery'), '3.3.7', true);
+    wp_enqueue_script('hc-offcanvas', $dir . '/assets/js/hc-offcanvas-nav.js', array('jquery'), '4.2.3', true);
+
+    wp_enqueue_script('dostart-active', $dir . '/assets/js/active.js', array('jquery'), '1.0', true);
+
+    if (is_singular() && comments_open() && get_option('thread_comments')) {
+
         wp_enqueue_script('comment-reply');
     }
 }
 add_action('wp_enqueue_scripts', 'dostart_load_style_and_scripts');
-
-
 
 /**
  * Custom template tags for this theme.
  */
 require DOSTART_THEME_DIR . '/inc/template-tags.php';
 
-
 /**
  * Required plugin installer
  */
 require DOSTART_THEME_DIR . '/inc/required-plugins.php';
-
 
 /**
  * Custom Header
@@ -227,3 +232,8 @@ require DOSTART_THEME_DIR . '/inc/custom-header.php';
  */
 require DOSTART_THEME_DIR . '/inc/customizer/customizer.php';
 
+/**
+ * Walker Menu
+//  */
+require DOSTART_THEME_DIR . '/inc/walker/init.php';
+require DOSTART_THEME_DIR . '/inc/walker/menu-walker.php';

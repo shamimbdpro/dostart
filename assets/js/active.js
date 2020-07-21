@@ -29,8 +29,8 @@
         }
     );
 
-    jQuery(document).ready(function() {
-        var $main_nav = $('#site-navigation');
+    $(document).ready(function() {
+        var $main_nav = $('.mainmenu #site-navigation');
         var $toggle = $('.toggle');
         
         var defaultData = {

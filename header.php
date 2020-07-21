@@ -35,7 +35,7 @@ if ( function_exists('wp_body_open') ) {
         <div class="dostart-main-header">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 logo_col">     
+                    <div class="col-md-3 logo_col">     
                         <div class="site-logo">
                             <?php
                             if ( has_custom_logo() ) {
@@ -56,15 +56,16 @@ if ( function_exists('wp_body_open') ) {
                             </div>
                         </div>                            
                     </div>
-                      <div class="col-md-8 menu_col">
+                      <div class="col-md-9 menu_col">
                          <a href="#" class="toggle"><span></span></a>
-                        <div class="mainmenu">
+                         <div class="mainmenu">
                               <nav class="nav-menu" id="site-navigation">
                                  <?php
                                     wp_nav_menu(
                                         array(
                                             'theme_location' => 'primary',
                                             'menu_id' => 'primary-menu',
+                                            'walker'         => new Dostart_Nav_Walker(),
                                         )
                                     );
                                     ?>
