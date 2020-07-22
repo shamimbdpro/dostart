@@ -203,7 +203,7 @@ if (!class_exists('Dostart_Customizer')) {
                'sanitize_callback' => array($this, 'dostart_sanitize_select'),
             ));
             $wp_customize->add_control('dostart_menu_arrow_down', array(
-                'label'   => __( 'Dropdown Arrow', 'dostart' ),
+                'label'   => __( 'Menu Dropdown Arrow', 'dostart' ),
                 'section' => 'dostart_primary_menu',
                 'type'    => 'select',
                 'choices' => array(

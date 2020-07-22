@@ -356,6 +356,9 @@ blockquote {
 
     /*-------[ Mega Menu] ------*/
 
+    .megamenu-li{
+        position: static !important
+    }
 
     .megamenu ul.sub-menu {
         display: block;
@@ -374,7 +377,7 @@ blockquote {
         display: flex;
         min-width: 800px;
         position: absolute;
-        left: -512px;
+        right:0 !important
     }
 
 
@@ -1733,4 +1736,17 @@ section.error-404 {
 
 .woocommerce-input-wrapper {
     width: 100% !important;
+}
+
+.woocommerce form .password-input, .woocommerce-page form .password-input{
+    width: 100%
+}
+
+
+/**
+ * My Account Page
+ */
+
+.woocommerce .woocommerce-form-login .woocommerce-form-login__submit{
+    margin-left:20px;
 }
