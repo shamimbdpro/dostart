@@ -153,7 +153,7 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
         h1, h2, h3, h4, h5, h6{
             color: <?php echo esc_attr($dostart_title_color); ?>
         }
-        .mainmenu ul li a{
+        .dostart-mainmenu ul li a{
             color: <?php echo $primary_menu_color; ?>
         }
         .dostart-breadcrumb-area,
@@ -164,17 +164,20 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
         .search-form:after,
         .dostart-single-blog-breadcrumb:before,
         .comment-form p > input[type="submit"],
-        .button
-            {
+        .button{
              background-color: <?php echo esc_attr($dostart_primary_color); ?> !important;
-            }
-            article.post a{
+        }
+        article.post a,
+        {
              color: <?php echo esc_attr($dostart_primary_color); ?>
-            }
+        }
+        .woocommerce-MyAccount-navigation ul li.is-active a{
+            border-bottom:2px solid <?php echo esc_attr($dostart_primary_color); ?>
+        }
 
         article a.dostart-btn {
             color: #fff;
-           }
+        }
          header{
             background: url('<?php echo esc_url(header_image()); ?>');
         }

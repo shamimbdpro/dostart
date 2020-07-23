@@ -58,7 +58,7 @@ if ( function_exists('wp_body_open') ) {
                     </div>
                       <div class="col-md-9 menu_col">
                          <a href="#" class="toggle"><span></span></a>
-                         <div class="mainmenu">
+                         <div class="dostart-mainmenu">
                               <nav class="nav-menu" id="site-navigation">
                                  <?php
                                     wp_nav_menu(

@@ -251,7 +251,7 @@ blockquote {
 -----------Navigation CSS------------
 ------------------------------******/
 @media(max-width: 991px) {
-    .mainmenu {
+    .dostart-mainmenu {
         display: none
     }
 }
@@ -259,41 +259,41 @@ blockquote {
 @media(min-width: 991px) {
 
 
-    .mainmenu {
+    .dostart-mainmenu {
         text-align: right;
     }
 
-    .mainmenu ul {
+    .dostart-mainmenu ul {
         margin: 0;
         padding: 0;
         list-style: none;
     }
 
-    .mainmenu ul li {
+    .dostart-mainmenu ul li {
         position: relative;
         display: inline-block;
     }
 
-    .mainmenu ul li a {
+    .dostart-mainmenu ul li a {
         display: block;
         font-size: 16px;
-        color: #666666;
+        color: #666;
         padding: 35px 15px 34px 15px;
     }
 
-    .mainmenu ul li a:hover,
-    .mainmenu ul li a:focus,
-    .mainmenu ul li a:active {
+    .dostart-mainmenu ul li a:hover,
+    .dostart-mainmenu ul li a:focus,
+    .dostart-mainmenu ul li a:active {
         text-decoration: underline;
         color: #03752f;
     }
 
-    .mainmenu ul li:last-child a {
+    .dostart-mainmenu ul li:last-child a {
         padding-right: 0;
     }
 
     /*2 level menu*/
-    .mainmenu ul ul {
+    .dostart-mainmenu ul ul {
         position: absolute;
         top: 120%;
         right: 0;
@@ -311,25 +311,24 @@ blockquote {
         text-align: left;
     }
 
-    .mainmenu li:last-child ul {
+    .dostart-mainmenu li:last-child ul {
         /*max-width: 165px;*/
     }
 
-    .mainmenu li ul li {
+    .dostart-mainmenu li ul li {
         display: block;
         position: relative;
         padding: 0;
         width: 100%
     }
 
-    .mainmenu li ul li a {
+    .dostart-mainmenu li ul li a {
         display: block;
         padding: 12px 26px 12px;
         font-size: 14px;
         text-decoration: none;
         text-transform: capitalize;
-        color: #888888;
-        font-weight: 600;
+        color: #888;
         -webkit-transition: none;
         transition: none;
         border-bottom: 1px solid rgba(255, 255, 255, .05);
@@ -338,16 +337,16 @@ blockquote {
         padding-left: 26px;
     }
 
-    .mainmenu ul li  ul ul{
+    .dostart-mainmenu ul li  ul ul{
         right:100%;
         left:inherit;
         top: 0 !important
     }
 
 
-    .mainmenu li.active>ul,
-    .mainmenu li.focus>ul,
-    .mainmenu li:hover>ul {
+    .dostart-mainmenu li.active>ul,
+    .dostart-mainmenu li.focus>ul,
+    .dostart-mainmenu li:hover>ul {
         opacity: 1;
         filter: Alpha(opacity=100);
         z-index: 99;
@@ -379,9 +378,11 @@ blockquote {
         position: absolute;
         right:0 !important
     }
-
-
-
+   .megamenu > li > a {
+        font-weight: 600 !important;
+        color: #333 !important;
+        font-size: 16px !important;
+    }
 
 }
 
@@ -1232,18 +1233,6 @@ section.error-404 {
         display: none;
     }
 
-    /*    .mainmenu ul li a {
-        padding: 35px 13px 34px 23px;
-    }
-    .mainmenu li ul {
-        width: 190px;
-    }
-    .mainmenu li ul li a {
-        padding: 12px 15px 12px;
-        font-size: 13px;
-        padding-left: 20px;
-    }*/
-
     .dostart-page-content .wpb_text_column li {
         margin-bottom: 7px;
     }
@@ -1280,9 +1269,6 @@ section.error-404 {
         margin-right: 10px;
     }
 
-    /*  .mainmenu {
-        display: none;
-    }*/
     .custom-heading h1 {
         font-size: 30px;
     }
@@ -1488,17 +1474,6 @@ section.error-404 {
         display: none;
     }
 
-    /*   .mainmenu ul li a {
-        padding: 35px 13px 34px 23px;
-    }
-    .mainmenu li ul {
-        width: 190px;
-    }
-    .mainmenu li ul li a {
-        padding: 12px 15px 12px;
-        font-size: 13px;
-        padding-left: 20px;
-    }*/
     .dostart-page-content .wpb_text_column li {
         margin-bottom: 7px;
     }
@@ -1535,9 +1510,6 @@ section.error-404 {
         margin-right: 10px;
     }
 
-    /*   .mainmenu {
-        display: none;
-    }*/
     .custom-heading h1 {
         font-size: 35px;
     }
@@ -1749,4 +1721,20 @@ section.error-404 {
 
 .woocommerce .woocommerce-form-login .woocommerce-form-login__submit{
     margin-left:20px;
+}
+
+.woocommerce-MyAccount-navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.woocommerce-MyAccount-navigation ul li{
+    padding: 10px 0px
+}
+.woocommerce-MyAccount-navigation ul li.is-active a {
+    padding: 6px 0px;
+    border-bottom: 2px solid #007bff;
+}
+.woocommerce-MyAccount-navigation ul li a{
+    color:#666;
 }

@@ -30,7 +30,7 @@
     );
 
     $(document).ready(function() {
-        var $main_nav = $('.mainmenu #site-navigation');
+        var $main_nav = $('.dostart-mainmenu #site-navigation');
         var $toggle = $('.toggle');
         
         var defaultData = {
