@@ -250,12 +250,6 @@ blockquote {
 /******------------------------------
 -----------Navigation CSS------------
 ------------------------------******/
-@media(max-width: 991px) {
-    .dostart-mainmenu {
-        display: none
-    }
-}
-
 @media(min-width: 991px) {
 
 
@@ -296,7 +290,7 @@ blockquote {
     .dostart-mainmenu ul ul {
         position: absolute;
         top: 120%;
-        right: 0;
+        left: 0;
         opacity: 0;
         filter: Alpha(opacity=0);
         width: 210px;
@@ -312,7 +306,7 @@ blockquote {
     }
 
     .dostart-mainmenu li:last-child ul {
-        /*max-width: 165px;*/
+        max-width: 165px;
     }
 
     .dostart-mainmenu li ul li {
@@ -372,12 +366,16 @@ blockquote {
         display: none;
     }
 
-    ul.megamenu{
+    ul.megamenu{ 
         display: flex;
         min-width: 800px;
-        position: absolute;
-        right:0 !important
+        position: absolute !important;
+        right: 0 !important;
+        left: inherit !important;
     }
+   .hide-headings .megamenu > li > a{
+    display: none;
+   }
    .megamenu > li > a {
         font-weight: 600 !important;
         color: #333 !important;
@@ -386,7 +384,16 @@ blockquote {
 
 }
 
-/* [ End 999px media quiery ]
+/* [ End 999px media quiery ] */
+
+@media(max-width: 991px) {
+    .dostart-mainmenu{
+        display: none;
+    }
+    .menu li a span.nav-arrow {
+       display: none !important;
+    }
+}
 
 
 
@@ -1232,6 +1239,10 @@ section.error-404 {
     .site-logo p.site-description {
         display: none;
     }
+    .hc-nav-trigger.hc-nav-1 {
+        display: block;
+        top: -60px;
+    }
 
     .dostart-page-content .wpb_text_column li {
         margin-bottom: 7px;
@@ -1713,7 +1724,9 @@ section.error-404 {
 .woocommerce form .password-input, .woocommerce-page form .password-input{
     width: 100%
 }
-
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button{
+    color:#fff;
+}
 
 /**
  * My Account Page

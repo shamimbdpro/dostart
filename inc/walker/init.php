@@ -61,7 +61,7 @@ class WooVina_Nav_Walker {
 	 * @return object The menu item.
 	 */
 	public function add_custom_fields($id, $item, $depth, $args) { ?>
-		<p class="field-mega_template description description-wide">
+		<p class="field-mega_template description description-wide" style="display: none">
 			<label for="edit-menu-item-mega_template-<?php echo esc_attr($item->ID); ?>">
 				<?php esc_html_e('Template', 'dostart'); ?> | <small><?php esc_html_e('Theme Panel > My Library', 'dostart'); ?></small>
 				<select id="edit-menu-item-mega_template-<?php echo esc_attr($item->ID); ?>" class="widefat code edit-menu-item-custom" name="menu-item-mega_template[<?php echo esc_attr($item->ID); ?>]">
@@ -77,14 +77,14 @@ class WooVina_Nav_Walker {
 				</select>
 			</label>
 		</p>
-	    <p class="field-nolink description description-wide">
+	    <p class="field-nolink description description-wide" style="display: none">
 	    	<label for="edit-menu-item-nolink-<?php echo esc_attr($item->ID); ?>">
 	    	<input type="checkbox" id="edit-menu-item-nolink-<?php echo esc_attr($item->ID); ?>" class="code edit-menu-item-nolink" value="nolink" name="menu-item-nolink[<?php echo esc_attr($item->ID); ?>]"<?php checked($item->nolink, 'nolink'); ?> />
 	    		<?php esc_html_e('Disable link', 'dostart'); ?>
 	    	</label>
 		</p>
 		<?php if($item->object == 'category'){ ?>
-	        <p class="field-category_post description description-wide">
+	        <p class="field-category_post description description-wide" style="display: none">
 	        	<label for="edit-menu-item-category_post-<?php echo esc_attr($item->ID); ?>">
 	        		<input type="checkbox" id="edit-menu-item-category_post-<?php echo esc_attr($item->ID); ?>" class="code edit-menu-item-category_post" value="category_post" name="menu-item-category_post[<?php echo esc_attr($item->ID); ?>]"<?php checked($item->category_post, 'category_post'); ?> />
 	        		<?php esc_html_e('Display Latest Posts', 'dostart'); ?>
@@ -97,13 +97,13 @@ class WooVina_Nav_Walker {
 		        <?php esc_html_e('Enable megamenu', 'dostart');    ?>
 	        </label>
 	    </p>
-		<p class="field-megamenu-auto-width description description-wide">
+		<p class="field-megamenu-auto-width description description-wide" style="display: none">
 	        <label for="edit-menu-item-megamenu_auto_width-<?php echo esc_attr($item->ID); ?>">
 		        <input type="checkbox" id="edit-menu-item-megamenu_auto_width-<?php echo esc_attr($item->ID); ?>" class="code edit-menu-item-megamenu_auto_width" value="megamenu_auto_width" name="menu-item-megamenu_auto_width[<?php echo esc_attr($item->ID); ?>]"<?php checked($item->megamenu_auto_width, 'megamenu_auto_width'); ?> />
 		        <?php esc_html_e('Megamenu auto width?', 'dostart');    ?>
 	        </label>
 	    </p>
-	    <p class="field-megamenu-columns description description-wide">
+	    <p class="field-megamenu-columns description description-wide" style="display: none">
 	        <label for="edit-menu-item-megamenu_col-<?php echo esc_attr($item->ID); ?>">
 	            <?php esc_html_e('Megamenu columns (from 1 to 6)', 'dostart'); ?><br />
 	            <input type="number" id="edit-menu-item-megamenu_col-<?php echo esc_attr($item->ID); ?>" class="widefat code edit-menu-item-custom" name="menu-item-megamenu_col[<?php echo esc_attr($item->ID); ?>]" min="1" max="6" value="<?php echo esc_attr($item->megamenu_col); ?>" />
@@ -115,7 +115,7 @@ class WooVina_Nav_Walker {
 		        <?php esc_html_e('Hide Mega menu heading?', 'dostart'); ?>
 	        </label>
 	    </p>
-	    <p class="field-megamenu-widgetarea description description-wide">
+	    <p class="field-megamenu-widgetarea description description-wide" style="display: none">
 			<label for="edit-menu-item-megamenu_widgetarea-<?php echo esc_attr($item->ID); ?>">
 				<?php esc_html_e('Mega Menu Widget Area', 'dostart'); ?>
 				<select id="edit-menu-item-megamenu_widgetarea-<?php echo esc_attr($item->ID); ?>" class="widefat code edit-menu-item-custom" name="menu-item-megamenu_widgetarea[<?php echo esc_attr($item->ID); ?>]">

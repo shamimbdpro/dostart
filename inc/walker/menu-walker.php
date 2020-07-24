@@ -322,7 +322,7 @@ if(! class_exists('Dostart_Nav_Walker')) {
 
 										$output .= get_the_post_thumbnail(get_the_ID(), 'medium', $img_args);
 
-										$output .= '<span class="overlay"></span>';
+									$output .= '<span class="overlay"></span>';
 									$output .= '</a>';
 
 									$output .= '<h3 class="mega-post-title"><a href="'. get_permalink() .'">'. get_the_title() .'</a></h3><div class="mega-post-date"><i class="icon-clock"></i>'. get_the_date() .'</div>';
@@ -382,9 +382,9 @@ if(! class_exists('Dostart_Nav_Walker')) {
 				$element->classes[] = 'dropdown';
 				if(true == get_theme_mod('woovina_menu_arrow_side', true)) {
 					if(is_rtl()) {
-						$element->title .= '<span class="nav-arrow fa fa-angle-right"></span>';
+					//	$element->title .= '<span class="nav-arrow fa fa-angle-right"></span>';
 					} else {
-						$element->title .= '<span class="nav-arrow fa fa-angle-left"></span>';
+					//	$element->title .= '<span class="nav-arrow fa fa-angle-left"></span>';
 					}
 				}
 			}
