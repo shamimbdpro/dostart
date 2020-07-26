@@ -65,7 +65,7 @@ if ( function_exists('wp_body_open') ) {
                                         array(
                                             'theme_location' => 'primary',
                                             'menu_id' => 'primary-menu',
-                                            'walker'         => new Dostart_Nav_Walker(),
+                                            'walker'  => new Dostart_Nav_Walker(),
                                         )
                                     );
                                     ?>

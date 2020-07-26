@@ -6,14 +6,14 @@
  * @package dostart
  */
 
-if (!defined('ABSPATH')) {
+if ( ! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
 
 /**
  * Customizer Loader
  */
-if (!class_exists('Dostart_Customizer')) {
+if ( ! class_exists('Dostart_Customizer') ) {
 
     /**
      * Declear Class
@@ -32,9 +32,8 @@ if (!class_exists('Dostart_Customizer')) {
         /**
          * making instatance of the class
          */
-        public static function get_instance()
-        {
-            if (!isset(self::$instance)) {
+        public static function get_instance() {
+            if ( ! isset(self::$instance) ) {
                 self::$instance = new self();
             }
             return self::$instance;
@@ -43,10 +42,9 @@ if (!class_exists('Dostart_Customizer')) {
         /**
          * Constructor
          */
-        public function __construct()
-        {
-            add_action('customize_preview_init', array($this, 'dostart_customize_preview_js'));
-            add_action('customize_register', array($this, 'dostart_customize_register'));
+        public function __construct() {
+            add_action('customize_preview_init', array( $this, 'dostart_customize_preview_js' ));
+            add_action('customize_register', array( $this, 'dostart_customize_register' ));
         }
 
         /**
@@ -55,10 +53,9 @@ if (!class_exists('Dostart_Customizer')) {
          * @param WP_Customize_Manager $wp_customize Theme Customizer object.
          */
 
-        public function dostart_customize_register($wp_customize)
-        {
+        public function dostart_customize_register( $wp_customize ) {
 
-            if (isset($wp_customize->selective_refresh)) {
+            if ( isset($wp_customize->selective_refresh) ) {
                 $wp_customize->selective_refresh->add_partial(
                     'blogname',
                     array(
@@ -99,7 +96,7 @@ if (!class_exists('Dostart_Customizer')) {
             // [----Theme Primary Color |  Subsection | colors ----- ]
             $wp_customize->add_setting('dostart_theme_primary_color', array(
                 'default'           => '#0052a5',
-                'sanitize_callback' => array($this, 'dostart_sanitize_color'),
+                'sanitize_callback' => array( $this, 'dostart_sanitize_color' ),
             ));
 
             $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'dostart_theme_primary_color', array(
@@ -113,7 +110,7 @@ if (!class_exists('Dostart_Customizer')) {
             // [----THeme Title Color |  Subsection | colors ----- ]
             $wp_customize->add_setting('dostart_theme_title_color', array(
                 'default'           => '#212121',
-                'sanitize_callback' => array($this, 'dostart_sanitize_color'),
+                'sanitize_callback' => array( $this, 'dostart_sanitize_color' ),
             ));
 
             $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'dostart_theme_title_color', array(
@@ -128,7 +125,7 @@ if (!class_exists('Dostart_Customizer')) {
       
             $wp_customize->add_setting('dostart_backtotop_bg', array(
                 'default'           => '#0052a5',
-                'sanitize_callback' => array($this, 'dostart_sanitize_color'),
+                'sanitize_callback' => array( $this, 'dostart_sanitize_color' ),
             ));
 
             $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'dostart_backtotop_bg', array(
@@ -153,7 +150,7 @@ if (!class_exists('Dostart_Customizer')) {
               
             $wp_customize->add_setting('dostart_theme_layout', array(
                 'default'           => 0,
-                'sanitize_callback' => array($this, 'dostart_sanitize_select'),
+                'sanitize_callback' => array( $this, 'dostart_sanitize_select' ),
             ));
 
             $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'dostart_theme_layout', array(
@@ -188,8 +185,8 @@ if (!class_exists('Dostart_Customizer')) {
             ));
             // [ Primary Menu Color ]
             $wp_customize->add_setting('dostart_primary_menu_color', array(
-                'default' => '#333333',
-                'sanitize_callback' => array($this, 'dostart_sanitize_color'),
+                'default'           => '#333333',
+                'sanitize_callback' => array( $this, 'dostart_sanitize_color' ),
             ));
             $wp_customize->add_control('dostart_primary_menu_color', array(
                 'label'   => __( 'Primary Menu Color', 'dostart' ),
@@ -199,8 +196,8 @@ if (!class_exists('Dostart_Customizer')) {
             );
               // [ Primary Menu Color ]
             $wp_customize->add_setting('dostart_menu_arrow_down', array(
-                'default' => 1,
-               'sanitize_callback' => array($this, 'dostart_sanitize_select'),
+                'default'           => 1,
+				'sanitize_callback' => array( $this, 'dostart_sanitize_select' ),
             ));
             $wp_customize->add_control('dostart_menu_arrow_down', array(
                 'label'   => __( 'Menu Dropdown Arrow', 'dostart' ),
@@ -224,7 +221,7 @@ if (!class_exists('Dostart_Customizer')) {
             // [ Footer Widget Background ]
             $wp_customize->add_setting('dostart_footer_widget_bg', array(
                 'default'           => '#2f2e2e',
-                'sanitize_callback' => array($this, 'dostart_sanitize_color'),
+                'sanitize_callback' => array( $this, 'dostart_sanitize_color' ),
             ));
 
             $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'dostart_footer_widget_bg', array(
@@ -238,7 +235,7 @@ if (!class_exists('Dostart_Customizer')) {
             // [ Footer Background ]
             $wp_customize->add_setting('dostart_footer_bg', array(
                 'default'           => '#222222',
-                'sanitize_callback' => array($this, 'dostart_sanitize_color'),
+                'sanitize_callback' => array( $this, 'dostart_sanitize_color' ),
             ));
 
             $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'dostart_footer_bg', array(
@@ -253,7 +250,7 @@ if (!class_exists('Dostart_Customizer')) {
             $wp_customize->add_setting('dostart_copyright_text', array(
                 'default'           => '© Powered by WordPress 2020',
                 'transport'         => 'postMessage',
-                'sanitize_callback' => array($this, 'dostart_sanitize_text_field'),
+                'sanitize_callback' => array( $this, 'dostart_sanitize_text_field' ),
             ));
 
             $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'dostart_copyright_text', array(
@@ -277,13 +274,13 @@ if (!class_exists('Dostart_Customizer')) {
                 'title'       => __('Social Media Icons', 'dostart'),
                 'description' => __('Social Media links', 'dostart'),
                 'priority'    => 30,
-                'panel'		  => 'dostart_general_settings'
+                'panel'       => 'dostart_general_settings',
             ));
 
             // Setting & control facebook icon
             $wp_customize->add_setting('dostart_social_facebook', array(
                 'default'           => '',
-                'sanitize_callback' => array($this, 'dostart_esc_url_raw'),
+                'sanitize_callback' => array( $this, 'dostart_esc_url_raw' ),
             ));
 
             $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'dostart_social_facebook', array(
@@ -297,7 +294,7 @@ if (!class_exists('Dostart_Customizer')) {
             // Setting & control twitter icon
             $wp_customize->add_setting('dostart_social_twitter', array(
                 'default'           => '',
-                'sanitize_callback' => array($this, 'dostart_esc_url_raw'),
+                'sanitize_callback' => array( $this, 'dostart_esc_url_raw' ),
             ));
 
             $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'dostart_social_twitter', array(
@@ -310,7 +307,7 @@ if (!class_exists('Dostart_Customizer')) {
             // Setting & control youtube icon
             $wp_customize->add_setting('dostart_social_youtube', array(
                 'default'           => '',
-                'sanitize_callback' => array($this, 'dostart_esc_url_raw'),
+                'sanitize_callback' => array( $this, 'dostart_esc_url_raw' ),
             ));
 
             $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'dostart_social_youtube', array(
@@ -323,7 +320,7 @@ if (!class_exists('Dostart_Customizer')) {
             // Setting & control google plus icon
             $wp_customize->add_setting('dostart_social_pinterest', array(
                 'default'           => '',
-                'sanitize_callback' => array($this, 'dostart_esc_url_raw'),
+                'sanitize_callback' => array( $this, 'dostart_esc_url_raw' ),
             ));
 
             $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'dostart_social_pinterest', array(
@@ -336,7 +333,7 @@ if (!class_exists('Dostart_Customizer')) {
             // Setting & control behance icon
             $wp_customize->add_setting('dostart_social_behance', array(
                 'default'           => '',
-                'sanitize_callback' => array($this, 'dostart_esc_url_raw'),
+                'sanitize_callback' => array( $this, 'dostart_esc_url_raw' ),
             ));
 
             $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'dostart_social_behance', array(
@@ -349,7 +346,7 @@ if (!class_exists('Dostart_Customizer')) {
             // Setting & control linkedin icon
             $wp_customize->add_setting('dostart_social_linkedin', array(
                 'default'           => '',
-                'sanitize_callback' => array($this, 'dostart_esc_url_raw'),
+                'sanitize_callback' => array( $this, 'dostart_esc_url_raw' ),
             ));
 
             $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'dostart_social_linkedin', array(
@@ -362,7 +359,7 @@ if (!class_exists('Dostart_Customizer')) {
             // Setting & control instagram icon
             $wp_customize->add_setting('dostart_social_instagram', array(
                 'default'           => '',
-                'sanitize_callback' => array($this, 'dostart_esc_url_raw'),
+                'sanitize_callback' => array( $this, 'dostart_esc_url_raw' ),
             ));
 
             $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'dostart_social_instagram', array(
@@ -385,20 +382,17 @@ if (!class_exists('Dostart_Customizer')) {
          * [ Sanitization ]
         /*-------------------------------------*/
 
-        public function dostart_sanitize_checkbox($checked)
-        {
+        public function dostart_sanitize_checkbox( $checked ) {
             // Boolean check.
             return ((isset($checked) && true == $checked) ? true : false);
         }
 
-        public function dostart_sanitize_text_field($str)
-        {
+        public function dostart_sanitize_text_field( $str ) {
             $filtered = _sanitize_text_fields($str, false);
             return apply_filters('sanitize_text_field', $filtered, $str);
         }
 
-        public function dostart_sanitize_select($input, $setting)
-        {
+        public function dostart_sanitize_select( $input, $setting ) {
             // Ensure input is a slug.
             $input = sanitize_key($input);
 
@@ -409,15 +403,14 @@ if (!class_exists('Dostart_Customizer')) {
             return (array_key_exists($input, $choices) ? $input : $setting->default);
         }
 
-        public function dostart_sanitize_color($color)
-        {
-            if (empty($color) || is_array($color)) {
+        public function dostart_sanitize_color( $color ) {
+            if ( empty($color) || is_array($color) ) {
                 return '';
             }
 
             // If string does not start with 'rgba', then treat as hex.
             // sanitize the hex color and finally convert hex to rgba
-            if (false === strpos($color, 'rgba')) {
+            if ( false === strpos($color, 'rgba') ) {
                 return sanitize_hex_color($color);
             }
 
@@ -428,17 +421,15 @@ if (!class_exists('Dostart_Customizer')) {
             return 'rgba(' . $red . ',' . $green . ',' . $blue . ',' . $alpha . ')';
         }
 
-        public function dostart_esc_url_raw($url, $protocols = null)
-        {
+        public function dostart_esc_url_raw( $url, $protocols = null ) {
             return esc_url($url, $protocols, 'db');
         }
 
         /**
          * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
          */
-        public function dostart_customize_preview_js()
-        {
-            wp_enqueue_script('dostart-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array('customize-preview'), '20151215', true);
+        public function dostart_customize_preview_js() {
+            wp_enqueue_script('dostart-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '20151215', true);
         }
 
     }

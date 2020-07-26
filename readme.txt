@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Free Multipurpose WordPress theme
 
 == Description ==
-Dostart Multipurpose theme is providing outstanding solutions for making business, blog, consultancy and personal website. dostart them is fully responsive and mobile frinedly layouts. easy to use and fast loading wordpress theme.
+Dostart multipurpose theme is suitable for blog, personal portfolio, business website, consultancy and WooCommerce storefront. its come with many features like prebuild megamenu, box layout, dynamic color, social icons, dynamic layouts and fully customizable.  It is completely responsive and mobile frinedly layouts. easy to use and fast loading wordpress theme.
 
 
 == Installation ==
@@ -54,6 +54,10 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 
 == Changelog ==
+
+= Version 1.0.6 =
+* Megamenu Added
+* Bootstrap version updated 3 to 4
 
 = Version 1.0.5 =
 * Redux framework removed and Customizer API added

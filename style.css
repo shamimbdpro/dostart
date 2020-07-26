@@ -3,7 +3,7 @@ Theme Name: Dostart
 Theme URI: https://wordpress.org/themes/dostart
 Author: codepopular
 Author URI: https://profiles.wordpress.org/codepopular/
-Description: Dostart Multipurpose theme is providing outstanding solutions for making business, blog, consultancy and personal website. dostart them is fully responsive and mobile frinedly layouts. easy to use and fast loading wordpress theme.
+Description: Dostart multipurpose theme is suitable for blog, personal portfolio, business website, consultancy and WooCommerce storefront. its come with many features like prebuild megamenu, box layout, dynamic color, social icons, dynamic layouts and fully customizable.  It is completely responsive and mobile frinedly layouts. easy to use and fast loading wordpress theme.
 Version: 1.0.6
 Requires at least: 5.4
 Tested up to: 5.4
@@ -313,7 +313,8 @@ blockquote {
         display: block;
         position: relative;
         padding: 0;
-        width: 100%
+        width: 100%;
+        border-bottom: 1px solid #eee
     }
 
     .dostart-mainmenu li ul li a {
@@ -358,6 +359,7 @@ blockquote {
         opacity: 1;
         top: 100%;
         position: static;
+        max-width: 100% !important;
         width: 100%;
         box-shadow: none
     }

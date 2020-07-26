@@ -2,10 +2,11 @@
 /**
  * Custom wp_nav_menu walker.
  *
- * @package WooVina WordPress theme
+ * @package Dostart WordPress theme
+ * @since 1.0.6
  */
 
-if(! class_exists('Dostart_Nav_Walker')) {
+if ( ! class_exists('Dostart_Nav_Walker') ) {
 	class Dostart_Nav_Walker extends Walker_Nav_Menu {
 
 		/**
@@ -31,13 +32,13 @@ if(! class_exists('Dostart_Nav_Walker')) {
 		 * @param int    $depth  Depth of menu item. Used for padding.
 		 * @param array  $args   An array of arguments. @see wp_nav_menu()
 		 */
-		public function start_lvl(&$output, $depth = 0, $args = array()) {
+		public function start_lvl( &$output, $depth = 0, $args = array() ) {
 	        $indent = str_repeat("\t", $depth);
 
 	        // Megamenu columns
 	        $col = ! empty($this->megamenu_col) ? ('menu-col-'. $this->megamenu_col .'') : 'menu-col-2';
 
-	        if($depth === 0 && $this->megamenu != '') {
+	        if ( 0 === $depth && '' !== $this->megamenu ) {
 	        	$output .= "\n$indent<ul class=\"megamenu ". $col ." sub-menu\">\n";
 	         } else {
 	         	$output .= "\n$indent<ul class=\"sub-menu \">\n";
@@ -53,16 +54,16 @@ if(! class_exists('Dostart_Nav_Walker')) {
 		 * @param array  $args   An array of arguments. @see wp_nav_menu()
 		 * @param int    $id     Current item ID.
 		 */
-		public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
+		public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 			global $wp_query;
 			$indent = ($depth) ? str_repeat("\t", $depth) : '';
 
 			// Set some vars
-			if($depth === 0) {
-				$this->megamenu 			= get_post_meta($item->ID, '_menu_item_megamenu', true);
-				$this->megamenu_auto_width 	= get_post_meta($item->ID, '_menu_item_megamenu_auto_width', true);
-				$this->megamenu_col 		= get_post_meta($item->ID, '_menu_item_megamenu_col', true);
-				$this->megamenu_heading 	= get_post_meta($item->ID, '_menu_item_megamenu_heading', true);
+			if ( 0 === $depth ) {
+				$this->megamenu             = get_post_meta($item->ID, '_menu_item_megamenu', true);
+				$this->megamenu_auto_width  = get_post_meta($item->ID, '_menu_item_megamenu_auto_width', true);
+				$this->megamenu_col         = get_post_meta($item->ID, '_menu_item_megamenu_col', true);
+				$this->megamenu_heading     = get_post_meta($item->ID, '_menu_item_megamenu_heading', true);
 			}
 
 			// Set up empty variable.
@@ -72,32 +73,32 @@ if(! class_exists('Dostart_Nav_Walker')) {
 			$classes[] = 'menu-item-' . $item->ID;
 
 			// Mega menu and Hide headings
-		    if($depth === 0 && $this->has_children) {
-				if($this->megamenu != '' && $this->megamenu_auto_width == '') {
+		    if ( 0 === $depth && $this->has_children ) {
+				if ( '' !== $this->megamenu && '' === $this->megamenu_auto_width ) {
 					$classes[] = 'megamenu-li full-mega';
-				} else if($this->megamenu != '' && $this->megamenu_auto_width != '') {
+				} elseif ( '' !== $this->megamenu && '' !== $this->megamenu_auto_width ) {
 					$classes[] = 'megamenu-li auto-mega';
 				}
 
-				if($this->megamenu != '' && $this->megamenu_heading != ''){
+				if ( '' !== $this->megamenu && '' !== $this->megamenu_heading ) {
 					$classes[] = 'hide-headings';
 				}
 			}
 
 			// Latest post for menu item categories
-			if($item->category_post != '' && $item->object == 'category') {
+			if ( '' !== $item->category_post && 'category' === $item->object ) {
 				$classes[] = 'menu-item-has-children megamenu-li full-mega mega-cat';
 			}
 
 		    // Nav no click
-		    if($item->nolink != '') {
+		    if ( '' !== $item->nolink ) {
 		    	$classes[] = 'nav-no-click';
 		    }
 
 			/**
 			 * Filters the arguments for a single nav menu item.
 			 *
-			 * @since 4.4.0
+			 * @since 1.0.6
 			 *
 			 * @param stdClass $args  An object of wp_nav_menu() arguments.
 			 * @param WP_Post  $item  Menu item data object.
@@ -108,8 +109,7 @@ if(! class_exists('Dostart_Nav_Walker')) {
 			/**
 			 * Filters the CSS class(es) applied to a menu item's list item element.
 			 *
-			 * @since 3.0.0
-			 * @since 4.1.0 The `$depth` parameter was added.
+			 * @since 1.0.6
 			 *
 			 * @param array    $classes The CSS classes that are applied to the menu item's `<li>` element.
 			 * @param WP_Post  $item    The current menu item.
@@ -122,8 +122,7 @@ if(! class_exists('Dostart_Nav_Walker')) {
 			/**
 			 * Filters the ID applied to a menu item's list item element.
 			 *
-			 * @since 3.0.1
-			 * @since 4.1.0 The `$depth` parameter was added.
+			 * @since 1.0.6
 			 *
 			 * @param string   $menu_id The ID that is applied to the menu item's `<li>` element.
 			 * @param WP_Post  $item    The current menu item.
@@ -137,15 +136,14 @@ if(! class_exists('Dostart_Nav_Walker')) {
 
 			$atts = array();
 			$atts['title']  = ! empty($item->attr_title) ? $item->attr_title : '';
-			$atts['target'] = ! empty($item->target)     ? $item->target     : '';
-			$atts['rel']    = ! empty($item->xfn)        ? $item->xfn        : '';
-			$atts['href']   = ! empty($item->url)        ? $item->url        : '';
+			$atts['target'] = ! empty($item->target) ? $item->target : '';
+			$atts['rel']    = ! empty($item->xfn) ? $item->xfn : '';
+			$atts['href']   = ! empty($item->url) ? $item->url : '';
 
 			/**
 			 * Filters the HTML attributes applied to a menu item's anchor element.
 			 *
-			 * @since 3.6.0
-			 * @since 4.1.0 The `$depth` parameter was added.
+			 * @since 1.0.6
 			 *
 			 * @param array $atts {
 			 *     The HTML attributes applied to the menu item's `<a>` element, empty strings are ignored.
@@ -162,8 +160,8 @@ if(! class_exists('Dostart_Nav_Walker')) {
 			$atts = apply_filters('nav_menu_link_attributes', $atts, $item, $args, $depth);
 
 			$attributes = '';
-			foreach ($atts as $attr => $value) {
-				if(! empty($value)) {
+			foreach ( $atts as $attr => $value ) {
+				if ( ! empty($value) ) {
 					$value = ('href' === $attr) ? esc_url($value) : esc_attr($value);
 					$attributes .= ' ' . $attr . '="' . $value . '"';
 				}
@@ -175,7 +173,7 @@ if(! class_exists('Dostart_Nav_Walker')) {
 			/**
 			 * Filters a menu item's title.
 			 *
-			 * @since 4.4.0
+			 * @since 1.0.6
 			 *
 			 * @param string   $title The menu item's title.
 			 * @param WP_Post  $item  The current menu item.
@@ -186,7 +184,7 @@ if(! class_exists('Dostart_Nav_Walker')) {
 
 		    // Description
 		    $description = '';
-		    if($item->description != '') {
+		    if ( '' !== $item->description ) {
 		    	$description = '<span class="nav-content">'. $item->description .'</span>';
 		    }
 
@@ -197,21 +195,22 @@ if(! class_exists('Dostart_Nav_Walker')) {
 
 			$item_output .= $args->link_before . $title . $args->link_after;
 
-	    	if($depth !== 0) {
+	    	if ( 0 !== $depth ) {
 		    	$item_output .= $description;
 		    }
 
 			$item_output .= '</a>';
 
-			if(($item->template || $item->mega_template) && $this->megamenu != '') {
+			if ( ($item->template || $item->mega_template) && '' !== $this->megamenu ) {
 				ob_start();
-					include(DOSTART_THEME_DIR . 'inc/walker/template.php');
+				    include(DOSTART_THEME_DIR . 'inc/walker/template.php');
+					// get_template_part('inc/walker/template.php');
 					$template_content = ob_get_contents();
 				ob_end_clean();
 				$item_output .= $template_content;
 			}
 
-			if($item->megamenu_widgetarea && $this->megamenu != '') {
+			if ( $item->megamenu_widgetarea && '' !== $this->megamenu ) {
 				ob_start();
 					dynamic_sidebar($item->megamenu_widgetarea);
 					$sidebar_content = ob_get_contents();
@@ -221,20 +220,6 @@ if(! class_exists('Dostart_Nav_Walker')) {
 
 		    $item_output .= $args->after;
 
-			/**
-			 * Filters a menu item's starting output.
-			 *
-			 * The menu item's starting output only includes `$args->before`, the opening `<a>`,
-			 * the menu item's title, the closing `</a>`, and `$args->after`. Currently, there is
-			 * no filter for modifying the opening and closing `<li>` for a menu item.
-			 *
-			 * @since 3.0.0
-			 *
-			 * @param string   $item_output The menu item's starting HTML output.
-			 * @param WP_Post  $item        Menu item data object.
-			 * @param int      $depth       Depth of menu item. Used for padding.
-			 * @param stdClass $args        An object of wp_nav_menu() arguments.
-			 */
 			$output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
 
 		}
@@ -247,17 +232,17 @@ if(! class_exists('Dostart_Nav_Walker')) {
 		 * @param int    $depth  Depth of menu item. Used for padding.
 		 * @param array  $args   An array of arguments. @see wp_nav_menu()
 		 */
-		public function end_el(&$output, $item, $depth = 0, $args = array()) {
+		public function end_el( &$output, $item, $depth = 0, $args = array() ) {
 
 			// Header style
 
-			if($depth === 0 && $item->category_post != '') {
+			if ( 0 === $depth && '' !== $item->category_post ) {
 				global $post;
 
 				$output .= "\n<ul class=\"megamenu menu-col-4 sub-menu\">\n";
 
 					// Sub Categories ===============================================================
-					if($item->category_post != '' && $item->object == 'category') {
+					if ( '' !== $item->category_post && 'category' === $item->object ) {
 						$no_sub_categories = $sub_categories_exists = $sub_categories = '';
 
 						$query_args = array(
@@ -266,39 +251,39 @@ if(! class_exists('Dostart_Nav_Walker')) {
 						$sub_categories = get_categories($query_args);
 
 						//Check if the category doesn't contain any sub categories.
-						if(count($sub_categories) == 0) {
-							$sub_categories = array($item->object_id) ;
+						if ( count($sub_categories) === 0 ) {
+							$sub_categories = array( $item->object_id ) ;
 							$no_sub_categories = true ;
 						}
 
-						foreach($sub_categories as $category) {
+						foreach ( $sub_categories as $category ) {
 
-							if(! $no_sub_categories) {
+							if ( ! $no_sub_categories ) {
 								$cat_id = $category->term_id;
 							} else {
 								$cat_id = $category;
 							}
 
-							$original_post 	= $post;
-							$count 			= 0;
+							$original_post  = $post;
+							$count          = 0;
 
 							$args = array(
-								'posts_per_page'		 => 4,
-								'cat'          			 => $cat_id,
-								'no_found_rows'          => true,
-								'ignore_sticky_posts'	 => true
+								'posts_per_page'      => 4,
+								'cat'                 => $cat_id,
+								'no_found_rows'       => true,
+								'ignore_sticky_posts' => true,
 							);
 							$cat_query = new WP_Query($args);
 
 							// Title
 							$output .= '<h3 class="mega-cat-title">'. esc_html__('Latest in', 'dostart') .' '. get_cat_name($cat_id) .'</h3>';
 
-							while ($cat_query->have_posts()) {
+							while ( $cat_query->have_posts() ) {
 
 								// first post
 								$count++;
 
-								if($count == 1) {
+								if ( 1 === $count ) {
 									$classes = 'mega-cat-post first';
 								} else {
 									$classes = 'mega-cat-post';
@@ -308,13 +293,13 @@ if(! class_exists('Dostart_Nav_Walker')) {
 
 								$output .= '<li class="'. $classes .'">';
 
-								if(has_post_thumbnail()) {
+								if ( has_post_thumbnail() ) {
 
 									// Image args
 									$img_args = array(
 									    'alt' => get_the_title(),
 									);
-									if(woovina_get_schema_markup('image')) {
+									if ( dostart_get_schema_markup('image') ) {
 										$img_args['itemprop'] = 'image';
 									}
 
@@ -352,7 +337,7 @@ if(! class_exists('Dostart_Nav_Walker')) {
 		 * @param int    $depth  Depth of menu item. Used for padding.
 		 * @param array  $args   An array of arguments. @see wp_nav_menu()
 		 */
-		public function end_lvl(&$output, $depth = 0, $args = array()) {
+		public function end_lvl( &$output, $depth = 0, $args = array() ) {
 			$indent = str_repeat("\t", $depth);
 			$output .= "$indent</ul>\n";
 		}
@@ -360,28 +345,28 @@ if(! class_exists('Dostart_Nav_Walker')) {
 		/**
 		 * Icon if sub menu.
 		 */
-		public function display_element($element, &$children_elements, $max_depth, $depth=0, $args, &$output) {
+		public function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
 
 			// Define vars
 			$id_field     = $this->db_fields['id'];
-
-			if(is_object($args[0]))
+			
+			if (is_object($args[0]))
 			   $args[0]->has_children = ! empty($children_elements[ $element->$id_field ]);
 
 			// Down Arrows
-			if(! empty($children_elements[$element->$id_field]) && ($depth == 0)
-				|| $element->category_post != '') {
+			if ( ! empty($children_elements[ $element->$id_field ]) && (0 === $depth)
+				|| '' !== $element->category_post ) {
 				$element->classes[] = 'dropdown';
-				if(true == get_theme_mod('dostart_menu_arrow_down', true)) {
+				if ( true === get_theme_mod('dostart_menu_arrow_down', true) ) {
 					$element->title .= ' <span class="nav-arrow fa fa-angle-down"></span>';
 				}
 			}
 
 			// Right/Left Arrows
-			if(! empty($children_elements[$element->$id_field]) && ($depth > 0)) {
+			if ( ! empty($children_elements[ $element->$id_field ]) && ($depth > 0) ) {
 				$element->classes[] = 'dropdown';
-				if(true == get_theme_mod('woovina_menu_arrow_side', true)) {
-					if(is_rtl()) {
+				if ( true === get_theme_mod('dostart_menu_arrow_side', true) ) {
+					if ( is_rtl() ) {
 					//	$element->title .= '<span class="nav-arrow fa fa-angle-right"></span>';
 					} else {
 					//	$element->title .= '<span class="nav-arrow fa fa-angle-left"></span>';

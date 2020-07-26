@@ -154,7 +154,7 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
             color: <?php echo esc_attr($dostart_title_color); ?>
         }
         .dostart-mainmenu ul li a{
-            color: <?php echo $primary_menu_color; ?>
+            color: <?php echo esc_attr($primary_menu_color); ?>
         }
         .dostart-breadcrumb-area,
         .dostart-breadcrumb-bg,

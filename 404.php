@@ -10,7 +10,7 @@
  if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
- 
+
 get_header(); ?>
 
     <div class="dostart-breadcrumb-area blog-breadcrumb-bg">

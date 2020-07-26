@@ -32,7 +32,7 @@
     $(document).ready(function() {
         var $main_nav = $('.dostart-mainmenu #site-navigation');
         var $toggle = $('.toggle');
-        
+
         var defaultData = {
             disableAt: 991,
             customToggle: $toggle,
@@ -42,8 +42,8 @@
         // call our plugin
         var Nav = $main_nav.hcOffcanvasNav(defaultData);
         $('.toggle').on('click', function() {
-            totalKeyboardLoop($('.menu'));
-            $('.nav-close').attr('tabindex','3');
+            totalKeyboardLoop($('.sub-menu'));
+            $('.nav-close').attr('tabindex', '3');
             $('.nav-close').focus();
         });
     });
@@ -58,7 +58,7 @@
 
         /*redirect last tab to first input*/
         lastTabbable.on('keydown', function(e) {
-            if ((e.which === 9 && ! e.shiftKey)) {
+            if ((e.which === 9 && !e.shiftKey)) {
                 e.preventDefault();
                 firstTabbable.focus();
             }
