@@ -1744,11 +1744,18 @@ section.error-404 {
     list-style: none;
 }
 .woocommerce-MyAccount-navigation ul li{
-    padding: 10px 0px
+    padding: 10px 10px;
+    border:1px solid #ccc;
+    border-bottom-width: 0
 }
+
+.woocommerce-MyAccount-navigation li:last-child {
+    border-bottom: 1px solid #ccc;
+}
+
 .woocommerce-MyAccount-navigation ul li.is-active a {
     padding: 6px 0px;
-    border-bottom: 2px solid #007bff;
+    color:#007bff;
 }
 .woocommerce-MyAccount-navigation ul li a{
     color:#666;

@@ -172,7 +172,7 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
              color: <?php echo esc_attr($dostart_primary_color); ?>
         }
         .woocommerce-MyAccount-navigation ul li.is-active a{
-            border-bottom:2px solid <?php echo esc_attr($dostart_primary_color); ?>
+            color:<?php echo esc_attr($dostart_primary_color); ?>
         }
 
         article a.dostart-btn {
