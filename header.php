@@ -61,13 +61,16 @@ if ( function_exists('wp_body_open') ) {
                          <div class="dostart-mainmenu">
                               <nav class="nav-menu" id="site-navigation">
                                  <?php
+                                 $theme_location = 'primary';
+                                 if ( has_nav_menu( $theme_location ) ) {
                                     wp_nav_menu(
                                         array(
-                                            'theme_location' => 'primary',
+                                            'theme_location' => $theme_location,
                                             'menu_id' => 'primary-menu',
                                             'walker'  => new Dostart_Nav_Walker(),
                                         )
                                     );
+                                 }
                                     ?>
                               </nav>
                         </div>
