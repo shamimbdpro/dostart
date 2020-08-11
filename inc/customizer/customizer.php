@@ -40,6 +40,29 @@ if(class_exists('Kirki')){
         'priority'    => 30,
         'panel'       => 'dostart_general_settings',
     ) );
+    Kirki::add_field( 'theme_config_id', [
+        'type'        => 'typography',
+        'settings'    => 'dostart_typography_setting',
+        'label'       => esc_html__( 'Control Label', 'dostart' ),
+        'section'     => 'dostart_basic_settings',
+        'default'     => [
+            'font-family'    => 'Roboto',
+            'variant'        => 'regular',
+            'font-size'      => '14px',
+            'line-height'    => '1.5',
+            'letter-spacing' => '0',
+            'color'          => '#666666',
+            'text-transform' => 'none',
+            'text-align'     => 'left',
+        ],
+        'priority'    => 10,
+        'transport'   => 'auto',
+        'output'      => [
+            [
+                'element' => 'body',
+            ],
+        ],
+    ] );
      //------Theme Layouts -----*/
     Kirki::add_field( 'theme_config_id', [
         'type'        => 'switch',
@@ -64,6 +87,15 @@ if(class_exists('Kirki')){
         'priority'    => 30,
         'panel'       => 'dostart_general_settings',
     ) );
+
+    //------Facebook Icon -----*/
+    Kirki::add_field( 'theme_config_id', [
+        'type'     => 'checkbox',
+        'settings' => 'social_open_new_tab',
+        'label'    => esc_html__('Open New Tab', 'dostart'),
+        'section'  => 'dostart_social_icons',
+        'priority' => 10,
+    ] ); 
 
     //------Facebook Icon -----*/
     Kirki::add_field( 'theme_config_id', [
@@ -250,7 +282,7 @@ if(class_exists('Kirki')){
         // 'transport'   => 'postMessage',
     ] );
 
-
+    //------Primary Menu Icon -----*/
     Kirki::add_field( 'theme_config_id', [
         'type'        => 'switch',
         'settings'    => 'dostart_menu_arrow_down',
@@ -376,8 +408,6 @@ if ( ! class_exists('Dostart_Customizer') ) {
         public function dostart_customize_preview_js() { 
         wp_enqueue_script('dostart-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'jquery', 'customize-preview' ), DOSTART_THEME_VERSION, true);
         }
-
-
 
     }
 }

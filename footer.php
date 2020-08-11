@@ -41,41 +41,51 @@ if ( ! defined( 'ABSPATH' ) ) {
                             $social_behance    = get_theme_mod( 'dostart_social_behance' );
                             $social_linkedin   = get_theme_mod( 'dostart_social_linkedin' );
                             $social_instagram  = get_theme_mod( 'dostart_social_instagram' );
+                            $open_new_tab      = get_theme_mod( 'social_open_new_tab' );
+                            $target_blank      = $open_new_tab == 1 ? '_blank' : '';
                            ?>
                            <!-- facebook -->
                            <?php if ( ! empty($social_facebook) ) : ?>
-                               <li><a href="<?php echo esc_url( $social_facebook ); ?>"><i class="fa fa-facebook"></i></a></li>
+                               <li><a target="<?php esc_attr_e($target_blank); ?>" href="<?php echo esc_url( $social_facebook ); ?>">
+                                  <i class="fa fa-facebook"></i>
+                                </a></li>
                            <?php endif ?>
 
                             <!-- twitter -->
                            <?php if ( ! empty($social_twitter) ) : ?>
-                               <li><a href="<?php echo esc_url( $social_twitter ); ?>"><i class="fa fa-twitter"></i></a></li>
+                               <li><a target="<?php esc_attr_e($target_blank); ?>" href="<?php echo esc_url( $social_twitter ); ?>">
+                                  <i class="fa fa-twitter"></i></a></li>
                            <?php endif ?>
 
                             <!-- youtube -->
                            <?php if ( ! empty($social_youtube) ) : ?>
-                               <li><a href="<?php echo esc_url( $social_youtube ); ?>"><i class="fa fa-youtube"></i></a></li>
+                               <li><a target="<?php esc_attr_e($target_blank); ?>" href="<?php echo esc_url( $social_youtube ); ?>">
+                                <i class="fa fa-youtube"></i></a></li>
                            <?php endif ?>
 
                            <!-- pinterest -->
                            <?php if ( ! empty($social_pinteres) ) : ?>
-                               <li><a href="<?php echo esc_url( $social_pinteres ); ?>"><i class="fa fa-pinterest"></i></a></li>
+                               <li><a target="<?php esc_attr_e($target_blank); ?>" href="<?php echo esc_url( $social_pinteres ); ?>">
+                                <i class="fa fa-pinterest"></i></a></li>
                            <?php endif ?>
 
                            <!-- behance -->
                            <?php if ( ! empty($social_behance) ) : ?>
-                               <li><a href="<?php echo esc_url( $social_behance ); ?>"><i class="fa fa-behance"></i></a></li>
+                               <li><a target="<?php esc_attr_e($target_blank); ?>" href="<?php echo esc_url( $social_behance ); ?>">
+                                <i class="fa fa-behance"></i></a></li>
                            <?php endif ?>
  
                            <!-- linkedin -->
                            <?php if ( ! empty($social_linkedin) ) : ?>
-                               <li><a href="<?php echo esc_url( $social_linkedin ); ?>"><i class="fa fa-linkedin"></i></a></li>
+                               <li><a target="<?php esc_attr_e($target_blank); ?>" href="<?php echo esc_url( $social_linkedin ); ?>">
+                                <i class="fa fa-linkedin"></i></a></li>
                            <?php endif ?>
 
 
                            <!-- linkedin -->
                            <?php if ( ! empty($social_instagram) ) : ?>
-                               <li><a href="<?php echo esc_url( $social_instagram ); ?>"><i class="fa fa-instagram"></i></a></li>
+                               <li><a target="<?php esc_attr_e($target_blank); ?>" href="<?php echo esc_url( $social_instagram ); ?>">
+                                <i class="fa fa-instagram"></i></a></li>
                            <?php endif ?>
 
 
