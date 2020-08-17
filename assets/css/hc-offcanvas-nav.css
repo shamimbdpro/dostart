@@ -897,7 +897,7 @@ body.hc-nav-open {
     height: 19px;
 }
 @media(min-width: 991px){
-	.hc-nav-original.hc-nav-1{
-		display: block !important;
-	}
+    .hc-nav-original.hc-nav-1{
+        display: block !important;
+    }
 }

@@ -7,7 +7,7 @@
  * @package dostart
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
 
@@ -21,7 +21,7 @@ get_header(); ?>
                     the_archive_title('<h1 class="page-title">', '</h1>');
                     the_archive_description('<div class="archive-description">', '</div>');
                     ?>
-                    <?php if ( function_exists('bcn_display') ) { bcn_display();
+                    <?php if (function_exists('bcn_display') ) { bcn_display();
                     } ?>
                 </div>
             </div>
@@ -33,7 +33,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-md-8">
                     <?php
-                    if ( have_posts() ) : ?>
+                    if (have_posts() ) : ?>
                         <?php
                         /* Start the Loop */
                         while ( have_posts() ) : the_post();

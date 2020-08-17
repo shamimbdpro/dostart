@@ -12,7 +12,7 @@
  * @package dostart
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
 get_header(); ?>
@@ -35,8 +35,8 @@ get_header(); ?>
             <div class="row">
                 <div class="col-md-8 blog-page-padding">
                     <?php
-                    if ( have_posts() ) :
-                        if ( is_home() && ! is_front_page() ) : ?>
+                    if (have_posts() ) :
+                        if (is_home() && ! is_front_page() ) : ?>
                                 <header>
                                     <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
                                 </header>
@@ -58,7 +58,7 @@ get_header(); ?>
 
                         the_posts_navigation();
                     else :
-                            get_template_part( 'template-parts/content', 'none' );
+                            get_template_part('template-parts/content', 'none');
                     endif; ?>
                 </div>
                 <?php get_sidebar(); ?>

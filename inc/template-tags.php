@@ -1,5 +1,5 @@
 <?php
-if ( ! defined('ABSPATH') ) {
+if (! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
 
@@ -11,9 +11,10 @@ if ( ! defined('ABSPATH') ) {
  * @package dostart
  */
 
-function dostart_body_classes( $classes ) {
+function dostart_body_classes( $classes )
+{
     // Adds a class of hfeed to non-singular pages.
-    if ( ! is_singular() ) {
+    if (! is_singular() ) {
         $classes[] = 'hfeed';
     }
 
@@ -24,24 +25,27 @@ add_filter('body_class', 'dostart_body_classes');
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
-function dostart_pingback_header() {
-    if ( is_singular() && pings_open() ) {
+function dostart_pingback_header()
+{
+    if (is_singular() && pings_open() ) {
         echo '<link rel="pingback" href="', esc_url(get_bloginfo('pingback_url')), '">';
     }
 }
 add_action('wp_head', 'dostart_pingback_header');
 
-if ( ! function_exists('dostart_posted_on') ) :
+if (! function_exists('dostart_posted_on') ) :
     /**
      * Prints HTML with meta information for the current post-date/time and author.
      */
-    function dostart_posted_on() {
+    function dostart_posted_on()
+    {
         $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-        if ( get_the_time('U') !== get_the_modified_time('U') ) {
+        if (get_the_time('U') !== get_the_modified_time('U') ) {
             $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
         }
 
-        $time_string = sprintf($time_string,
+        $time_string = sprintf(
+            $time_string,
             esc_attr(get_the_date('c')),
             esc_html(get_the_date()),
             esc_attr(get_the_modified_date('c')),
@@ -67,30 +71,31 @@ if ( ! function_exists('dostart_posted_on') ) :
     }
 endif;
 
-if ( ! function_exists('dostart_entry_footer') ) :
+if (! function_exists('dostart_entry_footer') ) :
     /**
      * Prints HTML with meta information for the categories, tags and comments.
      */
-    function dostart_entry_footer() {
+    function dostart_entry_footer()
+    {
         // Hide category and tag text for pages.
-        if ( 'post' === get_post_type() ) {
+        if ('post' === get_post_type() ) {
 
             /* translators: used between list items, there is a space after the comma */
             $categories_list = get_the_category_list(esc_html__(', ', 'dostart'));
-            if ( $categories_list ) {
+            if ($categories_list ) {
                 /* translators: 1: list of categories. */
                 printf('<span class="cat-links">' . esc_html__('Posted in %1$s', 'dostart') . '</span>', $categories_list); // WPCS: XSS OK.
             }
 
             /* translators: used between list items, there is a space after the comma */
             $tags_list = get_the_tag_list('', esc_html_x(', ', 'list item separator', 'dostart'));
-            if ( $tags_list ) {
+            if ($tags_list ) {
                 /* translators: 1: list of tags. */
                 printf('<span class="tags-links">' . esc_html__('Tagged %1$s', 'dostart') . '</span>', $tags_list); // WPCS: XSS OK.
             }
         }
 
-        if ( ! is_single() && ! post_password_required() && (comments_open() || get_comments_number()) ) {
+        if (! is_single() && ! post_password_required() && (comments_open() || get_comments_number()) ) {
             echo '<span class="comments-link">';
             comments_popup_link(
                 sprintf(
@@ -131,8 +136,9 @@ endif;
 /*
  * theme style
  */
-if ( ! function_exists('dostart_dynamic_styles') ) {
-    function dostart_dynamic_styles() {
+if (! function_exists('dostart_dynamic_styles') ) {
+    function dostart_dynamic_styles()
+    {
         // parimary color
         $dostart_primary_color    = empty(get_theme_mod('dostart_theme_primary_color')) ? '' : get_theme_mod('dostart_theme_primary_color');
 
@@ -145,6 +151,8 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
 
         // footer background color
         $footer_bg = empty(get_theme_mod('dostart_footer_bg')) ? '' : get_theme_mod('dostart_footer_bg');
+        // footer copyright text color
+        $dostart_copyright_text_color = empty(get_theme_mod('dostart_copyright_text_color')) ? '' : get_theme_mod('dostart_copyright_text_color');
 
         // footer top background color
         $back_to_top_bg = empty(get_theme_mod('dostart_backtotop_bg')) ? '' : get_theme_mod('dostart_backtotop_bg');
@@ -184,6 +192,9 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
         .footer-top-widgets{
             background: <?php echo esc_attr($footer_widget_bg); ?>;
         }
+        .copyright-text p{
+            color: <?php echo esc_attr($dostart_copyright_text_color); ?>
+        }
         .dostart-footer-area{
             background-color: <?php echo esc_attr($footer_bg); ?>;
         }
@@ -191,13 +202,14 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
             background: <?php echo esc_attr($back_to_top_bg); ?>
          }
 
-    <?php
-$output = ob_get_clean();
+        <?php
+        $output = ob_get_clean();
         return $output;
     } //end  dostart_dynamic_styles
 } //endif
 
-function dostart_style_method() {
+function dostart_style_method()
+{
 
     $custom_css = dostart_dynamic_styles();
     wp_add_inline_style('dostart-style', $custom_css);

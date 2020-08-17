@@ -22,7 +22,7 @@ get_header(); ?>
                     <div class="breadcrumb-inner">
                         <div class="breadcrumb-inner-content">
                             <h1><?php the_title();  ?></h1>
-                            <?php if ( function_exists('bcn_display') ) {
+                            <?php if (function_exists('bcn_display') ) {
                                 bcn_display();
                             } ?> 
                         </div>

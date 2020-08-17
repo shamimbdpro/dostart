@@ -7,7 +7,7 @@
  * @package dostart
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
 
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div class="page-content">
         <?php
-        if ( is_home() && current_user_can('publish_posts') ) : ?>
+        if (is_home() && current_user_can('publish_posts') ) : ?>
             <p><?php
                 printf(
                     wp_kses(
@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 );
                 ?></p>
 
-        <?php elseif ( is_search() ) : ?>
+        <?php elseif (is_search() ) : ?>
             <p><?php esc_html_e('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'dostart'); ?></p>
             <?php
                 get_search_form();

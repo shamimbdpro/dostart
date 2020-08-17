@@ -7,7 +7,7 @@
  * @package dostart
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
 get_header(); ?>
@@ -22,7 +22,7 @@ get_header(); ?>
                         printf(esc_html__('Search Results for: %s', 'dostart'), '<span>' . get_search_query() . '</span>');
                         ?>
                     </h1>
-                    <?php if ( function_exists('bcn_display') ) {
+                    <?php if (function_exists('bcn_display') ) {
                         bcn_display();
                     } ?>
                 </div>
@@ -35,7 +35,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-md-8">
                     <?php
-                    if ( have_posts() ) : ?>
+                    if (have_posts() ) : ?>
                             <?php
                             /* Start the Loop */
                             while ( have_posts() ) :

@@ -7,11 +7,11 @@
  * @package dostart
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+if (! defined('ABSPATH') ) {
+    exit; // Exit if accessed directly.
 }
 
-if ( ! is_active_sidebar('sidebar-1') ) {
+if (! is_active_sidebar('sidebar-1') ) {
     return;
 }
 ?>

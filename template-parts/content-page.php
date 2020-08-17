@@ -7,7 +7,7 @@
  * @package dostart
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
 
@@ -21,14 +21,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
             wp_link_pages(
                 array(
-					'before' => '<div class="page-links">' . esc_html__('Pages:', 'dostart'),
-					'after'  => '</div>',
+                'before' => '<div class="page-links">' . esc_html__('Pages:', 'dostart'),
+                'after'  => '</div>',
                 )
             );
             ?>
     </div><!-- .entry-content -->
 
-    <?php if ( get_edit_post_link() ) : ?>
+    <?php if (get_edit_post_link() ) : ?>
         <footer class="entry-footer">
             <?php
                 edit_post_link(

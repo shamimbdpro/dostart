@@ -12,7 +12,7 @@
  * @package dostart
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
 
@@ -26,7 +26,7 @@ get_header(); ?>
                     <div class="breadcrumb-inner">
                         <div class="breadcrumb-inner-content">
                             <h1><?php the_title();  ?></h1>
-                            <?php if ( function_exists('bcn_display') ) {
+                            <?php if (function_exists('bcn_display') ) {
                                 bcn_display();
                             } ?> 
                         </div>
@@ -47,7 +47,7 @@ get_header(); ?>
                         get_template_part('template-parts/content', 'page');
 
                         // If comments are open or we have at least one comment, load up the comment template.
-                        if ( comments_open() || get_comments_number() ) :
+                        if (comments_open() || get_comments_number() ) :
                             comments_template();
                         endif;
                     endwhile; // End of the loop.

@@ -7,7 +7,7 @@
  * @package dostart
  */
 
- if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
 
@@ -18,7 +18,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-md-12">
                     <h1 class="page-title"><?php esc_html_e('Error Page', 'dostart'); ?></h1>
-                    <?php if ( function_exists('bcn_display') ) { bcn_display();
+                    <?php if (function_exists('bcn_display') ) { bcn_display();
                     } ?>
                 </div>
             </div>

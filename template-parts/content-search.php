@@ -7,7 +7,7 @@
  * @package dostart
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
 ?>
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <header class="entry-header">
         <?php the_title(sprintf('<a href="%s" rel="bookmark"><h2 class="entry-title">', esc_url(get_permalink())), '</h2></a>'); ?>
 
-        <?php if ( 'post' === get_post_type() ) : ?>
+        <?php if ('post' === get_post_type() ) : ?>
         <div class="entry-meta">
             <?php dostart_posted_on(); ?>
         </div><!-- .entry-meta -->

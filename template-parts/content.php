@@ -7,26 +7,26 @@
  * @package dostart
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
-        <?php if ( has_post_thumbnail() && get_post_type() !== 'project' ) : ?>
+        <?php if (has_post_thumbnail() && get_post_type() !== 'project' ) : ?>
             <div class="dostart-post-featured-content">
                
-                <?php if ( ! is_singular() ) { echo '<a href="'.esc_url( get_the_permalink() ).'">';
+                <?php if (! is_singular() ) { echo '<a href="'.esc_url(get_the_permalink()).'">';
                 } ?>
                 <?php the_post_thumbnail('dostart-thumb'); ?>
-                <?php if ( ! is_singular() ) { echo '</a>';
+                <?php if (! is_singular() ) { echo '</a>';
                 } ?>
             </div>
         <?php endif; ?>
         <?php
 
-        if ( 'post' === get_post_type() ) :  if ( ! is_singular() ) : ?>
+        if ('post' === get_post_type() ) :  if (! is_singular() ) : ?>
                <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
         <?php endif; ?>
         <div class="entry-meta">
@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="entry-content">
     
         <?php
-        if ( is_single() ) {
+        if (is_single() ) {
             the_content(
                 sprintf(
                 /* translators: %s: Name of current post. */

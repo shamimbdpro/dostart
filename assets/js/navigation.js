@@ -8,7 +8,7 @@
     var container, button, menu, links, i, len;
 
     container = document.getElementById('site-navigation');
-    if ( ! container ) {
+    if (! container ) {
         return;
     }
     
@@ -57,7 +57,7 @@
             touchStartFn = function ( e ) {
                 var menuItem = this.parentNode, i;
 
-                if ( ! menuItem.classList.contains('focus') ) {
+                if (! menuItem.classList.contains('focus') ) {
                     e.preventDefault();
                     for ( i = 0; i < menuItem.parentNode.children.length; ++i ) {
                         if (menuItem === menuItem.parentNode.children[i] ) {

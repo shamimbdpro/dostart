@@ -2,9 +2,9 @@
 Contributors: codepopular, shamimtpi
 Tags:  blog, right-sidebar, custom-background, featured-images
 Requires at least: 5.4
-Tested up to: 5.4
-Requires PHP: 7.0
-Version: 1.0.6
+Tested up to: 5.5
+Requires PHP: 5.6
+Version: 1.0.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -55,6 +55,12 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 == Changelog ==
 
+= Version 1.0.7 =
+* Social click Target Added
+* Style Moved
+* Dynamic Footer Text Color
+* KirKi Customizer Framework Added
+
 = Version 1.0.6 =
 * Megamenu Added
 * Bootstrap version updated 3 to 4
@@ -78,7 +84,6 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 = Version 1.0.1 =
 * Customizer Fixed
-* Footer Copyright Fixed
 * Footer Copyright Fixed
 * Tested up to & Requires PHP set in style css
 * jquery.slicknav.js License and screenshot image License added
