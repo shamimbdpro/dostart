@@ -15,9 +15,9 @@ function dostart_register_required_plugins() {
 		),
 
 		array(
-			'name'     => 'Elementor Page Builder',
-			'slug'     => 'elementor',
-			'required' => false,
+			'name'     => 'Kirki Customizer Framework',
+			'slug'     => 'kirki',
+			'required' => true,
 		),
 	);
 

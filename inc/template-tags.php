@@ -145,6 +145,8 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
 
         // footer background color
         $footer_bg = empty(get_theme_mod('dostart_footer_bg')) ? '' : get_theme_mod('dostart_footer_bg');
+        // footer copyright text color
+        $dostart_copyright_text_color = empty(get_theme_mod('dostart_copyright_text_color')) ? '' : get_theme_mod('dostart_copyright_text_color');
 
         // footer top background color
         $back_to_top_bg = empty(get_theme_mod('dostart_backtotop_bg')) ? '' : get_theme_mod('dostart_backtotop_bg');
@@ -183,6 +185,9 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
         }
         .footer-top-widgets{
             background: <?php echo esc_attr($footer_widget_bg); ?>;
+        }
+        .copyright-text p{
+            color: <?php echo esc_attr( $dostart_copyright_text_color ); ?>
         }
         .dostart-footer-area{
             background-color: <?php echo esc_attr($footer_bg); ?>;

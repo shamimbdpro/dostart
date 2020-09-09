@@ -357,7 +357,7 @@ if ( ! class_exists('Dostart_Nav_Walker') ) {
 			if ( ! empty($children_elements[ $element->$id_field ]) && (0 === $depth)
 				|| '' !== $element->category_post ) {
 				$element->classes[] = 'dropdown';
-				if ( true === get_theme_mod('dostart_menu_arrow_down', true) ) {
+				if ( 1 == get_theme_mod('dostart_menu_arrow_down', true) ) {
 					$element->title .= ' <span class="nav-arrow fa fa-angle-down"></span>';
 				}
 			}
@@ -365,7 +365,7 @@ if ( ! class_exists('Dostart_Nav_Walker') ) {
 			// Right/Left Arrows
 			if ( ! empty($children_elements[ $element->$id_field ]) && ($depth > 0) ) {
 				$element->classes[] = 'dropdown';
-				if ( true === get_theme_mod('dostart_menu_arrow_side', true) ) {
+				if ( 1 == get_theme_mod('dostart_menu_arrow_side', true) ) {
 					if ( is_rtl() ) {
 					//	$element->title .= '<span class="nav-arrow fa fa-angle-right"></span>';
 					} else {

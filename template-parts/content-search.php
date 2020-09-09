@@ -12,9 +12,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('mb-4 bg-white p-3'); ?>>
     <header class="entry-header">
-        <?php the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
+        <?php the_title(sprintf('<a href="%s" rel="bookmark"><h2 class="entry-title">', esc_url(get_permalink())), '</h2></a>'); ?>
 
         <?php if ( 'post' === get_post_type() ) : ?>
         <div class="entry-meta">
