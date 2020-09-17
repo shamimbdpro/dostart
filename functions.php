@@ -95,6 +95,11 @@ if (! function_exists('dostart_theme_setup') ) :
         add_theme_support("custom-header");
 
         /**
+         * Yost seo support added for theme
+         */
+        add_theme_support( 'yoast-seo-breadcrumbs' );
+
+        /**
          * Add support for core custom logo.
          *
          * @link https://codex.wordpress.org/Theme_Logo
