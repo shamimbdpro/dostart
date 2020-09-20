@@ -1,6 +1,6 @@
 <?php
 
-if (!function_exists('dostart_cart_link')) {
+if ( ! function_exists('dostart_cart_link') ) {
 
     function dostart_cart_link() {
         ?>	
@@ -10,10 +10,9 @@ if (!function_exists('dostart_cart_link')) {
         </a>
         <?php
     }
-
 }
 
-if (!function_exists('dostart_header_cart')) {
+if ( ! function_exists('dostart_header_cart') ) {
 
     function dostart_header_cart() { ?>
             <div class="header-cart">
@@ -29,13 +28,12 @@ if (!function_exists('dostart_header_cart')) {
                 </div>
             </div>
     <?php }
-
 }
 
-if (!function_exists('dostart_header_add_to_cart_fragment')) {
+if ( ! function_exists('dostart_header_add_to_cart_fragment') ) {
     add_filter('woocommerce_add_to_cart_fragments', 'dostart_header_add_to_cart_fragment');
 
-    function dostart_header_add_to_cart_fragment($fragments) {
+    function dostart_header_add_to_cart_fragment( $fragments ) {
         ob_start();
 
         dostart_cart_link();
@@ -44,5 +42,4 @@ if (!function_exists('dostart_header_add_to_cart_fragment')) {
 
         return $fragments;
     }
-
 }

@@ -9,7 +9,7 @@
  * @package dostart
  */
 
-if (! defined('ABSPATH') ) {
+if ( ! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
 ?>
@@ -23,7 +23,7 @@ if (! defined('ABSPATH') ) {
 
 <body <?php body_class(); ?>>
 <?php
-if (function_exists('wp_body_open') ) {
+if ( function_exists('wp_body_open') ) {
             wp_body_open();
 } else {
     do_action('wp_body_open');
@@ -38,11 +38,11 @@ if (function_exists('wp_body_open') ) {
                     <div class="col-md-3 logo_col">     
                         <div class="site-logo">
                             <?php
-                            if (has_custom_logo() ) {
+                            if ( has_custom_logo() ) {
                                  the_custom_logo();
                             } ?>
                             <div class="site-text-logo">
-                                <?php if (is_front_page() && is_home() ) :  ?>
+                                <?php if ( is_front_page() && is_home() ) :  ?>
                                 <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php echo esc_html(bloginfo('name')); ?></a></h1>
                                     <?php
                                 else :
@@ -50,7 +50,7 @@ if (function_exists('wp_body_open') ) {
                                 <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php echo esc_html(bloginfo('name')); ?></a></h1>
                                 <?php  endif;
                                 $dostart_description = get_bloginfo('description', 'display');
-                                if ($dostart_description || is_customize_preview() ) : ?>
+                                if ( $dostart_description || is_customize_preview() ) : ?>
                                 <p class="site-description"><?php echo esc_html($dostart_description);?></p>
                                 <?php endif; ?>
                             </div>
@@ -63,12 +63,12 @@ if (function_exists('wp_body_open') ) {
                               <nav class="nav-menu" id="site-navigation">
                                  <?php
                                     $theme_location = 'primary';
-                                    if (has_nav_menu($theme_location) ) {
+                                    if ( has_nav_menu($theme_location) ) {
                                         wp_nav_menu(
                                             array(
-                                            'theme_location' => $theme_location,
-                                            'menu_id' => 'primary-menu',
-                                            'walker'  => new Dostart_Nav_Walker(),
+												'theme_location' => $theme_location,
+												'menu_id' => 'primary-menu',
+												'walker'  => new Dostart_Nav_Walker(),
                                             )
                                         );
                                     }
@@ -77,7 +77,7 @@ if (function_exists('wp_body_open') ) {
                         </div>
                         
                         <!-- Woocommere Cart Icon -->
-                        <?php if (function_exists('dostart_header_cart') && class_exists('WooCommerce')) { ?>
+                        <?php if ( function_exists('dostart_header_cart') && class_exists('WooCommerce') ) { ?>
                             <div class="dostart-header-cart" >
                                 <?php dostart_header_cart(); ?>
                             </div>  

@@ -58,7 +58,7 @@
 
         /*redirect last tab to first input*/
         lastTabbable.on('keydown', function(e) {
-            if ((e.which === 9 && !e.shiftKey)) {
+            if ((e.which === 9 && ! e.shiftKey)) {
                 e.preventDefault();
                 firstTabbable.focus();
             }

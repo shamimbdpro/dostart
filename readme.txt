@@ -46,8 +46,7 @@ Code licensed MIT, docs CC BY 3.0.
 Source - https://getbootstrap.com/docs/3.3/components/
 
 = FontAwesome Icons =
-License: SIL Open Font License, 1.1,
-https://opensource.org/licenses/OFL-1.1
+License: CC BY 4.0 License
 Source: https://www.fontawesome.io
 Code licensed under MIT License
 

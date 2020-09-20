@@ -3,7 +3,7 @@
  * dostart functions and definitions
  */
 
-if (! defined('ABSPATH') ) {
+if ( ! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
 
@@ -15,7 +15,7 @@ define('DOSTART_THEME_VERSION', '1.0.7');
 define('DOSTART_THEME_DIR', trailingslashit(get_template_directory()));
 define('DOSTART_THEME_URI', trailingslashit(esc_url(get_template_directory_uri())));
 
-if (! function_exists('dostart_theme_setup') ) :
+if ( ! function_exists('dostart_theme_setup') ) :
     /**
      * Sets up theme defaults and registers support for various WordPress features.
      *
@@ -23,8 +23,7 @@ if (! function_exists('dostart_theme_setup') ) :
      * runs before the init hook. The init hook is too late for some features, such
      * as indicating support for post thumbnails.
      */
-    function dostart_theme_setup()
-    {
+    function dostart_theme_setup() {
         /*
          * Make theme available for translation.
          * Translations can be filed in the /languages/ directory.
@@ -127,9 +126,8 @@ if (! function_exists('dostart_theme_setup') ) :
          * Post Excerpt Length
          **/
 
-        function dostart_custom_excerpt_length( $length )
-        {
-            if (is_admin() ) {
+        function dostart_custom_excerpt_length( $length ) {
+            if ( is_admin() ) {
                 return $length;
             }
 
@@ -147,8 +145,7 @@ add_action('after_setup_theme', 'dostart_theme_setup');
  *
  * @global int $content_width
  */
-function dostart_content_width()
-{
+function dostart_content_width() {
     $GLOBALS['content_width'] = apply_filters('dostart_content_width', 640);
 }
 add_action('after_setup_theme', 'dostart_content_width', 0);
@@ -158,8 +155,7 @@ add_action('after_setup_theme', 'dostart_content_width', 0);
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function dostart_widgets_setup()
-{
+function dostart_widgets_setup() {
     register_sidebar(
         array(
             'name'          => esc_html__('Sidebar', 'dostart'),
@@ -189,8 +185,7 @@ add_action('widgets_init', 'dostart_widgets_setup');
 /**
  * Enqueue scripts and styles.
  */
-function dostart_load_style_and_scripts()
-{
+function dostart_load_style_and_scripts() {
 
     // Define Direcotry URI
     $dir = DOSTART_THEME_URI;
@@ -209,7 +204,7 @@ function dostart_load_style_and_scripts()
     wp_enqueue_script('hc-offcanvas', $dir . '/assets/js/hc-offcanvas-nav.js', array( 'jquery' ), '4.2.3', true);
     wp_enqueue_script('dostart-active', $dir . '/assets/js/active.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
 
-    if (is_singular() && comments_open() && get_option('thread_comments') ) {
+    if ( is_singular() && comments_open() && get_option('thread_comments') ) {
 
         wp_enqueue_script('comment-reply');
     }
@@ -240,7 +235,7 @@ require DOSTART_THEME_DIR . '/inc/customizer/customizer.php';
 /**
  * WooCommerce
  */
-if (class_exists('WooCommerce')) {
+if ( class_exists('WooCommerce') ) {
     require_once DOSTART_THEME_DIR . '/inc/class/woocommerce.php';
 }
 

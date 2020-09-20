@@ -14,7 +14,7 @@ if ( ! defined('ABSPATH') ) {
  * Customizer Loader
  */
 
-if(class_exists('Kirki')){
+if ( class_exists('Kirki') ) {
 
     Kirki::add_config( 'theme_config_id', array(
         'capability'    => 'edit_theme_options',
@@ -108,9 +108,9 @@ if(class_exists('Kirki')){
         'partial_refresh' => array(
             'dostart_social_facebook' => array(
                 'selector' => '.footer-social-icon',
-                'render_callback' => '__return_false'
-            )
-        )
+                'render_callback' => '__return_false',
+            ),
+        ),
     ] );
 
     //------Twitter Icon -----*/
@@ -124,9 +124,9 @@ if(class_exists('Kirki')){
         'partial_refresh' => array(
             'dostart_social_twitter' => array(
                 'selector' => '.footer-social-icon',
-                'render_callback' => '__return_false'
-            )
-        )
+                'render_callback' => '__return_false',
+            ),
+        ),
     ] );
 
     //------Youtube Icon -----*/
@@ -140,9 +140,9 @@ if(class_exists('Kirki')){
         'partial_refresh' => array(
             'dostart_social_youtube' => array(
                 'selector' => '.footer-social-icon',
-                'render_callback' => '__return_false'
-            )
-        )
+                'render_callback' => '__return_false',
+            ),
+        ),
     ] );
 
     //------Pinterest Icon -----*/
@@ -156,9 +156,9 @@ if(class_exists('Kirki')){
         'partial_refresh' => array(
             'dostart_social_pinterest' => array(
                 'selector' => '.footer-social-icon',
-                'render_callback' => '__return_false'
-            )
-        )
+                'render_callback' => '__return_false',
+            ),
+        ),
     ] );
 
     //------Behance Icon -----*/
@@ -172,9 +172,9 @@ if(class_exists('Kirki')){
         'partial_refresh' => array(
             'dostart_social_behance' => array(
                 'selector' => '.footer-social-icon',
-                'render_callback' => '__return_false'
-            )
-        )
+                'render_callback' => '__return_false',
+            ),
+        ),
     ] );
 
 
@@ -189,9 +189,9 @@ if(class_exists('Kirki')){
         'partial_refresh' => array(
             'dostart_social_linkedin' => array(
                 'selector' => '.footer-social-icon',
-                'render_callback' => '__return_false'
-            )
-        )
+                'render_callback' => '__return_false',
+            ),
+        ),
     ] ); 
 
     //------Instagramm Icon -----*/
@@ -205,9 +205,9 @@ if(class_exists('Kirki')){
         'partial_refresh' => array(
             'dostart_social_instagram' => array(
                 'selector' => '.footer-social-icon',
-                'render_callback' => '__return_false'
-            )
-        )
+                'render_callback' => '__return_false',
+            ),
+        ),
     ] );
 
 
@@ -215,10 +215,10 @@ if(class_exists('Kirki')){
          [ Theme Global Color ]
      -------------------------------*/
      Kirki::add_section( 'colors', array(
-        'priority'    => 30,
-        'title'       => __('Colors', 'dostart'),
-        'panel'       => 'dostart_general_settings'
-    ) );
+		 'priority'    => 30,
+		 'title'       => __('Colors', 'dostart'),
+		 'panel'       => 'dostart_general_settings',
+	 ) );
 
      //----Theme Primary Color --------*/
     Kirki::add_field( 'theme_config_id', [
@@ -226,7 +226,7 @@ if(class_exists('Kirki')){
         'settings'    => 'dostart_theme_primary_color',
         'label'       => __('Theme Primary Color', 'dostart'),
         'section'     => 'colors',
-        'default'     => '#0052a5',
+        'default'     => '#065FD4',
         // 'transport'   => 'postMessage',
     ] );
 
@@ -247,7 +247,7 @@ if(class_exists('Kirki')){
         'settings'    => 'dostart_backtotop_bg',
         'label'    => __('Back To Top Background', 'dostart'),
         'section'     => 'colors',
-        'default'     => '#0052a5',
+        'default'     => '#065FD4',
         // 'transport'   => 'postMessage',
     ] );
 
@@ -319,22 +319,22 @@ if(class_exists('Kirki')){
 
     //------- Footer Background ---------/
      Kirki::add_field( 'theme_config_id', [
-        'type'        => 'color',
-        'settings'    => 'dostart_footer_bg',
-        'label'       => __('Footer Background', 'dostart'),
-        'section'     => 'dostart_footer',
-        'default'     => '#222222',
-        'transport'   => 'postMessage',
-    ] );
+		 'type'        => 'color',
+		 'settings'    => 'dostart_footer_bg',
+		 'label'       => __('Footer Background', 'dostart'),
+		 'section'     => 'dostart_footer',
+		 'default'     => '#222222',
+		 'transport'   => 'postMessage',
+	 ] );
 
     //------- Footer text color ---------/
      Kirki::add_field( 'theme_config_id', [
-        'type'        => 'color',
-        'settings'    => 'dostart_copyright_text_color',
-        'label'       => __('Copyright Text Color', 'dostart'),
-        'section'     => 'dostart_footer',
-        'default'     => '#666666',
-    ] );
+		 'type'        => 'color',
+		 'settings'    => 'dostart_copyright_text_color',
+		 'label'       => __('Copyright Text Color', 'dostart'),
+		 'section'     => 'dostart_footer',
+		 'default'     => '#666666',
+	 ] );
 
      //-----  Copyright Text ---------/
     Kirki::add_field( 'theme_config_id', [
@@ -344,13 +344,13 @@ if(class_exists('Kirki')){
         'section'  => 'dostart_footer',
         'default'  => esc_html__( '© Powered by WordPress 2020', 'dostart' ),
         'priority' => 10,
-        'transport' => 'postMessage',    
-        'partial_refresh' => array(
-            'dostart_footer' => array(
-                'selector' => '.copyright-text',
-                'render_callback' => '__return_false'
-            )
-        )
+        'transport' => 'postMessage',
+		'partial_refresh' => array(
+			'dostart_footer' => array(
+				'selector' => '.copyright-text',
+				'render_callback' => '__return_false',
+			),
+		),
     ] );
 
     
