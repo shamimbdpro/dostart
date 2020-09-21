@@ -358,7 +358,7 @@ if ( ! class_exists('Dostart_Nav_Walker') ) {
 				|| '' !== $element->category_post ) {
 				$element->classes[] = 'dropdown';
 				if ( 1 == get_theme_mod('dostart_menu_arrow_down', true) ) {
-					$element->title .= ' <span class="nav-arrow fa fa-angle-down"></span>';
+					$element->title .= '<i class="fas fa-chevron-down"></i>';
 				}
 			}
 

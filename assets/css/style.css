@@ -271,6 +271,12 @@ blockquote {
         padding-right: 0;
     }
 
+    .dostart-mainmenu ul li a i {
+        font-size: 12px;
+        padding-left: 5px;
+        color: #6d6767;
+    }
+
     /*2 level menu*/
     .dostart-mainmenu ul ul {
         position: absolute;
@@ -958,10 +964,10 @@ section.error-404 {
 
 .search-form:before {
     content: "\f002";
-    font-family: "FontAwesome";
+   font-family: "Font Awesome 5 Free";
     color: #fff;
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 900;
     position: absolute;
     right: 0px;
     top: 0;
@@ -970,8 +976,6 @@ section.error-404 {
     padding: 15px 20px;
     border-radius: 0px;
 }
-
-
 
 
 .widget_search .widget-title {
