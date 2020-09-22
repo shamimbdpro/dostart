@@ -672,6 +672,7 @@ article.post {
     margin-bottom: 50px;
     border: 1px solid #eee;
     padding: 25px 20px;
+    box-shadow: 1px 1px 17px 1px #eee
 }
 
 .entry-footer {
