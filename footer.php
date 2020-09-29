@@ -42,7 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                             $social_linkedin   = get_theme_mod( 'dostart_social_linkedin' );
                             $social_instagram  = get_theme_mod( 'dostart_social_instagram' );
                             $open_new_tab      = get_theme_mod( 'social_open_new_tab' );
-                            $target_blank      = $open_new_tab == 1 ? '_blank' : '';
+                            $target_blank      = ( 1 == $open_new_tab ) ? '_blank' : '';
                            ?>
                            <!-- facebook -->
                            <?php if ( ! empty($social_facebook) ) : ?>

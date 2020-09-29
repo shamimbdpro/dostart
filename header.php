@@ -71,6 +71,14 @@ if ( function_exists('wp_body_open') ) {
 												'walker'  => new Dostart_Nav_Walker(),
                                             )
                                         );
+                                    }else {
+
+                                        $dostart_fallback = array(
+                                            'theme_location' => $theme_location,
+                                        );
+                                        wp_page_menu( $dostart_fallback );
+
+                                    
                                     }
                                     ?>
                               </nav>

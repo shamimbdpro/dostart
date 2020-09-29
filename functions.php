@@ -11,7 +11,7 @@ if ( ! defined('ABSPATH') ) {
  * Define Constants
  */
 
-define('DOSTART_THEME_VERSION', '1.0.7');
+define('DOSTART_THEME_VERSION', '1.0.11');
 define('DOSTART_THEME_DIR', trailingslashit(get_template_directory()));
 define('DOSTART_THEME_URI', trailingslashit(esc_url(get_template_directory_uri())));
 
@@ -197,7 +197,7 @@ function dostart_load_style_and_scripts() {
     wp_enqueue_style('dostart-default', $dir . '/assets/css/default.css', array(), DOSTART_THEME_VERSION);
     wp_enqueue_style('dostart-theme', $dir . '/assets/css/style.css', array(), DOSTART_THEME_VERSION);
 
-    wp_enqueue_style('dostart-style', get_stylesheet_uri());
+    wp_enqueue_style('dostart-style', get_stylesheet_uri(), array(), DOSTART_THEME_VERSION);
 
     wp_enqueue_script('skip-link-focus-fix', $dir . '/assets/js/skip-link-focus-fix.js', array( 'jquery' ), '1.0.2', true);
     wp_enqueue_script('navigation', $dir . '/assets/js/navigation.js', array( 'jquery' ), '3.3.7', true);

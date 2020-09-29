@@ -671,7 +671,7 @@ body.blog .dostart-post-featured-content img {
 article.post {
     margin-bottom: 50px;
     border: 1px solid #eee;
-    padding: 25px 20px;
+    padding: 20px 20px 30px 20px;
     box-shadow: 1px 1px 17px 1px #eee
 }
 
@@ -1793,4 +1793,11 @@ section.error-404 {
 }
 .woocommerce-MyAccount-navigation ul li a{
     color:#666;
+}
+
+.woocommerce table.my_account_orders{
+    font-size: 14px
+}
+.woocommerce table.my_account_orders .button {
+    margin-right: 5px;
 }
