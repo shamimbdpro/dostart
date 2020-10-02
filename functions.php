@@ -11,7 +11,7 @@ if ( ! defined('ABSPATH') ) {
  * Define Constants
  */
 
-define('DOSTART_THEME_VERSION', '1.0.11');
+define('DOSTART_THEME_VERSION', wp_get_theme()->get('Version'));
 define('DOSTART_THEME_DIR', trailingslashit(get_template_directory()));
 define('DOSTART_THEME_URI', trailingslashit(esc_url(get_template_directory_uri())));
 
