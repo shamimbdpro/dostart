@@ -191,17 +191,17 @@ function dostart_load_style_and_scripts() {
     $dir = DOSTART_THEME_URI;
 
     wp_enqueue_style('bootstrap', $dir . '/assets/css/bootstrap.css', array(), DOSTART_THEME_VERSION);
-    wp_enqueue_style('font-awesome-all', $dir . '/assets/css/minified/all.min.css', array(), DOSTART_THEME_VERSION);
-    wp_enqueue_style('font-awesome-min', $dir . '/assets/css/minified/fontawesome.min.css', array(), DOSTART_THEME_VERSION);
-    wp_enqueue_style('hc-offcanvas', $dir . '/assets/css/hc-offcanvas-nav.css', array(), DOSTART_THEME_VERSION);
-    wp_enqueue_style('dostart-default', $dir . '/assets/css/default.css', array(), DOSTART_THEME_VERSION);
-    wp_enqueue_style('dostart-theme', $dir . '/assets/css/style.css', array(), DOSTART_THEME_VERSION);
+    wp_enqueue_style('font-awesome-all', $dir . '/assets/css/all.min.css', array(), DOSTART_THEME_VERSION);
+    wp_enqueue_style('font-awesome-min', $dir . '/assets/css/fontawesome.min.css', array(), DOSTART_THEME_VERSION);
+    wp_enqueue_style('hc-offcanvas', $dir . '/assets/css/hc-offcanvas-nav.min.css', array(), DOSTART_THEME_VERSION);
+    wp_enqueue_style('dostart-default', $dir . '/assets/css/default.min.css', array(), DOSTART_THEME_VERSION);
+    wp_enqueue_style('dostart-theme', $dir . '/assets/css/style.min.css', array(), DOSTART_THEME_VERSION);
 
     wp_enqueue_style('dostart-style', get_stylesheet_uri(), array(), DOSTART_THEME_VERSION);
 
-    wp_enqueue_script('skip-link-focus-fix', $dir . '/assets/js/skip-link-focus-fix.js', array( 'jquery' ), '1.0.2', true);
-    wp_enqueue_script('navigation', $dir . '/assets/js/navigation.js', array( 'jquery' ), '3.3.7', true);
-    wp_enqueue_script('hc-offcanvas', $dir . '/assets/js/hc-offcanvas-nav.js', array( 'jquery' ), '4.2.3', true);
+    wp_enqueue_script('skip-link-focus-fix', $dir . '/assets/js/skip-link-focus-fix.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
+    wp_enqueue_script('navigation', $dir . '/assets/js/navigation.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
+    wp_enqueue_script('hc-offcanvas', $dir . '/assets/js/hc-offcanvas-nav.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
     wp_enqueue_script('dostart-active', $dir . '/assets/js/active.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
 
     if ( is_singular() && comments_open() && get_option('thread_comments') ) {

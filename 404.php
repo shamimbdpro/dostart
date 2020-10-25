@@ -33,7 +33,7 @@ get_header(); ?>
                         <h1><?php esc_html_e('404', 'dostart'); ?></h1>
                     </div>
                     <h2><?php esc_html_e('PAGE NOT FOUND', 'dostart'); ?></h2>
-                    <h3><?php _e('UNFORTUNATELY THE PAGE YOU WERE LOOKING FOR DOES NOT EXIST. MAYBE SEARCH CAN HELP.', 'dostart'); ?></h3>
+                    <h3><?php esc_html_e('UNFORTUNATELY THE PAGE YOU WERE LOOKING FOR DOES NOT EXIST. MAYBE SEARCH CAN HELP.', 'dostart'); ?></h3>
 
                     <?php
                     get_search_form();

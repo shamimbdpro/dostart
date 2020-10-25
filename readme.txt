@@ -4,7 +4,7 @@ Tags:  blog, right-sidebar, custom-background, featured-images
 Requires at least: 5.4
 Tested up to: 5.5
 Requires PHP: 5.6
-Version: 1.0.12
+Version: 1.0.13
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,7 +30,7 @@ All available options can be used from Appearance->Customize
 
 Image for theme screenshot, Copyright pexels
 License: CC0 1.0 Universal (CC0 1.0)
-Source: https://www.pexels.com/photo/red-notebook-and-smartphone-beside-computer-laptop-3774023
+Source: https://www.pexels.com/photo/white-apple-keyboard-near-white-cup-917463/
 
 Source: https://www.pexels.com/photo/man-and-woman-wearing-white-crew-neck-t-shirts-991511/
 WooCommerce, Copyright (C) Automattic, GPLv3, 
@@ -59,9 +59,12 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 == Changelog ==
 
+= Version 1.0.13 =
+* Minified css added
+* Checkout page order review details moved to right side
+
 = Version 1.0.12 =
 * Header fallback menu set
-
 
 = Version 1.0.11 =
 * PHPCS validate
