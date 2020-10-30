@@ -218,10 +218,6 @@ blockquote {
     margin: 0;
 }
 
-.site-text-logo p.site-description {
-    margin: 0;
-}
-
 .site-text-logo {
     align-items: center;
     display: flex;
@@ -441,33 +437,6 @@ body.hc-nav-open {
 .dostart-site-footer .widget p {
     margin-bottom: 15px;
 }
-
-/*.footer-top-widgets ul#menu-services-nav li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 10px;
-    line-height: 20px;
-    padding-bottom: 0px;
-}
-
-.footer-top-widgets ul#menu-services-nav li a {
-    color: #fff;
-    font-weight: 300;
-}
-
-.footer-top-widgets ul#menu-services-nav li:before {
-    position: absolute;
-    left: 0;
-    top: 5px;
-    width: 15px;
-    height: 20px;
-    display: block;
-    text-align: center;
-    font-family: fontAwesome;
-    content: "\f105";
-    font-size: 15px;
-    color: #ffffff !important;
-}*/
 
 .footer-top-widgets .widget.widget_recent_entries li {
     line-height: 25px;
@@ -1374,36 +1343,7 @@ section.error-404 {
         font-size: 18px;
         margin-bottom: 10px !important;
     }
-/* 
-    .project-meta-item {
-        display: block;
-        width: 100%;
-        text-align: left;
-        float: none;
-        margin: 0 0px 25px 0px;
-    }
 
-    .dostart-related-projects h2 {
-        font-size: 25px;
-    }
-
-
-    .single-team-list {
-        margin-bottom: 20px;
-        padding-bottom: 20px;
-    }
-   .team-thumb-box {
-        margin-bottom: 25px;
-    }
-
-    .single-team-list .dostart-team-detail {
-        font-size: 14px;
-    }
-
-    .services-content .wpb_text_column {
-        font-size: 15px;
-    }
-*/
     .blog-page-padding {
         padding-right: 15px;
     }
@@ -1555,18 +1495,6 @@ section.error-404 {
         margin-bottom: 7px;
     }
 
-/*    .dostart-project-inner h3:before {
-        bottom: -17px;
-        width: 35px;
-        height: 4px;
-        margin-left: -17.5px;
-    }
-
-    .dostart-count-box h1 {
-        font-size: 35px;
-        line-height: 35px;
-    }*/
-
     .dostart-site-footer .widget {
         padding-top: 15px;
         padding-bottom: 0;
@@ -1612,23 +1540,6 @@ section.error-404 {
         font-size: 20px;
         margin-bottom: 8px;
     }
-
-/*    .single-team-list {
-        margin-bottom: 35px;
-        padding-bottom: 35px;
-    }
-
-    .team-thumb-box {
-        margin-bottom: auto;
-    }
-
-    .single-team-list .dostart-team-detail {
-        font-size: 15px;
-    }
-
-    .services-content .wpb_text_column {
-        font-size: 16px;
-    }*/
 
     .blog-page-padding {
         padding-right: 15px;

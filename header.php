@@ -48,11 +48,7 @@ if ( function_exists('wp_body_open') ) {
                                 else :
                                     ?>
                                 <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php echo esc_html(bloginfo('name')); ?></a></h1>
-                                <?php  endif;
-                                $dostart_description = get_bloginfo('description', 'display');
-                                if ( $dostart_description || is_customize_preview() ) : ?>
-                                <p class="site-description"><?php echo esc_html($dostart_description);?></p>
-                                <?php endif; ?>
+                                <?php  endif;?>
                             </div>
                         </div>                            
                     </div>
