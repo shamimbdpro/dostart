@@ -138,7 +138,7 @@ a {text-decoration: none;}
     margin-top: 5px;
     font-size: 14px;
 }*/
-    
+
 
 
 /******------------------------------
@@ -253,7 +253,7 @@ article.post a.granted-btn {
 }
 .widget select {max-width: 100%}
 .widget a {
-  color: #333;
+    color: #333;
 }
 .widget ul {
     line-height: 35px;
@@ -270,7 +270,7 @@ article.post a.granted-btn {
     margin-bottom: 20px;
 }
 .widget ul.sub-menu:nth-child(2) {
-     line-height: 25px;
+    line-height: 25px;
     padding-top: 5px;
     padding-bottom: 0px;
 }
@@ -363,7 +363,11 @@ ol ol, ol ul, ul ol, ul ul {
 /******------------------------------
 -----------COMMENTS CSS------------
 ------------------------------******/
-
+.comments-area{
+    border: 1px solid #eee;
+    padding: 20px 20px 30px 20px;
+    box-shadow: 1px 1px 17px 1px #eee;
+}
 .comments-title {
     margin-bottom: 35px;
     font-size: 30px;
@@ -428,7 +432,7 @@ kbd {
     background-color: rgba( 68, 68, 68, 0.2);
     border-radius: 0px;
     -webkit-box-shadow: none ;
-    box-shadow: none; 
+    box-shadow: none;
 }
 .comment-content h1, .comment-content h2, .comment-content h3, .comment-content h4, .comment-content h5, .comment-content h6 {
     margin: 20px 0;
@@ -486,7 +490,7 @@ b.fn a,
     font-weight: 300;
 }
 .reply {
-  padding-left: 50px;
+    padding-left: 50px;
 }
 
 .reply a {
@@ -520,6 +524,7 @@ b.fn a,
 }
 .comment-reply-title {
     margin-bottom: 30px;
+    font-size: 20px;
 }
 .logged-in .comment-reply-title {
     margin-bottom: 30px;
@@ -559,7 +564,17 @@ b.fn a,
 
 #cancel-comment-reply-link{
     color: red;
+    padding-left:10px
 }
 .comment-list li.pingback {
     margin-bottom: 15px;
+}
+input#wp-comment-cookies-consent {
+    width: auto;
+    margin-right: 3px;
+}
+.comment-body{
+    border:1px solid #eee;
+    padding:10px;
+    box-shadow: 1px 1px 17px 1px #eee;
 }

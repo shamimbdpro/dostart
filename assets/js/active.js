@@ -36,6 +36,7 @@
         var defaultData = {
             disableAt: 991,
             customToggle: $toggle,
+          //  levelOpen: 'expand',
             disableBody: true,
             levelTitles: false,
         };
