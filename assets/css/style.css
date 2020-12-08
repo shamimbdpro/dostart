@@ -168,34 +168,6 @@ blockquote {
 -----------Header CSS------------
 ------------------------------******/
 
-.header-top-area,
-.header-top-area a {
-    color: #888888;
-}
-
-.header-top-area a:hover {
-    color: #ffffff;
-}
-
-.header-top-area {
-    background-color: #065FD4;
-    font-size: 13px;
-    padding: 0;
-    font-weight: 400;
-}
-
-.header-box {
-    display: inline-block;
-    margin-right: 35px;
-    padding-top: 5px;
-    padding-bottom: 7px;
-}
-
-.top_info span i.fa {
-    padding-right: 10px;
-    color: #ffffff;
-}
-
 .dostart-header-area {
     box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .15);

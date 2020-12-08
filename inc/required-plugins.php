@@ -8,26 +8,17 @@ add_action( 'tgmpa_register', 'dostart_register_required_plugins' );
 function dostart_register_required_plugins() {
 
     $plugins = array(
-        array(
-            'name'     => 'Contact Form 7',
-            'slug'     => 'contact-form-7',
-            'required' => false,
-        ),
 
         array(
             'name'     => 'Kirki Customizer Framework',
             'slug'     => 'kirki',
-            'required' => true,
+            'required' => false,
         ),
+
         array(
-            'name'     => 'Elementor Page Builder',
-            'slug'     => 'elementor',
-            'required' => true,
-        ),
-        array(
-            'name'     => 'Unlimited Theme Addons For Elementor',
+            'name'     => 'Unlimited Theme Addons',
             'slug'     => 'unlimited-theme-addons',
-            'required' => true,
+            'required' => false,
         ),
     );
 
