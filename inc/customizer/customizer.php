@@ -338,7 +338,7 @@ if ( class_exists('Kirki') ) {
 
      //-----  Copyright Text ---------/
     Kirki::add_field( 'theme_config_id', [
-        'type'            => 'text',
+        'type'            => 'editor',
         'settings'        => 'dostart_copyright_text',
         'label'           => esc_html__('Copyright Text', 'dostart'),
         'section'         => 'dostart_footer',

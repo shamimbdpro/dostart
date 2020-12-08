@@ -96,7 +96,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <p> &copy; <?php echo esc_html(' Powered by ', 'dostart');?> <a target="_balnk" href="<?php echo esc_url('https://wordpress.org/'); ?>"><?php esc_html_e('WordPress', 'dostart');?></a> <?php echo esc_html(date_i18n(__('Y ', 'dostart'))); ?></p>
                          <?php else : ?>
 
-                            <p><?php echo esc_html(get_theme_mod('dostart_copyright_text')); ?></p>
+                            <p><?php echo get_theme_mod('dostart_copyright_text'); ?></p>
                          <?php endif?>
                         </div>
                     </div>

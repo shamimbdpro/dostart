@@ -1104,8 +1104,6 @@ section.error-404 {
 
 
 /*------------------------------------------------------------------------*/
-
-
 /* [ Woocommerce Style ]
 /*------------------------------------------------------------------------*/
 
@@ -1238,6 +1236,10 @@ section.error-404 {
 .woocommerce table.my_account_orders .button {
     margin-right: 5px;
     font-size:13px
+}
+.woocommerce table.shop_table{
+    border-top:0;
+    border-right:0
 }
 
 
