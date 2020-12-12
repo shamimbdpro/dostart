@@ -93,9 +93,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                       </div>
                       <div class="copyright-text">
                          <?php if ( empty(get_theme_mod('dostart_copyright_text')) ) : ?>
-                            <p> &copy; <?php echo esc_html(' Powered by ', 'dostart');?> <a target="_balnk" href="<?php echo esc_url('https://wordpress.org/'); ?>"><?php esc_html_e('WordPress', 'dostart');?></a> <?php echo esc_html(date_i18n(__('Y ', 'dostart'))); ?></p>
+                            <p> &copy; <?php echo esc_html(' Powered by ', 'dostart');?> <b><?php bloginfo('name');?></b> <?php echo esc_html(date_i18n(__('Y ', 'dostart'))); ?> | <?php esc_html_e('Theme By', 'dostart');?> <a target="_balnk" href="<?php echo esc_url('https://wordpress.org/theme/dostart'); ?>"><?php echo esc_html('Dostart');?></a></p>
                          <?php else : ?>
-
                             <?php echo get_theme_mod('dostart_copyright_text'); // phpcs:ignore ?>
                          <?php endif?>
                         </div>
