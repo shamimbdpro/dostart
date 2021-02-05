@@ -1,4 +1,4 @@
-<?php
+<?php //phpcs:ginore
 /**
  * Template content
  */
@@ -24,16 +24,12 @@ if ( ! empty($get_id) ) {
     
 // If Elementor
 if ( DOSTART_ELEMENTOR_ACTIVE && $elementor ) {
-
-    echo Elementor\Plugin::instance()->frontend->get_builder_content_for_display($get_id);
-
+    echo Elementor\Plugin::instance()->frontend->get_builder_content_for_display($get_id); //phpcs:ignore.
 }
 
 
 // Else
 else {
-
     // Display template content
-    echo dostart_shortcode($content);
-
+    echo dostart_shortcode($content); //phpcs:ignore.
 }
