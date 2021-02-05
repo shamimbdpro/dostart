@@ -2,7 +2,7 @@
 
 require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 
-add_action( 'tgmpa_register', 'dostart_register_required_plugins' );
+add_action('tgmpa_register', 'dostart_register_required_plugins');
 
 
 function dostart_register_required_plugins() {
@@ -34,5 +34,5 @@ function dostart_register_required_plugins() {
 
     );
 
-    tgmpa( $plugins, $config );
+    tgmpa($plugins, $config);
 }

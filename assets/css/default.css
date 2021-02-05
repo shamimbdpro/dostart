@@ -305,10 +305,7 @@ body.single .entry-content {
 .entry-content dd {
     margin-bottom: 15px;
 }
-.entry-content ul, .entry-content ol {
-    padding-left: 40px;
-    margin-bottom: 20px;
-}
+
 ol ol, ol ul, ul ol, ul ul {
     margin-bottom: 0!important;
 }

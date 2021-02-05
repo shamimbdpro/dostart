@@ -29,7 +29,7 @@ if ( function_exists('wp_body_open') ) {
     do_action('wp_body_open');
 }
 ?>
-  <div id="page-wrapper" class="site-wrapper <?php echo esc_html(  '' == get_theme_mod( 'dostart_theme_layout') ? '' : 'box-layout' ); ?>">
+  <div id="page-wrapper" class="site-wrapper <?php echo esc_html(false === get_theme_mod('dostart_theme_layout') ? '' : 'box-layout'); ?>">
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'dostart'); ?></a>
     <header class="dostart-header-area">
         <div class="dostart-main-header">
@@ -72,7 +72,7 @@ if ( function_exists('wp_body_open') ) {
                                         $dostart_fallback = array(
                                             'theme_location' => $theme_location,
                                         );
-                                        wp_page_menu( $dostart_fallback );
+                                        wp_page_menu($dostart_fallback);
 
                                     
                                     }

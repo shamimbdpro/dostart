@@ -7,7 +7,7 @@
  * @package dostart
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if ( ! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
 ?>
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php if ( has_post_thumbnail() && get_post_type() !== 'project' ) : ?>
             <div class="dostart-post-featured-content">
                
-                <?php if ( ! is_singular() ) { echo '<a href="'.esc_url( get_the_permalink() ).'">';
+                <?php if ( ! is_singular() ) { echo '<a href="'.esc_url(get_the_permalink()).'">';
                 } ?>
                 <?php the_post_thumbnail('dostart-thumb'); ?>
                 <?php if ( ! is_singular() ) { echo '</a>';

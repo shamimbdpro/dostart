@@ -5,7 +5,7 @@
 
 // Exit if accessed directly
 if ( ! defined('ABSPATH') ) {
-	exit;
+    exit;
 }
 
 // Get ID
@@ -16,12 +16,12 @@ $elementor  = get_post_meta($get_id, '_elementor_edit_mode', true);
 
 // Get template content
 if ( ! empty($get_id) ) {
-	$template_id = get_post($get_id);
-	if ( $template_id && ! is_wp_error($template_id) ) {
-		 $content = $template_id->post_content;
-	}
+    $template_id = get_post($get_id);
+    if ( $template_id && ! is_wp_error($template_id) ) {
+        $content = $template_id->post_content;
+    }
 }
-	
+    
 // If Elementor
 if ( DOSTART_ELEMENTOR_ACTIVE && $elementor ) {
 

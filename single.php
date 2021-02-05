@@ -7,7 +7,7 @@
  * @package dostart
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if ( ! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
 
@@ -15,7 +15,7 @@ get_header(); ?>
 
     <div class="dostart-breadcrumb-area dostart-single-blog-breadcrumb" <?php if ( has_post_thumbnail() ) :
         ?> style="background-image:url(<?php echo esc_url(the_post_thumbnail_url('large'));?>)"<?php
-                                                                        endif;?>>
+   endif;?>>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

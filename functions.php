@@ -96,7 +96,7 @@ if ( ! function_exists('dostart_theme_setup') ) :
         /**
          * Yost seo support added for theme
          */
-        add_theme_support( 'yoast-seo-breadcrumbs' );
+        add_theme_support('yoast-seo-breadcrumbs');
 
         /**
          * Add support for core custom logo.
@@ -236,7 +236,7 @@ require DOSTART_THEME_DIR . '/inc/customizer/customizer.php';
  * WooCommerce
  */
 if ( class_exists('WooCommerce') ) {
-    require_once DOSTART_THEME_DIR . '/inc/class/woocommerce.php';
+    include_once DOSTART_THEME_DIR . '/inc/class/woocommerce.php';
 }
 
 /**

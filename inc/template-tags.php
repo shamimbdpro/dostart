@@ -41,7 +41,8 @@ if ( ! function_exists('dostart_posted_on') ) :
             $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
         }
 
-        $time_string = sprintf($time_string,
+        $time_string = sprintf(
+            $time_string,
             esc_attr(get_the_date('c')),
             esc_html(get_the_date()),
             esc_attr(get_the_modified_date('c')),
@@ -187,7 +188,7 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
             background: <?php echo esc_attr($footer_widget_bg); ?>;
         }
         .copyright-text p{
-            color: <?php echo esc_attr( $dostart_copyright_text_color ); ?>
+            color: <?php echo esc_attr($dostart_copyright_text_color); ?>
         }
         .dostart-footer-area{
             background-color: <?php echo esc_attr($footer_bg); ?>;
@@ -196,8 +197,8 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
             background: <?php echo esc_attr($back_to_top_bg); ?>
          }
 
-    <?php
-$output = ob_get_clean();
+        <?php
+        $output = ob_get_clean();
         return $output;
     } //end  dostart_dynamic_styles
 } //endif
