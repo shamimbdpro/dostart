@@ -1188,10 +1188,19 @@ section.error-404 {
 }
 
 .select2-container .select2-selection--single{
-    height: 40px;
-    /* margin: 0 0 -4px; */
-    -moz-user-select: none;
+    height: 38px;
     padding: 6px;
+    margin-bottom: 2px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 5px;
+    right: 3px;
+}
+.select2-search--dropdown .select2-search__field {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .woocommerce #respond input#submit,
