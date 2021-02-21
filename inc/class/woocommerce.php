@@ -22,7 +22,7 @@ if ( ! function_exists('dostart_header_cart') ) {
                         <?php dostart_cart_link(); ?>
                        <!--  <ul class="site-header-cart menu list-unstyled text-center">
                             <li>
-                                <?php // the_widget('WC_Widget_Cart', 'title='); ?> 
+                               // the_widget('WC_Widget_Cart', 'title='); ?>
                             </li>
                         </ul> -->
                     </div>

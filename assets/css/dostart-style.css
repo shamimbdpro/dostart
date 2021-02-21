@@ -1187,6 +1187,13 @@ section.error-404 {
     width: 100%
 }
 
+.select2-container .select2-selection--single{
+    height: 40px;
+    /* margin: 0 0 -4px; */
+    -moz-user-select: none;
+    padding: 6px;
+}
+
 .woocommerce #respond input#submit,
 .woocommerce a.button,
 .woocommerce button.button,

@@ -89,7 +89,7 @@ if ( ! function_exists('dostart_theme_setup') ) :
         add_theme_support('customize-selective-refresh-widgets');
 
         // This theme styles the visual editor to resemble the theme style.
-        add_editor_style('assets/css/editor-style.css');
+        add_editor_style('assets/css/editor-dodstart-style.css');
 
         add_theme_support("custom-header");
 
@@ -195,7 +195,7 @@ function dostart_load_style_and_scripts() {
     wp_enqueue_style('font-awesome-min', $dir . '/assets/css/fontawesome.min.css', array(), DOSTART_THEME_VERSION);
     wp_enqueue_style('hc-offcanvas', $dir . '/assets/css/hc-offcanvas-nav.min.css', array(), DOSTART_THEME_VERSION);
     wp_enqueue_style('dostart-default', $dir . '/assets/css/default.min.css', array(), DOSTART_THEME_VERSION);
-    wp_enqueue_style('dostart-theme', $dir . '/assets/css/style.min.css', array(), DOSTART_THEME_VERSION);
+    wp_enqueue_style('dostart-theme', $dir . '/assets/css/dostart-style.min.css', array(), DOSTART_THEME_VERSION);
 
     wp_enqueue_style('dostart-style', get_stylesheet_uri(), array(), DOSTART_THEME_VERSION);
 
