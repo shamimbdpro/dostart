@@ -48,3 +48,4 @@ if ( ! function_exists('dostart_header_style') ) :
         <?php
     }
 endif;
+?>

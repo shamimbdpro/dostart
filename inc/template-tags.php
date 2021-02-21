@@ -209,3 +209,5 @@ function dostart_style_method() {
     wp_add_inline_style('dostart-style', $custom_css);
 }
 add_action('wp_enqueue_scripts', 'dostart_style_method');
+
+?>

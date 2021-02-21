@@ -3782,3 +3782,4 @@ if ( ! class_exists('TGMPA_Utils') ) {
         }
     } // End of class TGMPA_Utils
 } // End of class_exists wrapper
+?>

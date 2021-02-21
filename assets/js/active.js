@@ -1,3 +1,7 @@
+/**
+ * File active.js
+ * Preloader, back to top scroll, mobile menu navigiation, keyboard navigation.
+ */
 (function ($) {
 
     "use strict";
