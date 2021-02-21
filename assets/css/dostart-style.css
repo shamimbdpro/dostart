@@ -223,7 +223,7 @@ blockquote {
 .hc-nav-trigger.hc-nav-1 {
     position: absolute;
     right: 23px;
-    top: 30px;
+    top: 60px;
 }
 
 .hc-nav.hc-nav-1 {
@@ -380,7 +380,7 @@ body.hc-nav-open {
 @media( max-width:767px) {
     .hc-nav-trigger.hc-nav-1 {
         display: block;
-        top: -60px;
+        top: 80px;
     }
 }
 
