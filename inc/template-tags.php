@@ -167,6 +167,8 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
         .search-form:after,
         .dostart-single-blog-breadcrumb:before,
         .comment-form p > input[type="submit"],
+        .pagination .nav-links .page-numbers.current,
+        .pagination .nav-links .page-numbers:hover,
         .button{
              background-color: <?php echo esc_attr($dostart_primary_color); ?> !important;
         }

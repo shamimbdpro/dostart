@@ -1,0 +1,220 @@
+
+.dostart-header-area {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+}
+
+.dostart-header-area .logo a {
+  display: inline-block;
+}
+
+.custom-logo-link img {
+  max-width: 200px;
+  max-height: 40px;
+}
+
+.site-logo {
+  padding: 22px 0;
+}
+
+.site-text-logo h1.site-title {
+  font-size: 36px;
+  margin: 0;
+}
+
+.site-text-logo {
+  align-items: center;
+  display: flex;
+  margin: 3px 0px;
+}
+
+
+/*-------[ Header Responsive ] ------*/
+
+@media( max-width: 1200px) {}
+
+@media( max-width:991px) {
+  .dostart-header-cart {
+    display: none;
+  }
+}
+
+@media( max-width:767px) {}
+
+@media( max-width:480px) {}
+
+@media( max-width:320px) {}
+
+
+/******------------------------------
+-----------Navigation CSS------------
+------------------------------******/
+
+.hc-nav-trigger.hc-nav-1 {
+  position: absolute;
+  right: 23px;
+  top: 60px;
+}
+
+.hc-nav.hc-nav-1 {
+  display: block !important
+}
+
+.hc-offcanvas-nav {
+  z-index: 9999999999
+}
+
+body.hc-nav-open {
+  position: inherit;
+}
+
+.hc-offcanvas-nav li.nav-close span::before {
+  margin-left: -6px;
+}
+
+@media(min-width: 991px) {
+  .dostart-mainmenu {
+    text-align: right;
+  }
+  .dostart-mainmenu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .dostart-mainmenu ul li {
+    position: relative;
+    display: inline-block;
+  }
+  .dostart-mainmenu ul li a {
+    display: block;
+    font-size: 16px;
+    color: #666;
+    padding: 35px 15px 34px 15px;
+  }
+  .dostart-mainmenu ul li a:hover,
+  .dostart-mainmenu ul li a:focus,
+  .dostart-mainmenu ul li a:active {
+    text-decoration: underline;
+    color: #03752f;
+  }
+  .dostart-mainmenu ul li:last-child a {
+    padding-right: 0;
+  }
+  .dostart-mainmenu ul li a i {
+    font-size: 12px;
+    padding-left: 5px;
+    color: #6d6767;
+  }
+  /*-------[ 2 Label Menu ] ------*/
+  .dostart-mainmenu ul ul {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    opacity: 0;
+    filter: Alpha(opacity=0);
+    width: 210px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 38px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    margin: 0;
+    padding: 0px 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+    text-align: left;
+  }
+  .dostart-mainmenu li:last-child ul {
+    max-width: 165px;
+  }
+  .dostart-mainmenu li ul li {
+    display: block;
+    position: relative;
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px solid #eee
+  }
+  .dostart-mainmenu li ul li a {
+    display: block;
+    padding: 12px 26px 12px;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #888;
+    -webkit-transition: none;
+    transition: none;
+    border-bottom: 1px solid rgba(255, 255, 255, .05);
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    padding-left: 26px;
+  }
+  .dostart-mainmenu ul li ul ul {
+    right: 100%;
+    left: inherit;
+    top: 0 !important
+  }
+  .dostart-mainmenu li.active>ul,
+  .dostart-mainmenu li.focus>ul,
+  .dostart-mainmenu li:hover>ul {
+    opacity: 1;
+    filter: Alpha(opacity=100);
+    z-index: 99;
+    top: 100%;
+  }
+  /*-------[ Mega Menu] ------*/
+  .megamenu-li {
+    position: static !important
+  }
+  .megamenu ul.sub-menu {
+    display: block;
+    opacity: 1;
+    top: 100%;
+    position: static;
+    max-width: 100% !important;
+    width: 100%;
+    box-shadow: none
+  }
+  .megamenu li a .nav-arrow {
+    display: none;
+  }
+  ul.megamenu {
+    display: flex;
+    min-width: 800px;
+    position: absolute !important;
+    right: 0 !important;
+    left: inherit !important;
+  }
+  .hide-headings .megamenu>li>a {
+    display: none;
+  }
+  .megamenu>li>a {
+    font-weight: 600 !important;
+    color: #333 !important;
+    font-size: 16px !important;
+  }
+}
+
+
+/*-------[ Navigation Responsive ] ------*/
+
+@media( max-width: 1200px) {}
+
+@media( max-width:991px) {
+  .dostart-mainmenu {
+    display: none;
+  }
+  .menu li a i {
+    display: none !important;
+  }
+}
+
+@media( max-width:767px) {
+  .hc-nav-trigger.hc-nav-1 {
+    display: block;
+    top: 80px;
+  }
+}
+
+@media( max-width:480px) {}
+
+@media( max-width:320px) {}

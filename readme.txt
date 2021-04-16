@@ -2,7 +2,7 @@
 Contributors: codepopular
 Tags: custom-menu,blog, e-commerce, custom-colors, theme-options, right-sidebar, custom-background, custom-logo, featured-images, translation-ready
 Requires at least: 5.4
-Tested up to: 5.6
+Tested up to: 5.7
 Requires PHP: 5.6
 Version: 1.0.16
 License: GNU General Public License v2 or later
@@ -58,6 +58,11 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 
 == Changelog ==
+
+= Version 1.0.17 =
+* WordPress Test Up to (5.7) Version.
+* Pagination added for Blog Post.
+* Woocommerce Latest Version(5.2) Compatibility Checked.
 
 = Version 1.0.16 =
 * Bootstrap 5 added.

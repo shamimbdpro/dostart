@@ -190,10 +190,7 @@ function dostart_load_style_and_scripts() {
     // Define Direcotry URI
     $dir = DOSTART_THEME_URI;
 
-    wp_enqueue_style('bootstrap', $dir . '/assets/css/bootstrap.css', array(), DOSTART_THEME_VERSION);
-    wp_enqueue_style('font-awesome-all', $dir . '/assets/css/all.min.css', array(), DOSTART_THEME_VERSION);
-    wp_enqueue_style('font-awesome-min', $dir . '/assets/css/fontawesome.min.css', array(), DOSTART_THEME_VERSION);
-    wp_enqueue_style('hc-offcanvas', $dir . '/assets/css/hc-offcanvas-nav.min.css', array(), DOSTART_THEME_VERSION);
+    wp_enqueue_style('bootstrap', $dir . '/assets/css/library.min.css', array(), DOSTART_THEME_VERSION);
     wp_enqueue_style('dostart-default', $dir . '/assets/css/default.min.css', array(), DOSTART_THEME_VERSION);
     wp_enqueue_style('dostart-theme', $dir . '/assets/css/dostart-style.min.css', array(), DOSTART_THEME_VERSION);
 

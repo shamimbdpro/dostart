@@ -13,9 +13,7 @@ if ( ! defined('ABSPATH') ) {
 
 get_header(); ?>
 
-    <div class="dostart-breadcrumb-area dostart-single-blog-breadcrumb" <?php if ( has_post_thumbnail() ) :
-        ?> style="background-image:url(<?php echo esc_url(the_post_thumbnail_url('large'));?>)"<?php
-   endif;?>>
+    <div class="dostart-breadcrumb-area dostart-single-blog-breadcrumb">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

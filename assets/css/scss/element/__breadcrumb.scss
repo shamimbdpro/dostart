@@ -1,0 +1,87 @@
+.dostart-breadcrumb-area {
+  padding: 80px 0 80px;
+  text-align: center;
+  font-size: 16px;
+  background-size: cover;
+  background-position: center;
+  background-color: #065FD4;
+  position: relative;
+}
+
+.dostart-breadcrumb-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #065FD4;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding: 80px 0 80px;
+}
+
+.dostart-breadcrumb-bg h1,
+.dostart-breadcrumb-bg a {
+  color: #ffffff;
+}
+
+.breadcrumb-inner-content h1 {
+  font-size: 45px;
+  margin-bottom: 5px;
+}
+
+.dostart-breadcrumb-area,
+.dostart-breadcrumb-area a {
+  color: #ffffff;
+}
+
+.dostart-breadcrumb-area span[property="itemListElement"] {
+  display: inline-block;
+  padding: 0 8px;
+}
+
+.dostart-breadcrumb-area h1 {
+  color: #ffffff;
+  font-size: 48px;
+  margin-bottom: 10px
+}
+
+.dostart-internal-area.dostart-v-composer-disabled {
+  padding: 75px 0;
+}
+
+
+.dostart-single-blog-breadcrumb h1 {
+  font-size: 35px;
+}
+
+
+/*-------[ Breadcrumb Responsive ] ------*/
+
+@media( max-width: 1200px) {}
+
+@media( max-width:991px) {
+  .dostart-breadcrumb-bg,
+  .dostart-breadcrumb-area {
+    padding: 105px 0 105px;
+  }
+  .breadcrumb-inner-content h1,
+  .dostart-breadcrumb-area h1 {
+    font-size: 33px;
+    margin-bottom: 5px;
+  }
+  .dostart-single-blog-breadcrumb h1 {
+    font-size: 24px;
+    margin-bottom: 7px;
+  }
+}
+
+@media( max-width:767px) {
+  .dostart-breadcrumb-bg,
+  .dostart-breadcrumb-area {
+    padding: 50px 0 50px;
+  }
+}
+
+@media( max-width:480px) {}
+
+@media( max-width:320px) {}

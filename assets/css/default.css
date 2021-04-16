@@ -83,55 +83,45 @@ a {
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
-/*.gallery {
-    margin-bottom: 1.5em;
-}
+.gallery {
+  margin-bottom: 1.5em; }
 
 .gallery-item {
-    display: inline-block;
-    text-align: center;
-    vertical-align: top;
-    width: 100%;
-    margin-bottom: 20px;
-}
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+  margin-bottom: 20px; }
 
 .gallery-columns-2 .gallery-item {
-    max-width: 50%;
-}
+  max-width: 50%; }
 
 .gallery-columns-3 .gallery-item {
-    max-width: 33.33333%;
-}
+  max-width: 33.33333%; }
 
 .gallery-columns-4 .gallery-item {
-    max-width: 25%;
-}
+  max-width: 25%; }
 
 .gallery-columns-5 .gallery-item {
-    max-width: 20%;
-}
+  max-width: 20%; }
 
 .gallery-columns-6 .gallery-item {
-    max-width: 16.66667%;
-}
+  max-width: 16.66667%; }
 
 .gallery-columns-7 .gallery-item {
-    max-width: 14.28571%;
-}
+  max-width: 14.28571%; }
 
 .gallery-columns-8 .gallery-item {
-    max-width: 12.5%;
-}
+  max-width: 12.5%; }
 
 .gallery-columns-9 .gallery-item {
-    max-width: 11.11111%;
-}
+  max-width: 11.11111%; }
 
 .gallery-caption {
-    display: block;
-    margin-top: 5px;
-    font-size: 14px;
-}*/
+  display: block;
+  margin-top: 5px;
+  font-size: 14px; }
+
 /******------------------------------
 -----------BLOG CSS------------
 ------------------------------******/

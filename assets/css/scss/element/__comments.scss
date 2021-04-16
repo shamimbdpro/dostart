@@ -1,0 +1,53 @@
+
+body.page .comment-respond {
+  padding: 0;
+}
+
+.logged-in .comment-form p:not(:first-child) {
+  width: 100%;
+}
+
+.comment-form p>input[type="submit"] {
+  width: auto;
+  padding: 10px 25px;
+  background-color: #065FD4;
+}
+
+.comment-form p>input[type="submit"]:hover {
+  background-color: #333333;
+}
+
+.comment-list>li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.comment-list .children {
+  margin-top: 30px;
+}
+
+.comments-area .edit-link a {
+  color: #065FD4;
+  margin: 0 5px;
+}
+
+.comment-form p>input[type="submit"] {
+  border: none;
+}
+
+.bypostauthor {
+  padding: 2px;
+  display: block;
+}
+
+
+/*-------[ Comment Responsive ] ------*/
+
+@media( max-width: 1200px) {}
+
+@media( max-width:991px) {}
+
+@media( max-width:767px) {}
+
+@media( max-width:480px) {}
+
+@media( max-width:320px) {}

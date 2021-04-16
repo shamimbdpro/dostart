@@ -1,0 +1,194 @@
+
+.widget.widget_archive ul,
+.widget.widget_categories ul {
+  overflow: hidden
+}
+
+.widget_categories ul li:before {
+  display: block;
+  font-size: 12px;
+  float: left;
+  content: "\f105";
+  font-family: "FONT AWESOME 5 FREE";
+  padding-right: 12px;
+  font-weight: 600;
+  color: #222;
+}
+
+.widget_categories ul li a {
+  width: 100%;
+}
+
+.widget a,
+.widget li {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.widget a:hover {
+  color: #065FD4;
+}
+
+.widget select {
+  width: 100%;
+}
+
+.error404 .search-form {
+  max-width: 300px;
+  margin: 30px auto 35px auto;
+}
+
+.error-title h1 {
+  font-size: 100px;
+  margin-bottom: 15px;
+}
+
+.error404 h2 {
+  font-size: 23px;
+  margin-bottom: 30px;
+}
+
+.error404 h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.error-404 .widget_search {
+  margin-top: 20px;
+}
+
+section.error-404 {
+  padding: 80px 0;
+}
+
+.error404 .dostart-breadcrumb-area {
+  padding: 90px 0 90px;
+}
+
+.error404 .dostart-breadcrumb-area h1 {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.search-form {
+  position: relative;
+}
+
+.search-form input[type="submit"]:hover {}
+
+.search-form label {
+  width: 100%;
+  margin: 0;
+}
+
+.search-form label input.search-field {
+  border: 0px solid #f0f0f0;
+  padding: 15px 20px;
+  width: 100%;
+  font-weight: 300;
+  font-size: 15px;
+  background: #f6f6f6;
+}
+
+.search-form input[type="submit"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px 27px;
+  text-indent: -999999px;
+  height: 100%;
+  z-index: 111;
+  background: none !important;
+}
+
+.search-form:before {
+  content: "\f002";
+  font-family: "Font Awesome 5 Free";
+  color: #fff;
+  font-size: 15px;
+  font-weight: 900;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  z-index: 0;
+  background: #065FD4;
+  padding: 15px 20px;
+  border-radius: 0px;
+}
+
+.widget_search .widget-title {
+  display: block;
+}
+
+.widget-title,
+.widgettitle {
+  font-size: 18px;
+  margin-bottom: 35px !important;
+  position: relative;
+}
+
+.widget-title:after,
+.widgettitle:after {
+  bottom: -11px;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 53px;
+  background-color: #065FD4;
+}
+
+.widget.widget_recent_entries li {
+  line-height: 25px;
+  padding-bottom: 10px;
+}
+
+.widget_tag_cloud .tagcloud a {
+  font-size: 14px !important;
+  display: inline-block;
+  position: relative;
+  padding: 7px 20px 9px;
+  margin: 0 5px 5px 0;
+  background-color: #065FD4;
+  color: #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 4px;
+}
+
+.widget_tag_cloud .tagcloud a:hover {
+  background-color: #222;
+  color: #ffffff;
+}
+
+
+/*------------------------------------------------
+    WordPress Default Widget Design
+ ------------------------------------------------*/
+.widget_search {
+  .search-form {
+    display: flex;
+    label{
+      width:100%;
+      display:block
+    }
+    input[type="search"]{
+      width:100%;
+    }
+  }
+
+}
+
+
+/*-------[ Widget Responsive ] ------*/
+
+@media( max-width: 1200px) {}
+
+@media( max-width:991px) {}
+
+@media( max-width:767px) {}
+
+@media( max-width:480px) {}
+
+@media( max-width:320px) {}

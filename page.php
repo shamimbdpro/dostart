@@ -19,7 +19,6 @@ if ( ! defined('ABSPATH') ) {
 get_header(); ?>
     
     <div class="dostart-breadcrumb-bg">
-
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
