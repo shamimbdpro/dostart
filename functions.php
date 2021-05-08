@@ -208,6 +208,12 @@ function dostart_load_style_and_scripts() {
 }
 add_action('wp_enqueue_scripts', 'dostart_load_style_and_scripts');
 
+
+/**
+ * Promotion area for this theme.
+ */
+require DOSTART_THEME_DIR . '/inc/codepopular-promotion.php';
+
 /**
  * Custom template tags for this theme.
  */
