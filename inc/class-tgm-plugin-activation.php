@@ -1521,11 +1521,11 @@ if ( ! class_exists('TGM_Plugin_Activation') ) {
 
             switch ( $this->plugins[ $slug ]['source_type'] ) {
             case 'repo':
-                    return $this->get_wp_repo_download_url($slug);
+                return $this->get_wp_repo_download_url($slug);
             case 'external':
-                    return $this->plugins[ $slug ]['source'];
+                return $this->plugins[ $slug ]['source'];
             case 'bundled':
-                    return $this->default_path . $this->plugins[ $slug ]['source'];
+                return $this->default_path . $this->plugins[ $slug ]['source'];
             }
 
             return $dl_source; // Should never happen.
@@ -2307,13 +2307,13 @@ if ( ! class_exists('TGMPA_List_Table') ) {
             switch ( $type ) {
             case 'repo':
                 $string = __('WordPress Repository', 'dostart');
-                    break;
+                break;
             case 'external':
                 $string = __('External Source', 'dostart');
-                    break;
+                break;
             case 'bundled':
                 $string = __('Pre-Packaged', 'dostart');
-                    break;
+                break;
             }
 
             return $string;
@@ -2403,22 +2403,22 @@ if ( ! class_exists('TGMPA_List_Table') ) {
                 case 'all':
                     /* translators: 1: number of plugins. */
                     $text = _nx('All <span class="count">(%s)</span>', 'All <span class="count">(%s)</span>', $count, 'plugins', 'dostart');
-                        break;
+                    break;
                 case 'install':
                     /* translators: 1: number of plugins. */
                     $text = _n('To Install <span class="count">(%s)</span>', 'To Install <span class="count">(%s)</span>', $count, 'dostart');
-                        break;
+                    break;
                 case 'update':
                     /* translators: 1: number of plugins. */
                     $text = _n('Update Available <span class="count">(%s)</span>', 'Update Available <span class="count">(%s)</span>', $count, 'dostart');
-                        break;
+                    break;
                 case 'activate':
                     /* translators: 1: number of plugins. */
                     $text = _n('To Activate <span class="count">(%s)</span>', 'To Activate <span class="count">(%s)</span>', $count, 'dostart');
-                        break;
+                    break;
                 default:
                     $text = '';
-                        break;
+                    break;
                 }
 
                 if ( ! empty($text) ) {
@@ -2868,13 +2868,13 @@ if ( ! class_exists('TGMPA_List_Table') ) {
 
                         case 'install':
                             $sources[] = $source;
-                                break;
+                            break;
 
                         case 'update':
                             $file_paths[]                 = $this->tgmpa->plugins[ $slug ]['file_path'];
                             $to_inject[ $slug ]           = $this->tgmpa->plugins[ $slug ];
                             $to_inject[ $slug ]['source'] = $source;
-                                break;
+                            break;
                         }
                     }
                 }
