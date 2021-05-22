@@ -54,7 +54,11 @@
 .hc-nav-trigger.hc-nav-1 {
   position: absolute;
   right: 23px;
-  top: 60px;
+  top: 35px;
+}
+
+body.logged-in .hc-nav-trigger.hc-nav-1{
+   top: 80px;
 }
 
 .hc-nav.hc-nav-1 {
@@ -208,12 +212,6 @@ body.hc-nav-open {
   }
 }
 
-@media( max-width:767px) {
-  .hc-nav-trigger.hc-nav-1 {
-    display: block;
-    top: 80px;
-  }
-}
 
 @media( max-width:480px) {}
 

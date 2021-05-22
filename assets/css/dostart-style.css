@@ -162,7 +162,10 @@ blockquote {
 .hc-nav-trigger.hc-nav-1 {
   position: absolute;
   right: 23px;
-  top: 60px; }
+  top: 35px; }
+
+body.logged-in .hc-nav-trigger.hc-nav-1 {
+  top: 80px; }
 
 .hc-nav.hc-nav-1 {
   display: block !important; }
@@ -280,11 +283,6 @@ body.hc-nav-open {
     display: none; }
   .menu li a i {
     display: none !important; } }
-
-@media (max-width: 767px) {
-  .hc-nav-trigger.hc-nav-1 {
-    display: block;
-    top: 80px; } }
 
 /*--------------------------------------------------------------
     3.Footer CSS
