@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="432627e0-c44d-4fd3-8807-3cdb0788b2ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dostart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dostart.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1omjkkXPaBVDMz461Ev0MXYn4RO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../booking" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="432627e0-c44d-4fd3-8807-3cdb0788b2ea" name="Default Changelist" comment="" />
+      <created>1613898804922</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613898804922</updated>
+      <workItem from="1613898806001" duration="8083000" />
+      <workItem from="1613928657413" duration="1233000" />
+      <workItem from="1614098473521" duration="609000" />
+      <workItem from="1614104887891" duration="167000" />
+      <workItem from="1614174822368" duration="3000" />
+      <workItem from="1614881414804" duration="3366000" />
+      <workItem from="1615211560756" duration="10093000" />
+      <workItem from="1615302567501" duration="3297000" />
+      <workItem from="1615474347814" duration="5075000" />
+      <workItem from="1615540060269" duration="216000" />
+      <workItem from="1615540289697" duration="10228000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="715" y="344" key="#Notifications" timestamp="1615540274070">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="715" y="344" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1615540274070" />
+    <state x="610" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613898853541">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="610" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1613898853541" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1615564977312">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1615564977312" />
+    <state x="667" y="253" width="585" height="558" key="find.popup" timestamp="1615477493073">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="253" width="585" height="558" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1615477493073" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1615222455561">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1615222455561" />
+  </component>
+</project>

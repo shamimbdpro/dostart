@@ -29,6 +29,9 @@
   margin: 3px 0px;
 }
 
+.primary_header{
+  position: relative;
+}
 
 /*-------[ Header Responsive ] ------*/
 
@@ -163,7 +166,7 @@ body.hc-nav-open {
     opacity: 1;
     filter: Alpha(opacity=100);
     z-index: 99;
-    top: 100%;
+    top: 100% !important;
   }
   /*-------[ Mega Menu] ------*/
   .megamenu-li {
