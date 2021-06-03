@@ -1,8 +1,8 @@
-
 .dostart-header-area {
   box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+  //position: relative;
 }
 
 .dostart-header-area .logo a {
@@ -29,90 +29,53 @@
   margin: 3px 0px;
 }
 
-.primary_header{
+.primary_header {
   position: relative;
 }
 
 /*-------[ Header Responsive ] ------*/
 
-@media( max-width: 1200px) {}
-
-@media( max-width:991px) {
-  .dostart-header-cart {
-    display: none;
-  }
-}
-
-@media( max-width:767px) {}
-
-@media( max-width:480px) {}
-
-@media( max-width:320px) {}
-
-
-/******------------------------------
------------Navigation CSS------------
-------------------------------******/
-
-.hc-nav-trigger.hc-nav-1 {
-  position: absolute;
-  right: 23px;
-  top: 35px;
-}
-
-body.logged-in .hc-nav-trigger.hc-nav-1{
-   top: 80px;
-}
-
-.hc-nav.hc-nav-1 {
-  display: block !important
-}
-
-.hc-offcanvas-nav {
-  z-index: 9999999999
-}
-
-body.hc-nav-open {
-  position: inherit;
-}
-
-.hc-offcanvas-nav li.nav-close span::before {
-  margin-left: -6px;
-}
 
 @media(min-width: 991px) {
   .dostart-mainmenu {
     text-align: right;
   }
+
   .dostart-mainmenu ul {
     margin: 0;
     padding: 0;
     list-style: none;
   }
+
   .dostart-mainmenu ul li {
     position: relative;
     display: inline-block;
   }
+
   .dostart-mainmenu ul li a {
     display: block;
     font-size: 16px;
     color: #666;
     padding: 35px 15px 34px 15px;
   }
+
   .dostart-mainmenu ul li a:hover,
   .dostart-mainmenu ul li a:focus,
   .dostart-mainmenu ul li a:active {
     text-decoration: underline;
     color: #03752f;
   }
+
   .dostart-mainmenu ul li:last-child a {
     padding-right: 0;
   }
+
   .dostart-mainmenu ul li a i {
     font-size: 12px;
     padding-left: 5px;
     color: #6d6767;
   }
+
   /*-------[ 2 Label Menu ] ------*/
   .dostart-mainmenu ul ul {
     position: absolute;
@@ -131,9 +94,11 @@ body.hc-nav-open {
     z-index: -1;
     text-align: left;
   }
+
   .dostart-mainmenu li:last-child ul {
     max-width: 165px;
   }
+
   .dostart-mainmenu li ul li {
     display: block;
     position: relative;
@@ -141,6 +106,7 @@ body.hc-nav-open {
     width: 100%;
     border-bottom: 1px solid #eee
   }
+
   .dostart-mainmenu li ul li a {
     display: block;
     padding: 12px 26px 12px;
@@ -155,11 +121,13 @@ body.hc-nav-open {
     transition: all .4s ease;
     padding-left: 26px;
   }
+
   .dostart-mainmenu ul li ul ul {
     right: 100%;
     left: inherit;
     top: 0 !important
   }
+
   .dostart-mainmenu li.active>ul,
   .dostart-mainmenu li.focus>ul,
   .dostart-mainmenu li:hover>ul {
@@ -168,10 +136,12 @@ body.hc-nav-open {
     z-index: 99;
     top: 100% !important;
   }
+
   /*-------[ Mega Menu] ------*/
   .megamenu-li {
     position: static !important
   }
+
   .megamenu ul.sub-menu {
     display: block;
     opacity: 1;
@@ -181,9 +151,11 @@ body.hc-nav-open {
     width: 100%;
     box-shadow: none
   }
+
   .megamenu li a .nav-arrow {
     display: none;
   }
+
   ul.megamenu {
     display: flex;
     min-width: 800px;
@@ -191,9 +163,11 @@ body.hc-nav-open {
     right: 0 !important;
     left: inherit !important;
   }
+
   .hide-headings .megamenu>li>a {
     display: none;
   }
+
   .megamenu>li>a {
     font-weight: 600 !important;
     color: #333 !important;
@@ -204,18 +178,54 @@ body.hc-nav-open {
 
 /*-------[ Navigation Responsive ] ------*/
 
-@media( max-width: 1200px) {}
 
-@media( max-width:991px) {
+@media(max-width:991px) {
+
+
+  .dostart-header-cart {
+    display: none;
+  }
+
+  .hc-nav-trigger.hc-nav-1 {
+    position: absolute;
+    right: 23px;
+    top: 30px;
+  }
+
+
+  .hc-nav.hc-nav-1 {
+    display: block !important
+  }
+
+  .hc-offcanvas-nav {
+    z-index: 9999999999
+  }
+
+  body.hc-nav-open {
+    position: inherit;
+  }
+
+  .hc-offcanvas-nav li.nav-close span::before {
+    margin-left: -6px;
+  }
+
+
   .dostart-mainmenu {
     display: none;
   }
+
   .menu li a i {
     display: none !important;
   }
 }
 
+@media(max-width:767px){
+  .hc-nav-trigger.hc-nav-1{
+    top: -60px;
+  }
 
-@media( max-width:480px) {}
 
-@media( max-width:320px) {}
+}
+@media(max-width:480px) {}
+
+@media(max-width:320px) {}

@@ -155,33 +155,6 @@ blockquote {
   position: relative; }
 
 /*-------[ Header Responsive ] ------*/
-@media (max-width: 991px) {
-  .dostart-header-cart {
-    display: none; } }
-
-/******------------------------------
------------Navigation CSS------------
-------------------------------******/
-.hc-nav-trigger.hc-nav-1 {
-  position: absolute;
-  right: 23px;
-  top: 35px; }
-
-body.logged-in .hc-nav-trigger.hc-nav-1 {
-  top: 80px; }
-
-.hc-nav.hc-nav-1 {
-  display: block !important; }
-
-.hc-offcanvas-nav {
-  z-index: 9999999999; }
-
-body.hc-nav-open {
-  position: inherit; }
-
-.hc-offcanvas-nav li.nav-close span::before {
-  margin-left: -6px; }
-
 @media (min-width: 991px) {
   .dostart-mainmenu {
     text-align: right; }
@@ -282,10 +255,28 @@ body.hc-nav-open {
 
 /*-------[ Navigation Responsive ] ------*/
 @media (max-width: 991px) {
+  .dostart-header-cart {
+    display: none; }
+  .hc-nav-trigger.hc-nav-1 {
+    position: absolute;
+    right: 23px;
+    top: 30px; }
+  .hc-nav.hc-nav-1 {
+    display: block !important; }
+  .hc-offcanvas-nav {
+    z-index: 9999999999; }
+  body.hc-nav-open {
+    position: inherit; }
+  .hc-offcanvas-nav li.nav-close span::before {
+    margin-left: -6px; }
   .dostart-mainmenu {
     display: none; }
   .menu li a i {
     display: none !important; } }
+
+@media (max-width: 767px) {
+  .hc-nav-trigger.hc-nav-1 {
+    top: -60px; } }
 
 /*--------------------------------------------------------------
     3.Footer CSS
