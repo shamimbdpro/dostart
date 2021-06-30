@@ -15,13 +15,16 @@
 if ( ! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
+
+$blog_title = get_theme_mod('dostart_blog_or_archive_title');
+
 get_header(); ?>
 
     <div class="dostart-breadcrumb-area blog-breadcrumb-bg">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1><?php esc_html_e('Latest News', 'dostart'); ?></h1>
+                    <h1><?php echo esc_html( $blog_title ); ?></h1>
                     <a href="<?php echo esc_url(home_url('/')); ?>"><?php esc_html_e('Home', 'dostart'); ?></a>
                         &nbsp; / &nbsp; 
                     <span class="current"><?php esc_html_e('Blog', 'dostart'); ?></span>

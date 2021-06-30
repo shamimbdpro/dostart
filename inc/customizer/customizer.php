@@ -31,7 +31,7 @@ if ( class_exists('Kirki') ) {
     Kirki::add_panel(
         'dostart_general_settings', array(
 			'priority' => 19,
-			'title'    => esc_html__('General Settings', 'dostart'),
+			'title'    => esc_html__('Global', 'dostart'),
         ) 
     );
 
@@ -407,6 +407,31 @@ if ( class_exists('Kirki') ) {
 		] 
     );
 
+
+
+
+ 	/*=======================================================================-*/
+         /* [ Blog Customizer ]
+    /*========================================================================*/
+
+    Kirki::add_section(
+        'dostart_blog', array(
+			'priority' => 30,
+			'title'    => __('Blog', 'dostart'),
+        ) 
+    );
+
+
+    //------- Blog/Archive Title ---------/
+    Kirki::add_field(
+        'theme_config_id', [
+			'type'     => 'text',
+			'settings' => 'dostart_blog_or_archive_title',
+			'label'    => __('Blog/Archive Title', 'dostart'),
+			'section'  => 'dostart_blog',
+			'default'  => 'Latest News',
+		] 
+    );
     
 }
 
