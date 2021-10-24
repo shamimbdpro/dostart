@@ -5,7 +5,7 @@
  */
 if ( ! function_exists('dostart_dynamic_styles') ) {
     function dostart_dynamic_styles() {
-        // parimary color
+        // primary color
         $dostart_primary_color    = empty(get_theme_mod('dostart_theme_primary_color')) ? '' : get_theme_mod('dostart_theme_primary_color');
 
         $dostart_title_color = empty(get_theme_mod('dostart_theme_title_color')) ? '' : get_theme_mod('dostart_theme_title_color');

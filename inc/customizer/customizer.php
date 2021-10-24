@@ -53,9 +53,9 @@ if ( class_exists('Kirki') ) {
 			'label'     => esc_html__('Control Label', 'dostart'),
 			'section'   => 'dostart_basic_settings',
 			'default'   => [
-				'font-family'    => 'Roboto',
+				'font-family'    => 'Source Sans Pro',
 				'variant'        => 'regular',
-				'font-size'      => '14px',
+				'font-size'      => '16px',
 				'line-height'    => '1.5',
 				'letter-spacing' => '0',
 				'color'          => '#666666',

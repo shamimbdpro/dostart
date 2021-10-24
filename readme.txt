@@ -59,6 +59,8 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 == Changelog ==
 
+= Version 1.1.4 =
+* Default font family changed.
 
 = Version 1.1.3 =
 * Option added to change dynamic blog title.

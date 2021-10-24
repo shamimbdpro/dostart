@@ -89,7 +89,7 @@ if ( ! function_exists('dostart_theme_setup') ) :
         add_theme_support('customize-selective-refresh-widgets');
 
         // This theme styles the visual editor to resemble the theme style.
-        add_editor_style('assets/css/editor-dodstart-style.css');
+        add_editor_style('assets/css/editor-dostart-style.css');
 
         add_theme_support("custom-header");
 
@@ -106,12 +106,25 @@ if ( ! function_exists('dostart_theme_setup') ) :
         add_theme_support(
             'custom-logo',
             array(
-                'height'      => 40,
-                'width'       => 200,
-                'flex-width'  => true,
+                'height' => 40,
+                'width' => 200,
+                'flex-width' => true,
                 'flex-height' => true,
             )
         );
+
+
+        // Add support for Block Styles.
+        add_theme_support('wp-block-styles');
+
+        // Add support for full and wide align images.
+        add_theme_support('align-wide');
+
+        // Add support for editor styles.
+        add_theme_support('editor-styles');
+
+        // Add support for responsive embedded content.
+        add_theme_support( 'responsive-embeds' );
 
         /**
          * Woocommerce Support.
@@ -133,6 +146,7 @@ if ( ! function_exists('dostart_theme_setup') ) :
 
             return 50;
         }
+
         add_filter('excerpt_length', 'dostart_custom_excerpt_length', 999);
     }
 endif;
@@ -148,6 +162,7 @@ add_action('after_setup_theme', 'dostart_theme_setup');
 function dostart_content_width() {
     $GLOBALS['content_width'] = apply_filters('dostart_content_width', 640);
 }
+
 add_action('after_setup_theme', 'dostart_content_width', 0);
 
 /**
@@ -158,28 +173,29 @@ add_action('after_setup_theme', 'dostart_content_width', 0);
 function dostart_widgets_setup() {
     register_sidebar(
         array(
-            'name'          => esc_html__('Sidebar', 'dostart'),
-            'id'            => 'sidebar-1',
-            'description'   => esc_html__('Add widgets here.', 'dostart'),
+            'name' => esc_html__('Sidebar', 'dostart'),
+            'id' => 'sidebar-1',
+            'description' => esc_html__('Add widgets here.', 'dostart'),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</section>',
-            'before_title'  => '<h2 class="widget-title">',
-            'after_title'   => '</h2>',
+            'after_widget' => '</section>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
         )
     );
 
     register_sidebar(
         array(
-            'name'          => esc_html__('Footer Widgets', 'dostart'),
-            'id'            => 'footer-widgets',
-            'description'   => esc_html__('Add footer widgets here.', 'dostart'),
+            'name' => esc_html__('Footer Widgets', 'dostart'),
+            'id' => 'footer-widgets',
+            'description' => esc_html__('Add footer widgets here.', 'dostart'),
             'before_widget' => '<div class="col-md-3 col-sm-6"><div id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</div></div>',
-            'before_title'  => '<h3 class="footer-widget-title">',
-            'after_title'   => '</h3>',
+            'after_widget' => '</div></div>',
+            'before_title' => '<h3 class="footer-widget-title">',
+            'after_title' => '</h3>',
         )
     );
 }
+
 add_action('widgets_init', 'dostart_widgets_setup');
 
 /**
@@ -206,6 +222,7 @@ function dostart_load_style_and_scripts() {
         wp_enqueue_script('comment-reply');
     }
 }
+
 add_action('wp_enqueue_scripts', 'dostart_load_style_and_scripts');
 
 
@@ -250,7 +267,7 @@ if ( class_exists('WooCommerce') ) {
 
 /**
  * Walker Menu
-//  
-*/
+ * //
+ */
 require DOSTART_THEME_DIR . '/inc/walker/init.php';
 require DOSTART_THEME_DIR . '/inc/walker/menu-walker.php';

@@ -93,7 +93,7 @@ if ( ! defined('ABSPATH') ) {
                       </div>
                       <div class="copyright-text">
                          <?php if ( empty(get_theme_mod('dostart_copyright_text')) ) : ?>
-                            <p> &copy; <?php echo esc_html_e(' Powered by ', 'dostart');?> <a target="_balnk" href="<?php echo esc_url('https://codepopular.com'); ?>"><?php esc_html_e('CodePopular', 'dostart');?></a> <?php echo esc_html(date_i18n(__('Y ', 'dostart'))); ?> </p>
+                            <p> &copy; <?php echo esc_html_e(' Powered by ', 'dostart');?> <a rel="nofollow" target="_balnk" href="<?php echo esc_url('https://codepopular.com'); ?>"><?php esc_html_e('CodePopular', 'dostart');?></a> <?php echo esc_html(date_i18n(__('Y ', 'dostart'))); ?> </p>
                          <?php else : ?>
 
                             <?php
