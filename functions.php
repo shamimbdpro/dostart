@@ -271,3 +271,8 @@ if ( class_exists('WooCommerce') ) {
  */
 require DOSTART_THEME_DIR . '/inc/walker/init.php';
 require DOSTART_THEME_DIR . '/inc/walker/menu-walker.php';
+
+/**
+ * Dostart Theme Metabox.
+ */
+require DOSTART_THEME_DIR . '/inc/class/dostart-metabox.php';
