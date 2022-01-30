@@ -12,12 +12,15 @@
 if ( ! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
+$widget_layout = get_post_meta( get_the_ID(), 'dostart-widget-status', true );
+$footer_layout = get_post_meta( get_the_ID(), 'dostart-footer-status', true );
 
 ?>
 
     </div><!-- #content -->
+    
     <footer id="colophon" class="dostart-site-footer">
-        <?php if ( is_active_sidebar('footer-widgets') ) : ?>
+        <?php if ( is_active_sidebar('footer-widgets') && 'disabled' !== $widget_layout) : ?>
         <div class="footer-top-widgets">
             <div class="container">
                 <div class="row">
@@ -26,6 +29,9 @@ if ( ! defined('ABSPATH') ) {
             </div>
         </div>
         <?php endif;?>
+
+        
+		<?php if ( 'disabled' !== $footer_layout ) { ?>
 
         <div class="dostart-footer-area">
             <div class="container">
@@ -115,6 +121,7 @@ if ( ! defined('ABSPATH') ) {
                 </div>
             </div>
         </div>
+        <?php } ?>
     </footer><!-- #colophon -->
 </div><!-- #page wrapper-->
 

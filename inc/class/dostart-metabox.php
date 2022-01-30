@@ -34,46 +34,53 @@ class Dostart_Meta
     }
 
 
+    /**
+     * Meta box display.
+     *
+     * @access public
+     * 
+     * @return void
+     */
     public function dostart_meta_box_callback()
     {
         wp_nonce_field( basename( __FILE__ ), 'dostart_settings_meta_box_nonce' );
 
-        $header_meta = get_post_meta(get_the_ID(), 'dostart-disable-header', true); ?>
+        $header_meta = get_post_meta(get_the_ID(), 'dostart-header-status', true); ?>
 
         <h3>Disable Section</h3>
 
-        <div class="dostart-header-meta">
-            <label for="dostart-header-content">
-                <input type="checkbox" id="dosart-header-content" name="dostart-disable-header" value="disabled" <?php checked($header_meta, 'disabled'); ?> />
+        <div class="dostart-meta-status">
+            <label for="dostart-header-status">
+                <input type="checkbox" id="dosart-header-status" name="dostart-header-status" value="disabled" <?php checked($header_meta, 'disabled'); ?> />
                 <?php esc_html_e('Disable Header', 'dostart'); ?>
             </label>
         </div>
 
-       <?php $dostart_breadcrumb_meta = get_post_meta(get_the_ID(), 'dostart-disable-breadcrumbs', true); ?>
+       <?php // $dostart_breadcrumb_meta = get_post_meta(get_the_ID(), 'dostart-breadcrumb-status', true); ?>
 
-        <div class="dostart-breadcrumbs-meta">
+        <!-- <div class="dostart-meta-status">
             <label for="dostart-breadcrumbs-content">
-                <input type="checkbox" id="dosart-breadcrumbs-content" name="dostart-disable-breadcrumbs" value="disabled" <?php checked($dostart_breadcrumb_meta, 'disabled'); ?> />
-                <?php esc_html_e('Disable Breadcrumb', 'dostart'); ?>
+                <input type="checkbox" id="dosart-breadcrumb-status" name="dostart-breadcrumb-status" value="disabled" <?php // checked($dostart_breadcrumb_meta, 'disabled'); ?> />
+                <?php // esc_html_e('Disable Breadcrumb', 'dostart'); ?>
             </label>
-        </div>
+        </div> -->
 
 
-       <?php $dostart_widget_meta = get_post_meta(get_the_ID(), 'dostart-disable-widget', true); ?>
+       <?php $dostart_widget_meta = get_post_meta(get_the_ID(), 'dostart-widget-status', true); ?>
 
-        <div class="dostart-widget-meta">
+        <div class="dostart-meta-status">
             <label for="dostart-widget-content">
-                <input type="checkbox" id="dosart-widget-content" name="dostart-disable-widget" value="disabled" <?php checked($dostart_widget_meta, 'disabled'); ?> />
+                <input type="checkbox" id="dosart-widget-status" name="dostart-widget-status" value="disabled" <?php checked($dostart_widget_meta, 'disabled'); ?> />
                 <?php esc_html_e('Disable Widget', 'dostart'); ?>
             </label>
         </div>
 
         
-       <?php $dostart_footer_meta = get_post_meta(get_the_ID(), 'dostart-disable-footer', true); ?>
+       <?php $dostart_footer_meta = get_post_meta(get_the_ID(), 'dostart-footer-status', true); ?>
 
-        <div class="dostart-footer-meta">
+        <div class="dostart-meta-status">
             <label for="dostart-footer-content">
-                <input type="checkbox" id="dosart-footer-content" name="dostart-disable-footer" value="disabled" <?php checked($dostart_footer_meta, 'disabled'); ?> />
+                <input type="checkbox" id="dosart-footer-status" name="dostart-footer-status" value="disabled" <?php checked($dostart_footer_meta, 'disabled'); ?> />
                 <?php esc_html_e('Disable Footer', 'dostart'); ?>
             </label>
         </div>
@@ -103,16 +110,16 @@ class Dostart_Meta
 
 
         // Sanitize user input.
-        $header_data = sanitize_text_field($_POST['dostart-disable-header']);
-        $breadcrumb_data = sanitize_text_field($_POST['dostart-disable-breadcrumbs']);
-        $widget_data = sanitize_text_field($_POST['dostart-disable-widget']);
-        $footer_data = sanitize_text_field($_POST['dostart-disable-footer']);
+        $header_data = sanitize_text_field($_POST['dostart-header-status']);
+        // $breadcrumb_data = sanitize_text_field($_POST['dostart-breadcrumb-status']); 
+        $widget_data = sanitize_text_field($_POST['dostart-widget-status']);
+        $footer_data = sanitize_text_field($_POST['dostart-footer-status']);
 
         // Update the meta field in the database.
-        update_post_meta($post_id, 'dostart-disable-header', $header_data);
-        update_post_meta($post_id, 'dostart-disable-breadcrumbs', $breadcrumb_data);
-        update_post_meta($post_id, 'dostart-disable-widget', $widget_data);
-        update_post_meta($post_id, 'dostart-disable-footer', $footer_data);
+        update_post_meta($post_id, 'dostart-header-status', $header_data);
+        // update_post_meta($post_id, 'dostart-breadcrumb-status', $breadcrumb_data); 
+        update_post_meta($post_id, 'dostart-widget-status', $widget_data);
+        update_post_meta($post_id, 'dostart-footer-status', $footer_data);
     }
 }
 

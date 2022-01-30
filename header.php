@@ -31,6 +31,9 @@ if ( function_exists('wp_body_open') ) {
 ?>
   <div id="page-wrapper" class="site-wrapper <?php echo esc_html(false === get_theme_mod('dostart_theme_layout') ? '' : 'box-layout'); ?>">
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'dostart'); ?></a>
+
+    <?php $header_layout = get_post_meta( get_the_ID(), 'dostart-header-status', true ); ?>
+    <?php if ( 'disabled' !== $header_layout ) { ?>
     <header class="dostart-header-area">
         <div class="dostart-main-header">
             <div class="container">
@@ -92,4 +95,5 @@ if ( function_exists('wp_body_open') ) {
             </div>
         </div>
     </header> 
+    <?php } ?>
     <div id="content" class="site-content">
