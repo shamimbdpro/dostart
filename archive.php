@@ -21,8 +21,7 @@ get_header(); ?>
                     the_archive_title('<h1 class="page-title">', '</h1>');
                     the_archive_description('<div class="archive-description">', '</div>');
                     ?>
-                    <?php if ( function_exists('bcn_display') ) { bcn_display();
-                    } ?>
+                  
                 </div>
             </div>
         </div>

@@ -56,14 +56,14 @@ class Dostart_Meta
             </label>
         </div>
 
-       <?php // $dostart_breadcrumb_meta = get_post_meta(get_the_ID(), 'dostart-breadcrumb-status', true); ?>
+       <?php  $dostart_breadcrumb_meta = get_post_meta(get_the_ID(), 'dostart-breadcrumb-status', true); ?>
 
-        <!-- <div class="dostart-meta-status">
+        <div class="dostart-meta-status">
             <label for="dostart-breadcrumbs-content">
-                <input type="checkbox" id="dosart-breadcrumb-status" name="dostart-breadcrumb-status" value="disabled" <?php // checked($dostart_breadcrumb_meta, 'disabled'); ?> />
-                <?php // esc_html_e('Disable Breadcrumb', 'dostart'); ?>
+                <input type="checkbox" id="dosart-breadcrumb-status" name="dostart-breadcrumb-status" value="disabled" <?php  checked($dostart_breadcrumb_meta, 'disabled'); ?> />
+                <?php  esc_html_e('Disable Breadcrumb', 'dostart'); ?>
             </label>
-        </div> -->
+        </div>
 
 
        <?php $dostart_widget_meta = get_post_meta(get_the_ID(), 'dostart-widget-status', true); ?>
@@ -111,13 +111,13 @@ class Dostart_Meta
 
         // Sanitize user input.
         $header_data = sanitize_text_field($_POST['dostart-header-status']);
-        // $breadcrumb_data = sanitize_text_field($_POST['dostart-breadcrumb-status']); 
+        $breadcrumb_data = sanitize_text_field($_POST['dostart-breadcrumb-status']); 
         $widget_data = sanitize_text_field($_POST['dostart-widget-status']);
         $footer_data = sanitize_text_field($_POST['dostart-footer-status']);
 
         // Update the meta field in the database.
         update_post_meta($post_id, 'dostart-header-status', $header_data);
-        // update_post_meta($post_id, 'dostart-breadcrumb-status', $breadcrumb_data); 
+        update_post_meta($post_id, 'dostart-breadcrumb-status', $breadcrumb_data); 
         update_post_meta($post_id, 'dostart-widget-status', $widget_data);
         update_post_meta($post_id, 'dostart-footer-status', $footer_data);
     }

@@ -20,6 +20,8 @@ $blog_title = ! empty(get_theme_mod('dostart_blog_or_archive_title')) ? get_them
 
 get_header(); ?>
 
+<?php $breadcrumb_status = get_post_meta( get_the_ID(), 'dostart-breadcrumb-status', true ); ?>
+<?php if('disabled' !== $breadcrumb_status){ ?>
     <div class="dostart-breadcrumb-area blog-breadcrumb-bg">
         <div class="container">
             <div class="row">
@@ -32,6 +34,7 @@ get_header(); ?>
             </div>
         </div>
     </div>
+<?php } ?>
 
     <div class="dostart-internal-area dostart-v-composer-disabled">
         <div class="container">
