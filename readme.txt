@@ -2,9 +2,9 @@
 Contributors: codepopular
 Tags: custom-menu,blog, e-commerce, custom-colors, theme-options, right-sidebar, custom-background, custom-logo, featured-images, translation-ready
 Requires at least: 5.4
-Tested up to: 5.7
+Tested up to: 5.9
 Requires PHP: 5.6
-Version: 1.1.4
+Version: 1.1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,6 +58,12 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 
 == Changelog ==
+
+= Version 1.1.5 =
+* Dynamicly Header Enable/Disable.
+* Dynamicly Breadcrumb Enable/Disable.
+* Dynamicly Widget Enable/Disable.
+* Dynamicly Footer Enable/Disable.
 
 = Version 1.1.4 =
 * Default font family changed.

@@ -20,7 +20,7 @@ $footer_layout = get_post_meta( get_the_ID(), 'dostart-footer-status', true );
     </div><!-- #content -->
     
     <footer id="colophon" class="dostart-site-footer">
-        <?php if ( is_active_sidebar('footer-widgets') && 'disabled' !== $widget_layout) : ?>
+        <?php if ( is_active_sidebar('footer-widgets') && 'disabled' !== $widget_layout ) : ?>
         <div class="footer-top-widgets">
             <div class="container">
                 <div class="row">

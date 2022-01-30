@@ -225,6 +225,15 @@ function dostart_load_style_and_scripts() {
 
 add_action('wp_enqueue_scripts', 'dostart_load_style_and_scripts');
 
+function dostart_load_admin_script_callback() {
+    $dir = DOSTART_THEME_URI;
+    wp_enqueue_style('dostart-admin-style', $dir . '/assets/css/dostart-admin.min.css', array(), DOSTART_THEME_VERSION);
+}
+add_action('admin_enqueue_scripts', 'dostart_load_admin_script_callback');
+
+
+
+
 
 /**
  * Promotion area for this theme.
