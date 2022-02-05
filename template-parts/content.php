@@ -10,6 +10,9 @@
 if ( ! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
+
+$dostart_excerpt_length = ! empty( get_theme_mod( 'dostart_blog_excerpt_length' ) ) ? get_theme_mod( 'dostart_blog_excerpt_length' ) : '25';
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -50,7 +53,8 @@ if ( ! defined('ABSPATH') ) {
             );
             
         } else {
-            the_excerpt();
+            
+            echo wp_trim_words( get_the_content(), $dostart_excerpt_length, '[...]' );
                 
             echo '<div style="clear:both"></div><a href="' . esc_url(get_permalink()) . '" class="dostart-btn">'.esc_html__('Read More', 'dostart').'</a>';
         }

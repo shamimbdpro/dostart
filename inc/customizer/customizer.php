@@ -441,8 +441,8 @@ if ( class_exists('Kirki') ) {
 		'theme_config_id',
 		array(
 			'type'     => 'text',
-			'settings' => 'dostart_breadcrumb_title',
-			'label'    => esc_html__( 'Breadcrumb Title', 'dostart' ),
+			'settings' => 'dostart_blog_or_archive_title',
+			'label'    => esc_html__( 'Blog / Title Breadcrumb Title', 'dostart' ),
 			'section'  => 'dostart_blog_basic_settings',
 			'default'  => 'Latest news',
 			'priority' => 10,
@@ -559,7 +559,7 @@ if ( class_exists('Kirki') ) {
 			'settings' => 'dostart_blog_related_post',
 			'label'    => esc_html__( 'Show Related Post', 'dostart' ),
 			'section'  => 'dostart_blog_details',
-			'default'  => '1',
+			'default'  => '0',
 			'priority' => 10,
 			'choices'  => array(
 				'on'  => esc_html__( 'Enable', 'dostart' ),
@@ -619,17 +619,17 @@ if ( class_exists('Kirki') ) {
 		array(
 			'type'            => 'select',
 			'settings'        => 'dostart_blog_post_column',
-			'label'           => esc_html__( 'Related Posts Column', 'dostart' ),
+			'label'           => esc_html__( 'Related Posts Per Row.', 'dostart' ),
 			'section'         => 'dostart_blog_details',
 			'default'         => 'three',
 			'priority'        => 10,
 			'multiple'        => 1,
 			'choices'         => array(
-				'1' => esc_html__( 'One Column', 'dostart' ),
-				'2' => esc_html__( 'Two Columns', 'dostart' ),
-				'3' => esc_html__( 'Three Columns', 'dostart' ),
-				'4' => esc_html__( 'Four Columns', 'dostart' ),
-				'6' => esc_html__( 'six Columns', 'dostart' ),
+				'12' => esc_html__( 'One Column', 'dostart' ),
+				'6' => esc_html__( 'Two Columns', 'dostart' ),
+				'4' => esc_html__( 'Three Columns', 'dostart' ),
+				'3' => esc_html__( 'Four Columns', 'dostart' ),
+				'2' => esc_html__( 'six Columns', 'dostart' ),
 			),
 			'active_callback' => array(
 				array(

@@ -62,7 +62,7 @@ gulp.task(
             .pipe( sourcemaps.init( { largeFile: true } ) )
             .pipe( sass().on( 'error', sass.logError ) )
             .on( 'error', notify.onError( {title: "Error", message: "Error: <%= error.message %>"} ) ) // phpcs:ignore WordPressVIPMinimum.Security.Underscorejs.OutputNotation
-            .pipe( autoprefixer( config.autoprefixer.options ) )
+            .pipe( autoprefixer( 'last two version' ) )
             .pipe( gulp.dest( config.scss.dist ) )
             .pipe( minifyCSS() )
             .pipe( rename( { suffix: '.min'} ) )

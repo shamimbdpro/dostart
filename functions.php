@@ -276,7 +276,7 @@ function dostart_related_posts() {
                               <div class="dostart-blog-item-img">
                             <?php if ( has_post_thumbnail() ) : ?>
                                   <a href="<?php the_permalink(); ?>">
-                                      <?php the_post_thumbnail( 'dostart-590x300' ); ?>
+                                      <?php the_post_thumbnail( 'dostart-thumb' ); ?>
                                   </a>
                             <?php endif; ?>
                                   <span>
