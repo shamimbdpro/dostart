@@ -409,29 +409,248 @@ if ( class_exists('Kirki') ) {
 
 
 
+	/*
+	=======================================================================*/
+	/*
+	 [ Blog ]
+	/*=======================================================================*/
 
- 	/*=======================================================================-*/
-         /* [ Blog Customizer ]
-    /*========================================================================*/
-
-    Kirki::add_section(
-        'dostart_blog', array(
+	Kirki::add_panel(
+		'dostart_blog',
+		array(
 			'priority' => 30,
-			'title'    => __('Blog', 'dostart'),
-        ) 
-    );
+			'title'    => esc_html__( 'Blog', 'dostart' ),
+		)
+	);
 
+	/*
+	---------------------------------
+	[ Basic Settings ]
+	--------------------------------*/
+	Kirki::add_section(
+		'dostart_blog_basic_settings',
+		array(
+			'priority' => 30,
+			'title'    => __( 'Settings', 'dostart' ),
+			'panel'    => 'dostart_blog',
+		)
+	);
 
-    //------- Blog/Archive Title ---------/
-    Kirki::add_field(
-        'theme_config_id', [
+	// ------Breadcrumb Title -----*/
+	Kirki::add_field(
+		'theme_config_id',
+		array(
 			'type'     => 'text',
-			'settings' => 'dostart_blog_or_archive_title',
-			'label'    => __('Blog/Archive Title', 'dostart'),
-			'section'  => 'dostart_blog',
-			'default'  => 'Latest News',
-		] 
+			'settings' => 'dostart_breadcrumb_title',
+			'label'    => esc_html__( 'Breadcrumb Title', 'dostart' ),
+			'section'  => 'dostart_blog_basic_settings',
+			'default'  => 'Latest news',
+			'priority' => 10,
+		)
+	);
+
+	// ------Blog Excerpt Length -----*/
+	Kirki::add_field(
+		'theme_config_id',
+		array(
+			'type'     => 'slider',
+			'settings' => 'dostart_blog_excerpt_length',
+			'label'    => esc_html__( 'Excerpt Length', 'dostart' ),
+			'section'  => 'dostart_blog_basic_settings',
+			'default'  => 42,
+			'choices'  => array(
+				'min'  => 10,
+				'max'  => 100,
+				'step' => 1,
+			),
+		)
+	);
+
+	/*
+	---------------------------------
+	[ Blog Dettails ]
+	--------------------------------*/
+	Kirki::add_section(
+		'dostart_blog_details',
+		array(
+			'priority' => 30,
+			'title'    => __( 'Blog Details', 'dostart' ),
+			'priority' => 30,
+			'panel'    => 'dostart_blog',
+		)
+	);
+
+
+    // ---- Blog Post Columns -----*/
+    Kirki::add_field(
+        'theme_config_id',
+        array(
+            'type'            => 'select',
+            'settings'        => 'dostart_blog_single_layout',
+            'label'           => esc_html__( 'Page Layout', 'dostart' ),
+            'section'         => 'dostart_blog_details',
+            'default'         => 'sidebar',
+            'priority'        => 10,
+            'multiple'        => 1,
+            'choices'         => array(
+                'full' => esc_html__( 'Full Width', 'dostart' ),
+                'sidebar' => esc_html__( 'Sidebar Layout', 'dostart' ),
+            ),
+        )
     );
+
+
+	// ------Blog Social Share on / off -----*/
+	// Kirki::add_field(
+	// 	'theme_config_id',
+	// 	array(
+	// 		'type'     => 'switch',
+	// 		'settings' => 'dostart_blog_social_share',
+	// 		'label'    => esc_html__( 'Social Share', 'dostart' ),
+	// 		'section'  => 'dostart_blog_details',
+	// 		'default'  => '1',
+	// 		'priority' => 10,
+	// 		'choices'  => array(
+	// 			'on'  => esc_html__( 'Enable', 'dostart' ),
+	// 			'off' => esc_html__( 'Disable', 'dostart' ),
+	// 		),
+	// 	)
+	// );
+
+	// ------ Social share open to new tab -----*/
+	// Kirki::add_field(
+	// 	'theme_config_id',
+	// 	array(
+	// 		'type'     => 'switch',
+	// 		'settings' => 'dostart_blog_social_share_open_new_tab',
+	// 		'label'    => esc_html__( 'Social Share Open To New Tab', 'dostart' ),
+	// 		'section'  => 'dostart_blog_details',
+	// 		'default'  => 'on',
+	// 		'priority' => 10,
+	// 		'choices'  => array(
+	// 			'on'  => esc_html__( 'Enable', 'dostart' ),
+	// 			'off' => esc_html__( 'Disable', 'dostart' ),
+	// 		),
+	// 	)
+	// );
+
+	// ------Blog Post Navigation on / off -----*/
+	Kirki::add_field(
+		'theme_config_id',
+		array(
+			'type'     => 'switch',
+			'settings' => 'dostart_blog_navigation_switch',
+			'label'    => esc_html__( 'Post Navigation (Next/Previous)', 'dostart' ),
+			'section'  => 'dostart_blog_details',
+			'default'  => '1',
+			'priority' => 10,
+			'choices'  => array(
+				'on'  => esc_html__( 'Enable', 'dostart' ),
+				'off' => esc_html__( 'Disable', 'dostart' ),
+			),
+		)
+	);
+
+	// ------Releated Post on / off -----*/
+	Kirki::add_field(
+		'theme_config_id',
+		array(
+			'type'     => 'switch',
+			'settings' => 'dostart_blog_related_post',
+			'label'    => esc_html__( 'Show Related Post', 'dostart' ),
+			'section'  => 'dostart_blog_details',
+			'default'  => '1',
+			'priority' => 10,
+			'choices'  => array(
+				'on'  => esc_html__( 'Enable', 'dostart' ),
+				'off' => esc_html__( 'Disable', 'dostart' ),
+			),
+		)
+	);
+
+	// -----Related Post Title------*/
+	Kirki::add_field(
+		'theme_config_id',
+		array(
+			'type'            => 'text',
+			'settings'        => 'dostart_related_post_title',
+			'label'           => __( 'Related Post Title', 'dostart' ),
+			'section'         => 'dostart_blog_details',
+			'default'         => 'Related Post',
+			'priority'        => 10,
+			'active_callback' => array(
+				array(
+					'setting'  => 'dostart_blog_related_post',
+					'operator' => '==',
+					'value'    => true,
+				),
+			),
+		)
+	);
+
+	// ------Related Post Limit -----*/
+	Kirki::add_field(
+		'theme_config_id',
+		array(
+			'type'            => 'number',
+			'settings'        => 'dostart_related_post_limit',
+			'label'           => esc_html__( 'Blog Related Post Limit', 'dostart' ),
+			'description'     => esc_html__( 'Related posts per page', 'dostart' ),
+			'section'         => 'dostart_blog_details',
+			'default'         => 3,
+			'choices'         => array(
+				'min'  => 1,
+				'max'  => 4,
+				'step' => 1,
+			),
+			'active_callback' => array(
+				array(
+					'setting'  => 'dostart_blog_related_post',
+					'operator' => '==',
+					'value'    => true,
+				),
+			),
+		)
+	);
+
+	// ---- Blog Post Columns -----*/
+	Kirki::add_field(
+		'theme_config_id',
+		array(
+			'type'            => 'select',
+			'settings'        => 'dostart_blog_post_column',
+			'label'           => esc_html__( 'Related Posts Column', 'dostart' ),
+			'section'         => 'dostart_blog_details',
+			'default'         => 'three',
+			'priority'        => 10,
+			'multiple'        => 1,
+			'choices'         => array(
+				'1' => esc_html__( 'One Column', 'dostart' ),
+				'2' => esc_html__( 'Two Columns', 'dostart' ),
+				'3' => esc_html__( 'Three Columns', 'dostart' ),
+				'4' => esc_html__( 'Four Columns', 'dostart' ),
+				'6' => esc_html__( 'six Columns', 'dostart' ),
+			),
+			'active_callback' => array(
+				array(
+					'setting'  => 'dostart_blog_related_post',
+					'operator' => '==',
+					'value'    => true,
+				),
+			),
+		)
+	);
+
+
+
+
+
+
+
+
+
+
+
     
 }
 
