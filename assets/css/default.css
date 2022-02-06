@@ -184,19 +184,16 @@ article.sticky::after {
   text-align: center;
 }
 
-article.post a {
-  color: #0052a5;
+.entry-header {
+  margin-bottom: 25px;
 }
-
 .entry-header h2 {
   font-size: 25px;
 }
 
-.entry-header {
-  margin-bottom: 25px;
-}
-
-.entry-footer, .entry-meta, .cat-links {
+.entry-footer,
+.entry-meta,
+.cat-links {
   font-size: 93%;
 }
 
@@ -251,15 +248,12 @@ article.post a.granted-btn {
 .widget {
   margin-bottom: 40px;
 }
-
 .widget select {
   max-width: 100%;
 }
-
 .widget a {
   color: #333;
 }
-
 .widget ul {
   line-height: 35px;
   font-size: 16px;
@@ -310,7 +304,8 @@ body.single .entry-content {
   margin-bottom: 30px;
 }
 
-.entry-content table td, .entry-content table th {
+.entry-content table td,
+.entry-content table th {
   border-right: 1px solid #ddd;
   border-top: 1px solid #ddd;
   padding: 10px;
@@ -320,7 +315,10 @@ body.single .entry-content {
   margin-bottom: 15px;
 }
 
-ol ol, ol ul, ul ol, ul ul {
+ol ol,
+ol ul,
+ul ol,
+ul ul {
   margin-bottom: 0 !important;
 }
 
@@ -418,11 +416,15 @@ code {
   border-radius: 0;
 }
 
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
   font-size: 15px;
 }
 
-ins, mark {
+ins,
+mark {
   background: #007acc;
   color: #ffffff;
   padding: 2px 5px;
@@ -437,7 +439,12 @@ kbd {
   box-shadow: none;
 }
 
-.comment-content h1, .comment-content h2, .comment-content h3, .comment-content h4, .comment-content h5, .comment-content h6 {
+.comment-content h1,
+.comment-content h2,
+.comment-content h3,
+.comment-content h4,
+.comment-content h5,
+.comment-content h6 {
   margin: 20px 0;
 }
 
@@ -462,7 +469,8 @@ kbd {
   padding-left: 15px;
 }
 
-.comment-content ul, .comment-content ol {
+.comment-content ul,
+.comment-content ol {
   padding-left: 25px;
 }
 

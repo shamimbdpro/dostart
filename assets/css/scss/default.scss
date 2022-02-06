@@ -1,5 +1,11 @@
-img {max-width: 100%;height: auto;}
-a {text-decoration: none;}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -11,7 +17,8 @@ a {text-decoration: none;}
     height: 1px;
     width: 1px;
     overflow: hidden;
-    word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+    word-wrap: normal !important;
+    /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
 .screen-reader-text:focus {
@@ -31,7 +38,8 @@ a {text-decoration: none;}
     text-decoration: none;
     top: 5px;
     width: auto;
-    z-index: 100000; /* Above WP toolbar. */
+    z-index: 100000;
+    /* Above WP toolbar. */
 }
 
 /* Do not show the outline on the skip link target. */
@@ -149,13 +157,15 @@ a {text-decoration: none;}
     display: inline-block;
     margin-left: 8px;
     padding: 3px 11px;
-    color: #ffffff!important;
+    color: #ffffff !important;
     background: #0052a5;
 }
+
 .page-links a:hover {
     background-color: #333;
     color: #ffffff;
 }
+
 .page-links {
     margin: 25px 0;
 }
@@ -181,25 +191,33 @@ article.sticky::after {
 }
 
 
-article.post a {
-    color: #0052a5;
-}
-.entry-header h2 {
-    font-size: 25px;
-}
 .entry-header {
     margin-bottom: 25px;
+
+    h2 {
+        font-size: 25px;
+    }
+
 }
-.entry-footer, .entry-meta, .cat-links {
+
+.entry-footer,
+.entry-meta,
+.cat-links {
     font-size: 93%;
 }
+
 .cat-links {
     font-size: 100%;
 }
-.entry-footer span {padding-right: 15px;}
-.entry-meta > span {
+
+.entry-footer span {
     padding-right: 15px;
 }
+
+.entry-meta>span {
+    padding-right: 15px;
+}
+
 .entry-meta i.fa {
     padding-right: 5px;
 }
@@ -208,18 +226,22 @@ article.post a.granted-btn {
     color: #fff;
     margin-top: 10px;
 }
+
 .entry-footer {
-    margin-top: 15px; /* Change  15px slo*/
+    margin-top: 15px;
+    /* Change  15px slo*/
 }
 
 .widget-title {
     font-size: 25px;
 }
+
 .widget_calendar table {
     border-right: 1px solid #ddd;
     border-top: 1px solid #ddd;
     width: 100%;
 }
+
 .widget_calendar table td,
 .widget_calendar table th {
     border-bottom: 1px solid #ddd;
@@ -227,35 +249,50 @@ article.post a.granted-btn {
     padding: 5px;
     text-align: center;
 }
+
 .widget_calendar table caption {
     font-weight: 700;
 }
+
 .widget {
     margin-bottom: 40px;
+
+    select {
+        max-width: 100%
+    }
+
+    a {
+        color: #333;
+    }
+
+
+    ul {
+        line-height: 35px;
+        font-size: 16px;
+        list-style: outside none none;
+        margin: 0;
+        padding: 0;
+    }
+
+
 }
-.widget select {max-width: 100%}
-.widget a {
-    color: #333;
-}
-.widget ul {
-    line-height: 35px;
-    font-size: 16px;
-    list-style: outside none none;
-    margin: 0;
-    padding: 0;
-}
+
+
 .rss-date {
     color: #999;
     font-weight: 300;
 }
+
 .widget_rss li {
     margin-bottom: 20px;
 }
+
 .widget ul.sub-menu:nth-child(2) {
     line-height: 25px;
     padding-top: 5px;
     padding-bottom: 0px;
 }
+
 .widget ul.sub-menu:last-child {
     padding-bottom: 5px;
 }
@@ -267,29 +304,38 @@ article.post a.granted-btn {
 .cat-links a {
     text-decoration: underline;
 }
+
 .entry-content {
     line-height: 1.7;
     color: #333333;
 }
+
 body.single .entry-content {
     font-size: 16px;
 }
+
 .entry-content table {
     border-bottom: 1px solid #ddd;
     border-left: 1px solid #ddd;
     margin-bottom: 30px;
 }
-.entry-content table td, .entry-content table th {
+
+.entry-content table td,
+.entry-content table th {
     border-right: 1px solid #ddd;
     border-top: 1px solid #ddd;
     padding: 10px;
 }
+
 .entry-content dd {
     margin-bottom: 15px;
 }
 
-ol ol, ol ul, ul ol, ul ul {
-    margin-bottom: 0!important;
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+    margin-bottom: 0 !important;
 }
 
 
@@ -299,19 +345,24 @@ ol ol, ol ul, ul ol, ul ul {
     margin: 0;
     padding: 0;
 }
+
 .rssSummary {
     line-height: 26px;
 }
+
 .widget.widget_rss .rsswidget {
     font-size: 110%;
     font-weight: 600;
 }
+
 .widget_rss ul {
     line-height: 26px;
 }
+
 .widget.widget_rss li:hover {
     color: #333;
 }
+
 .widget.widget_rss cite {
     display: inline-block;
     font-weight: 400;
@@ -321,38 +372,45 @@ ol ol, ol ul, ul ol, ul ul {
 /******------------------------------
 -----------COMMENTS CSS------------
 ------------------------------******/
-.comments-area{
+.comments-area {
     border: 1px solid #eee;
     padding: 20px 20px 30px 20px;
     box-shadow: 1px 1px 17px 1px #eee;
 }
+
 .comments-title {
     margin-bottom: 35px;
     font-size: 30px;
     color: #000000;
 }
+
 .comment-list {
     max-width: 790px;
 }
+
 .comment-list,
 .children {
     list-style: outside none none;
     margin: 0;
     padding: 0;
 }
+
 .says {
     display: none;
 }
+
 .comment-author.vcard img {
     float: left;
     margin-right: 18px;
 }
+
 .comment-content {
     color: #555555;
     padding-left: 50px;
     margin-top: 15px;
     font-size: 16px;
 }
+
 pre {
     border: 1px solid #d1d1d1;
     font-size: 15px;
@@ -366,87 +424,114 @@ pre {
     word-wrap: break-word;
     background: transparent;
 }
+
 code {
-    font-size:  15px;
+    font-size: 15px;
     background: #f8f8f8;
     color: #333;
     padding: 0.125em 0.25em;
     border-radius: 0;
 }
 
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
     font-size: 15px;
 }
 
-ins, mark {
-    background:  #007acc;
+ins,
+mark {
+    background: #007acc;
     color: #ffffff;
     padding: 2px 5px;
-    text-decoration:  none;
+    text-decoration: none;
 }
+
 kbd {
     padding: 3px 5px;
     color: #333;
-    background-color: rgba( 68, 68, 68, 0.2);
+    background-color: rgba(68, 68, 68, 0.2);
     border-radius: 0px;
-    -webkit-box-shadow: none ;
+    -webkit-box-shadow: none;
     box-shadow: none;
 }
-.comment-content h1, .comment-content h2, .comment-content h3, .comment-content h4, .comment-content h5, .comment-content h6 {
+
+.comment-content h1,
+.comment-content h2,
+.comment-content h3,
+.comment-content h4,
+.comment-content h5,
+.comment-content h6 {
     margin: 20px 0;
 }
+
 .comment-content dd {
     margin-bottom: 20px;
 }
+
 .comment-content table {
     border-left: 1px solid #ddd;
     border-top: 1px solid #ddd;
     margin-bottom: 30px;
 }
+
 .comment-content table td,
 .comment-content table th {
     border-bottom: 1px solid #ddd;
     border-right: 1px solid #ddd;
     padding: 10px;
 }
+
 .comment-content ol {
     padding-left: 15px;
 }
-.comment-content ul, .comment-content ol {
+
+.comment-content ul,
+.comment-content ol {
     padding-left: 25px;
 }
+
 .comment-content ul {
     list-style: disc outside;
 }
+
 .comment-list li ol.children {
     padding-left: 50px;
 }
+
 .comment-list li ol.children ol.children {
     padding-left: 20px;
 }
+
 .comment-author.vcard img {
     border-radius: 50%;
     position: relative;
     top: 10px;
 }
+
 b.fn {
     color: #666;
     font-size: 18px;
     text-transform: capitalize;
 }
+
 b.fn a,
 .comments-area a {
     color: #000;
 }
-.comment-list > li,
+
+.comment-list>li,
 .children article {
     margin-bottom: 30px;
 }
+
 .comment-metadata a time {
     color: #777777;
     font-size: 14px;
     font-weight: 300;
 }
+
 .reply {
     padding-left: 50px;
 }
@@ -454,11 +539,12 @@ b.fn a,
 .reply a {
     color: #666;
 }
+
 .children {
     padding-left: 25px;
 }
 
-.comment-form p > input,
+.comment-form p>input,
 .comment-form p textarea {
     border: 0px solid;
     padding: 11px 0 11px 10px;
@@ -468,71 +554,88 @@ b.fn a,
     resize: none;
     background-color: #f6f6f6;
 }
+
 .comment-form textarea {
     margin-bottom: 10px;
 }
+
 .comment-form .form-submit {
     margin-top: 30px;
 }
+
 .comment-form p {
     margin-bottom: 20px;
 }
+
 .comment-form p.comment-form-comment {
     margin-bottom: 5px;
 }
+
 .comment-reply-title {
     margin-bottom: 30px;
     font-size: 20px;
 }
+
 .logged-in .comment-reply-title {
     margin-bottom: 30px;
 }
-.comment-form p > input:focus,
+
+.comment-form p>input:focus,
 .comment-form p textarea:focus {
     border-color: transparent;
     box-shadow: none;
 }
+
 .comment-form {
     padding-right: 10px;
 }
+
 .comment-form .comment-notes {
     display: none;
 }
+
 .logged-in .form-submit {
     bottom: 4px;
     right: 0;
 }
+
 .logged-in .comment-form p:nth-child(2) {
     float: none;
 }
+
 .logged-in .comment-form p:not(:first-child) {
     float: none;
     width: 70%;
 }
+
 .logged-in .comment-form-comment textarea {
     display: block;
     width: 100%;
 }
-.comment-form p > input[type="submit"] {
+
+.comment-form p>input[type="submit"] {
     background: #000;
     color: #fff;
     text-transform: uppercase;
     font-weight: 600;
 }
 
-#cancel-comment-reply-link{
+#cancel-comment-reply-link {
     color: red;
-    padding-left:10px
+    padding-left: 10px
 }
+
 .comment-list li.pingback {
     margin-bottom: 15px;
 }
+
 input#wp-comment-cookies-consent {
     width: auto;
     margin-right: 3px;
 }
-.comment-body{
-    border:1px solid #eee;
-    padding:10px;
+
+.comment-body {
+    border: 1px solid #eee;
+    padding: 10px;
     box-shadow: 1px 1px 17px 1px #eee;
 }

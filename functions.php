@@ -234,11 +234,6 @@ add_action('admin_enqueue_scripts', 'dostart_load_admin_script_callback');
 
 
 
-
-
-
-
-
 /**
  * Related Posts
  * @return array|mixed
@@ -319,6 +314,11 @@ function dostart_related_posts() {
 }
 
 
+
+/**
+ * Load Helper Class.
+ */
+require DOSTART_THEME_DIR . '/inc/class/helper.php';
 
 
 /**
