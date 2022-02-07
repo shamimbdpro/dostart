@@ -998,7 +998,6 @@ section.error-404 {
 .search-form {
   position: relative;
 }
-
 .search-form label {
   width: 100%;
   margin: 0;
@@ -1043,22 +1042,34 @@ section.error-404 {
   display: block;
 }
 
-.widget-title,
-.widgettitle {
+.blog-sidebar .widget-title {
   font-size: 18px;
   margin-bottom: 35px !important;
   position: relative;
+  padding-bottom: 20px;
 }
-
-.widget-title:after,
-.widgettitle:after {
-  bottom: -11px;
+.blog-sidebar .widget-title:before {
   content: "";
-  height: 2px;
-  left: 0;
+  clear: both;
+  display: block;
+  overflow: hidden;
   position: absolute;
-  width: 53px;
-  background-color: #065FD4;
+  width: 22%;
+  bottom: 0;
+  height: 2px;
+  background: #ff6d60;
+  z-index: 1;
+}
+.blog-sidebar .widget-title:after {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 2px;
+  background: #ddd;
 }
 
 .widget.widget_recent_entries li {

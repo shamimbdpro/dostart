@@ -1,4 +1,3 @@
-
 .widget.widget_archive ul,
 .widget.widget_categories ul {
   overflow: hidden
@@ -73,14 +72,19 @@ section.error-404 {
 
 .search-form {
   position: relative;
+
+  label {
+    width: 100%;
+    margin: 0;
+  }
+
 }
 
-.search-form input[type="submit"]:hover {}
-
-.search-form label {
-  width: 100%;
-  margin: 0;
+.search-form input[type="submit"]:hover {
+  background: $brand-hover;
 }
+
+
 
 .search-form label input.search-field {
   border: 0px solid #f0f0f0;
@@ -117,26 +121,48 @@ section.error-404 {
   border-radius: 0px;
 }
 
+
+
 .widget_search .widget-title {
   display: block;
 }
 
-.widget-title,
-.widgettitle {
-  font-size: 18px;
-  margin-bottom: 35px !important;
-  position: relative;
-}
+.blog-sidebar {
 
-.widget-title:after,
-.widgettitle:after {
-  bottom: -11px;
-  content: "";
-  height: 2px;
-  left: 0;
-  position: absolute;
-  width: 53px;
-  background-color: #065FD4;
+  .widget-title {
+    font-size: 18px;
+    margin-bottom: 35px !important;
+    position: relative;
+    padding-bottom: 20px;
+
+    &:before {
+      content: "";
+      clear: both;
+      display: block;
+      overflow: hidden;
+      position: absolute;
+      width: 22%;
+      bottom: 0;
+      height: 2px;
+      background: $brand-color;
+      z-index: 1;
+    }
+
+    &:after {
+      content: "";
+      clear: both;
+      display: block;
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      height: 2px;
+      background: #ddd;
+    }
+
+  }
+
+
 }
 
 .widget.widget_recent_entries li {
@@ -169,12 +195,14 @@ section.error-404 {
 .widget_search {
   .search-form {
     display: flex;
-    label{
-      width:100%;
-      display:block
+
+    label {
+      width: 100%;
+      display: block
     }
-    input[type="search"]{
-      width:100%;
+
+    input[type="search"] {
+      width: 100%;
     }
   }
 
@@ -183,12 +211,12 @@ section.error-404 {
 
 /*-------[ Widget Responsive ] ------*/
 
-@media( max-width: 1200px) {}
+@media(max-width: 1200px) {}
 
-@media( max-width:991px) {}
+@media(max-width:991px) {}
 
-@media( max-width:767px) {}
+@media(max-width:767px) {}
 
-@media( max-width:480px) {}
+@media(max-width:480px) {}
 
-@media( max-width:320px) {}
+@media(max-width:320px) {}
