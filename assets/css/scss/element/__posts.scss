@@ -59,12 +59,27 @@ article.post {
     color: #fff;
     padding: 10px 20px;
     border-top-right-radius: 30px;
-    background: red;
+    background: $brand-color;
   }
 
 
   &-content {
     padding: 30px;
+
+    .tags>a {
+      transition: .4s;
+      border: 2px solid;
+      padding: 3px 15px;
+      border-radius: 20px;
+      margin: 2px;
+      display: inline-block;
+
+      &:hover{
+        background: $brand-color;
+        color:#fff
+      }
+  }
+
   }
 
 
@@ -140,13 +155,13 @@ blockquote {
 
       &:hover {
         color: #fff;
-        background-color: #065fd4;
+        background-color: $brand-color;
       }
 
 
       &.current {
         color: #fff;
-        background-color: #065fd4;
+        background-color: $brand-color;
       }
 
     }

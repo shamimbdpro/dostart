@@ -242,7 +242,7 @@ function dostart_related_posts() {
 	$related_post = get_theme_mod( 'dostart_blog_related_post', true );
 	if ( true === $related_post ) {
 		$posts_per_page        = ! empty( get_theme_mod( 'dostart_related_post_limit' ) ) ? get_theme_mod( 'dostart_related_post_limit' ) : '3';
-		$related_posts_columns = ! empty( get_theme_mod( 'dostart_blog_post_column' ) ) ? get_theme_mod( 'dostart_blog_post_column' ) : '3';
+		$related_posts_columns = ! empty( get_theme_mod( 'dostart_blog_post_column' ) ) ? get_theme_mod( 'dostart_blog_post_column' ) : '4';
 		$related_post_title    = ! empty( get_theme_mod( 'dostart_related_post_title' ) ) ? get_theme_mod( 'dostart_related_post_title' ) : 'Related Posts';
 
 		global $post;

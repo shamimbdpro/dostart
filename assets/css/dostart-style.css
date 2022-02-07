@@ -645,10 +645,22 @@ article.post {
   color: #fff;
   padding: 10px 20px;
   border-top-right-radius: 30px;
-  background: red;
+  background: #065fd4;
 }
 .dostart-post-content {
   padding: 30px;
+}
+.dostart-post-content .tags > a {
+  transition: 0.4s;
+  border: 2px solid;
+  padding: 3px 15px;
+  border-radius: 20px;
+  margin: 2px;
+  display: inline-block;
+}
+.dostart-post-content .tags > a:hover {
+  background: #065fd4;
+  color: #fff;
 }
 .dostart-post .entry-meta {
   font-size: 14px;

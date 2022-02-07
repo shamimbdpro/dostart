@@ -500,39 +500,39 @@ if ( class_exists('Kirki') ) {
     );
 
 
-	// ------Blog Social Share on / off -----*/
-	Kirki::add_field(
-		'theme_config_id',
-		array(
-			'type'     => 'switch',
-			'settings' => 'dostart_blog_social_share',
-			'label'    => esc_html__( 'Social Share', 'dostart' ),
-			'section'  => 'dostart_blog_details',
-			'default'  => '1',
-			'priority' => 10,
-			'choices'  => array(
-				'on'  => esc_html__( 'Enable', 'dostart' ),
-				'off' => esc_html__( 'Disable', 'dostart' ),
-			),
-		)
-	);
+	// // ------Blog Social Share on / off -----*/
+	// Kirki::add_field(
+	// 	'theme_config_id',
+	// 	array(
+	// 		'type'     => 'switch',
+	// 		'settings' => 'dostart_blog_social_share',
+	// 		'label'    => esc_html__( 'Social Share', 'dostart' ),
+	// 		'section'  => 'dostart_blog_details',
+	// 		'default'  => '1',
+	// 		'priority' => 10,
+	// 		'choices'  => array(
+	// 			'on'  => esc_html__( 'Enable', 'dostart' ),
+	// 			'off' => esc_html__( 'Disable', 'dostart' ),
+	// 		),
+	// 	)
+	// );
 
-	// ------ Social share open to new tab -----*/
-	Kirki::add_field(
-		'theme_config_id',
-		array(
-			'type'     => 'switch',
-			'settings' => 'dostart_blog_social_share_open_new_tab',
-			'label'    => esc_html__( 'Social Share Open To New Tab', 'dostart' ),
-			'section'  => 'dostart_blog_details',
-			'default'  => 'on',
-			'priority' => 10,
-			'choices'  => array(
-				'on'  => esc_html__( 'Enable', 'dostart' ),
-				'off' => esc_html__( 'Disable', 'dostart' ),
-			),
-		)
-	);
+	// // ------ Social share open to new tab -----*/
+	// Kirki::add_field(
+	// 	'theme_config_id',
+	// 	array(
+	// 		'type'     => 'switch',
+	// 		'settings' => 'dostart_blog_social_share_open_new_tab',
+	// 		'label'    => esc_html__( 'Social Share Open To New Tab', 'dostart' ),
+	// 		'section'  => 'dostart_blog_details',
+	// 		'default'  => 'on',
+	// 		'priority' => 10,
+	// 		'choices'  => array(
+	// 			'on'  => esc_html__( 'Enable', 'dostart' ),
+	// 			'off' => esc_html__( 'Disable', 'dostart' ),
+	// 		),
+	// 	)
+	// );
 
 	// ------Blog Post Navigation on / off -----*/
 	Kirki::add_field(
@@ -621,7 +621,7 @@ if ( class_exists('Kirki') ) {
 			'settings'        => 'dostart_blog_post_column',
 			'label'           => esc_html__( 'Related Posts Per Row.', 'dostart' ),
 			'section'         => 'dostart_blog_details',
-			'default'         => 'three',
+			'default'         => '4',
 			'priority'        => 10,
 			'multiple'        => 1,
 			'choices'         => array(
