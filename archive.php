@@ -46,7 +46,14 @@ get_header(); ?>
 
                         endwhile;
 
-                        the_posts_navigation();
+                        // Previous / Next Button.
+
+                        the_post_navigation(
+                                array(
+                                    'prev_text' => esc_html__( '&#171; Previous Post', 'dostart' ),
+                                    'next_text' => esc_html__( 'Next Post &#187;', 'dostart' ),
+                                )
+                            );
 
                         else :
 

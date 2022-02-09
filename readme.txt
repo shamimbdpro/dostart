@@ -4,7 +4,7 @@ Tags: custom-menu,blog, e-commerce, custom-colors, theme-options, right-sidebar,
 Requires at least: 5.4
 Tested up to: 5.9
 Requires PHP: 5.6
-Version: 1.1.7
+Version: 1.1.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,6 +58,10 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 
 == Changelog ==
+
+= Version 1.1.8 =
+* Sidebar Widget Design Updated.
+* Category Next Previous Button Design Updated.
 
 = Version 1.1.7 =
 * Default Releated Post 3 Column Updated.
