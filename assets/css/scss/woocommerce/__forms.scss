@@ -1,0 +1,51 @@
+/**
+ * Forms
+ */
+.woocommerce-billing-fields .form-row {
+  display: block;
+}
+
+.woocommerce-additional-fields .woocommerce-input-wrapper,
+.woocommerce-additional-fields label,
+.woocommerce-billing-fields label {
+  width: 100%;
+}
+
+.woocommerce-additional-fields .woocommerce-input-wrapper textarea {
+  border-radius: 6px;
+  height: 160px;
+}
+
+.form-row.woocommerce-validated input.input-text {
+  box-shadow: inset 2px 0 0 #0f834d;
+}
+
+.form-row.woocommerce-invalid input.input-text {
+  box-shadow: inset 2px 0 0 #e2401c;
+}
+
+.required {
+  color: red;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #666;
+  line-height: 55px !important;
+  padding-left: 20px !important;
+}
+
+.select2-container .select2-selection--single {
+  height: 55px;
+  border-radius: 50px !important;
+  border: 1px solid #ddd !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 55px !important;
+  right: 10px !important;
+}
+
+.select2-container--open .select2-dropdown--below {
+  padding: 10px;
+  margin-top: 10px;
+}

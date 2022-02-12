@@ -1,0 +1,60 @@
+/*Dokan*/
+
+.dokan-store-products-filter-area{
+  display:none;
+}
+
+#dokan-store-listing-filter-wrap .nice-select .list {
+  margin-top: 35px;
+  width: 240px;
+}
+
+#dokan-store-listing-filter-wrap .nice-select .list li {
+  line-height: 40px;
+  list-style: none;
+  min-height: 40px;
+  outline: 0;
+  padding-left: 18px;
+}
+
+#dokan-store-listing-filter-wrap .nice-select::after {
+  right: 5px;
+}
+
+.store-review-wrap .commentlist {
+  padding-left: 0;
+}
+
+.store-review-wrap .commentlist li {
+  list-style: none;
+}
+
+
+.store-review-wrap .commentlist li .dokan-review-author-img {
+  width: 90px;
+  height: 90px;
+  float: left;
+  margin-right: 20px;
+}
+
+.store-review-wrap .commentlist li .dokan-review-author-img img {
+  border-radius: 50%;
+}
+
+.store-review-wrap .commentlist li .description {
+  overflow: hidden;
+}
+
+#dokan-form-contact-seller{
+  .form-group{
+    margin-bottom:5px;
+    input{
+      border-radius:15px
+    }
+
+  }
+  input[type='submit']{
+    margin-top:5px;
+    border-radius:15px
+  }
+}

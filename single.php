@@ -14,23 +14,7 @@ $dostart_blog_details_post_navigation = get_theme_mod( 'dostart_blog_navigation_
 $page_layout = get_theme_mod('dostart_blog_single_layout') ? get_theme_mod('dostart_blog_single_layout') : 'sidebar';
 get_header(); ?>
 
-<?php $breadcrumb_status = get_post_meta( get_the_ID(), 'dostart-breadcrumb-status', true ); ?>
-<?php if ( 'disabled' !== $breadcrumb_status ) { ?>
-    <div class="dostart-breadcrumb-area dostart-single-blog-breadcrumb">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1><?php the_title(); ?></h1>
-                    <a href="<?php echo esc_url(home_url('/')); ?>"><?php esc_html_e('Home', 'dostart'); ?></a>
-                        &nbsp; / &nbsp; 
-                    <span class="current"><?php the_title(); ?></span>
-                </div>
-            </div>
-        </div>
-    </div>
-<?php } ?>
-
-    <div class="dostart-internal-area dostart-v-composer-disabled">
+    <section class="section-padding">
         <div class="container">
             <div class="row <?php echo esc_attr('full' == $page_layout ? 'justify-content-center' : ''); ?>">
                 <div class="col-md-8">
@@ -82,7 +66,7 @@ get_header(); ?>
             ?>
         </div>
 
-    </div>
+    </section>
 
 <?php
 get_footer();

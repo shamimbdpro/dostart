@@ -1,0 +1,89 @@
+/**
+ * Tabs
+ */
+.woocommerce-tabs {
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid #eee;
+  margin-bottom: 30px;
+}
+
+.woocommerce-tabs ul.tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.woocommerce-tabs ul.tabs li {
+  display: inline-block;
+  margin: 0;
+  position: relative;
+  border-right: 1px solid #ddd;
+}
+
+.woocommerce-tabs ul.tabs li:last-child {
+  border: none;
+}
+
+.woocommerce-tabs ul.tabs li a {
+  position: relative;
+  padding: 20px;
+  display: block;
+  color: #333;
+  font-weight: 500;
+}
+
+.woocommerce-tabs ul.tabs li.active a {
+  position: relative;
+}
+
+.woocommerce-tabs ul.tabs li.active a:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+}
+
+.woocommerce-tabs .panel {
+  padding: 30px;
+}
+
+.woocommerce-cart-form__contents .actions {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.comment-form-rating .nice-select,
+.comment-form-rating #rating {
+  display: none;
+}
+
+.woocommerce-tabs #tab-seller .details a {
+  font-weight: bolder;
+  color: #333;
+}
+
+.woocommerce-tabs #tab-seller .star-rating {
+  float: left;
+  margin-right: 10px;
+}
+
+.woocommerce-tabs #tab-seller ul {
+  margin-bottom: 0;
+}
+
+.woocommerce-tabs #tab-seller ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/**
+ Accordion.
+ */
+
+.accordion-button:not(.collapsed){
+  color:#333
+}
