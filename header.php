@@ -96,4 +96,13 @@ if ( function_exists('wp_body_open') ) {
         </div>
     </header> 
     <?php } ?>
+
+    <?php 
+    $breadcrumb_status = get_post_meta( get_the_ID(), 'dostart-breadcrumb-status', true );
+    if ( ! is_page_template( 'custom-homepage.php' ) || is_page_template( '404.php' ) ) {
+        if('disabled' !== $breadcrumb_status){
+            dostart_breadcrumb_display();
+        }
+	}  ?>
+
     <div id="content" class="site-content">

@@ -13,19 +13,7 @@ if ( ! defined('ABSPATH') ) {
 
 get_header(); ?>
 
-    <div class="dostart-breadcrumb-area blog-breadcrumb-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="page-title"><?php esc_html_e('Error Page', 'dostart'); ?></h1>
-                    <?php if ( function_exists('bcn_display') ) { bcn_display();
-                    } ?>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="dostart-internal-area dostart-v-composer-disabled">
+    <section class="section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
@@ -41,7 +29,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 <?php
 get_footer();
