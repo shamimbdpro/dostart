@@ -91,9 +91,9 @@ add_filter( 'loop_shop_columns', 'dostart_woocommerce_loop_columns' );
  * @param array $args related products args.
  * @return array $args related products args.
  */
-function digicart_woocommerce_related_products_args( $args ) {
-	$related_products_per_page = ! empty( get_theme_mod( 'digicart_related_product_limit' ) ) ? get_theme_mod( 'digicart_related_product_limit' ) : '3';
-	$related_products_columns = ! empty( get_theme_mod( 'digicart_related_product_column' ) ) ? get_theme_mod( 'digicart_related_product_column' ) : '4';
+function dostart_woocommerce_related_products_args( $args ) {
+	$related_products_per_page = ! empty( get_theme_mod( 'dostart_related_product_limit' ) ) ? get_theme_mod( 'dostart_related_product_limit' ) : '3';
+	$related_products_columns = ! empty( get_theme_mod( 'dostart_related_product_column' ) ) ? get_theme_mod( 'dostart_related_product_column' ) : '4';
 	$defaults = array(
 		'posts_per_page' => $related_products_per_page,
 		'columns'        => $related_products_columns,
@@ -103,7 +103,13 @@ function digicart_woocommerce_related_products_args( $args ) {
 
 	return $args;
 }
-add_filter( 'woocommerce_output_related_products_args', 'digicart_woocommerce_related_products_args' );
+add_filter( 'woocommerce_output_related_products_args', 'dostart_woocommerce_related_products_args' );
+
+
+/**
+ * Remove "You May Also Like" UPsell Products.
+ */
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
 
 
 /**
@@ -113,7 +119,7 @@ add_filter( 'woocommerce_output_related_products_args', 'digicart_woocommerce_re
  *
  * Tutorial: http://skyver.ge/c
  */
-function digicart_free_checkout_fields() {
+function dostart_free_checkout_fields() {
 	// first, bail if WC isn't active since we're hooked into a general WP hook
 	if ( ! function_exists( 'WC' ) ) {
 		return;
@@ -125,7 +131,7 @@ function digicart_free_checkout_fields() {
 	// now continue only if we're at checkout
 	// is_checkout() was broken as of WC 3.2 in ajax context, double-check for is_ajax
 	// I would check WOOCOMMERCE_CHECKOUT but testing shows it's not set reliably
-	if ( function_exists( 'is_checkout' ) && ( is_checkout() || is_ajax() ) ) {
+	if ( function_exists( 'is_checkout' ) && ( is_checkout() || wp_doing_ajax () ) ) {
 		// remove coupon forms since why would you want a coupon for a free cart??
 		remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
 		// Remove the "Additional Info" order notes
@@ -155,7 +161,7 @@ function digicart_free_checkout_fields() {
 		);
 	}
 }
-add_action( 'wp', 'digicart_free_checkout_fields' );
+add_action( 'wp', 'dostart_free_checkout_fields' );
 
 /**
  * @snippet       Display &quot;FREE&quot; if WooCommerce Product Price is Zero or Empty - WooCommerce
@@ -167,14 +173,14 @@ add_action( 'wp', 'digicart_free_checkout_fields' );
  */
 
 
-function digicart_price_free_zero_empty( $price, $product ) {
+function dostart_price_free_zero_empty( $price, $product ) {
 
 	if ( '' === $product->get_price() || 0 == $product->get_price() ) {
-		$price = '<span class="woocommerce-Price-amount amount">' . esc_html__( 'Free', 'digicart' ) . '</span>';
+		$price = '<span class="woocommerce-Price-amount amount">' . esc_html__( 'Free', 'dostart' ) . '</span>';
 	}
 	return $price;
 }
-add_filter( 'woocommerce_get_price_html', 'digicart_price_free_zero_empty', 100, 2 );
+add_filter( 'woocommerce_get_price_html', 'dostart_price_free_zero_empty', 100, 2 );
 
 
 /**
@@ -228,7 +234,7 @@ function add_faq_product_tab_content() { ?>
 			</h5>
 
 			<div id="collapse-<?php echo esc_attr( $key . $randID ); ?>" class="collapse" data-bs-parent="#accordion<?php echo esc_attr( $randID ); ?>">
-				<?php echo wp_kses( $entry['faq_description'], digicart_allowed_html() ); ?>
+				<?php echo wp_kses( $entry['faq_description'], dostart_allowed_html() ); ?>
 			</div>
 		  </div>
 		  
@@ -246,10 +252,10 @@ function add_faq_product_tab_content() { ?>
 
 
 // Product Item
-function digicart_product_item() {
+function dostart_product_item() {
 
-	$digicart_product_hover_button = get_theme_mod( 'digicart_product_hover', 'ture' );
-	$product_live_preview_new_tab = 1 == get_theme_mod('digicart_product_live_preview_new_tab', true) ? '_blank' : '';
+	$digicart_product_hover_button = get_theme_mod( 'dostart_product_hover', 'ture' );
+	$product_live_preview_new_tab = 1 == get_theme_mod('dostart_product_live_preview_new_tab', true) ? '_blank' : '';
 	?>
   <div class="download-item">
 	<div class="download-item-image">
@@ -299,7 +305,7 @@ function digicart_product_item() {
 	<?php
 }
 
-add_action( 'get_digicart_product_item', 'digicart_product_item' );
+add_action( 'get_dostart_product_item', 'dostart_product_item' );
 
 
 
@@ -455,4 +461,4 @@ function digicart_variation_radio_buttons( $html, $args ) {
 
 	return $html . $radios;
 }
-add_filter( 'woocommerce_dropdown_variation_attribute_options_html', 'digicart_variation_radio_buttons', 20, 2 );
+add_filter( 'woocommerce_dropdown_variation_attribute_options_html', 'digicart_variation_radio_buttons', 20, 2 ); 

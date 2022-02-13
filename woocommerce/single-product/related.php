@@ -19,8 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$related_product_show   = get_theme_mod( 'digicart_show_related_product', true );
-$related_products_title = ! empty( get_theme_mod( 'digicart_related_product_title' ) ) ? get_theme_mod( 'digicart_related_product_title' ) : __( 'Related products', 'digicart' );
+$related_product_show   = get_theme_mod( 'dostart_show_related_product', true );
+$related_products_title = ! empty( get_theme_mod( 'dostart_related_product_title' ) ) ? get_theme_mod( 'dostart_related_product_title' ) : __( 'Related products', 'digicart' );
 
 if ( $related_products & true == $related_product_show ) : ?>
 

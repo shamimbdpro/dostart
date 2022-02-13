@@ -36,7 +36,12 @@ get_header( 'shop' ); ?>
 						setPostViews( get_the_id() );
 					}
 
-					wc_get_template_part( 'content', 'single-product' );
+					if(function_exists('dostart_pro')){
+						include_once(DGC_PLUGIN_PATH .'inc/woocommerce/content-single-product.php');
+					}else{
+					    wc_get_template_part( 'content', 'single-product' );
+					}
+					
 					?>
 
 				<?php endwhile; // end of the loop. ?>
@@ -59,6 +64,7 @@ get_header( 'shop' ); ?>
 </section>
 
 <?php
+
 get_footer( 'shop' );
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

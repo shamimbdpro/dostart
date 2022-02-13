@@ -232,10 +232,8 @@ function dostart_load_style_and_scripts() {
     // Define Direcotry URI
     $dir = DOSTART_THEME_URI;
 
-    wp_enqueue_style('bootstrap', $dir . '/assets/css/library.min.css', array(), DOSTART_THEME_VERSION);
-    wp_enqueue_style('dostart-default', $dir . '/assets/css/default.min.css', array(), DOSTART_THEME_VERSION);
+    wp_enqueue_style('dostart-library', $dir . '/assets/css/library.min.css', array(), DOSTART_THEME_VERSION);
     wp_enqueue_style('dostart-theme', $dir . '/assets/css/dostart-style.min.css', array(), DOSTART_THEME_VERSION);
-
     wp_enqueue_style('dostart-style', get_stylesheet_uri(), array(), DOSTART_THEME_VERSION);
 
     wp_enqueue_script('skip-link-focus-fix', $dir . '/assets/js/skip-link-focus-fix.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
@@ -312,7 +310,7 @@ require DOSTART_THEME_DIR . '/inc/customizer/customizer.php';
  * WooCommerce
  */
 if ( class_exists('WooCommerce') ) {
-    include_once DOSTART_THEME_DIR . '/inc/class/woocommerce.php';
+    include_once DOSTART_THEME_DIR . '/inc/class/woocommerce.php'; 
 }
 
 /**

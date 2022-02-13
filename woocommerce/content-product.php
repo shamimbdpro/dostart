@@ -25,5 +25,5 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 <div <?php wc_product_class( '', $product ); ?>>
-	<?php do_action( 'get_digicart_product_item' ); ?>
+	<?php do_action( 'get_dostart_product_item' ); ?>
 </div>
