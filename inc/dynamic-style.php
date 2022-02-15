@@ -30,8 +30,7 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
         .dostart-mainmenu ul li a{
             color: <?php echo esc_attr($primary_menu_color); ?>
         }
-        .dostart-breadcrumb-area,
-        .dostart-breadcrumb-bg,
+        .dostart-breadcrumb,
         article a.dostart-btn,
         .dostart-post .excerpt-date,
         .widget-title:before,
