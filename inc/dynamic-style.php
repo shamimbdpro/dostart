@@ -32,6 +32,7 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
         }
         .dostart-breadcrumb,
         .excerpt-readmore a,
+        .back-to-top,
         .dostart-post .excerpt-date,
         .widget-title:before,
         .search-form:after,
