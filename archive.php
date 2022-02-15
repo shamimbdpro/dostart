@@ -13,7 +13,7 @@ if ( ! defined('ABSPATH') ) {
 
 get_header(); ?>
 
-    <div class="dostart-internal-area dostart-v-composer-disabled">
+    <section class="section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
