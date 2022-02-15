@@ -895,10 +895,7 @@ del span {
   padding: 30px 0px;
 }
 .woocommerce-account table.account-orders-table tr, .woocommerce-account table.account-orders-table th, .woocommerce-account table.account-orders-table td {
-  border: 0;
-}
-.woocommerce-account table.account-orders-table thead {
-  border-bottom: 1px solid #ddd;
+  border: 1px solid #ddd;
 }
 .woocommerce-account .woocommerce-MyAccount-navigation {
   float: left;
