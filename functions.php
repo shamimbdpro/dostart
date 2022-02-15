@@ -213,6 +213,7 @@ function dostart_load_style_and_scripts() {
 
     wp_enqueue_script('skip-link-focus-fix', $dir . '/assets/js/skip-link-focus-fix.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
     wp_enqueue_script('navigation', $dir . '/assets/js/navigation.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
+    wp_enqueue_script('bootstrap', $dir . '/assets/js/bootstrap.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
     wp_enqueue_script('hc-offcanvas', $dir . '/assets/js/hc-offcanvas-nav.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
     wp_enqueue_script('dostart-active', $dir . '/assets/js/active.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
 
