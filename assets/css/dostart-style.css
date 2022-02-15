@@ -100,7 +100,7 @@ button[type=submit]:hover {
 }
 
 .button {
-  background: #065fd4 !important;
+  background: #065FD4 !important;
   color: #fff !important;
   padding: 8px 20px;
 }
@@ -798,6 +798,25 @@ input#wp-comment-cookies-consent {
   position: relative;
 }
 
+.menu_col {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+/*------- WooCommerce Header Cart Style.------*/
+.dostart-wc-button {
+  display: flex;
+  justify-content: end;
+  padding-left: 35px;
+}
+
+.dostart-my-account-btn a {
+  border: 1px solid #065fd4;
+  padding: 7px 10px;
+  margin-left: 19px;
+}
+
 /*-------[ Header Responsive ] ------*/
 @media (min-width: 991px) {
   .dostart-mainmenu {
@@ -928,10 +947,6 @@ input#wp-comment-cookies-consent {
 }
 /*-------[ Navigation Responsive ] ------*/
 @media (max-width: 991px) {
-  .dostart-header-cart {
-    display: none;
-  }
-
   .hc-nav-trigger.hc-nav-1 {
     position: absolute;
     right: 23px;
