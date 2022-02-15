@@ -28,7 +28,7 @@ $exclude_sale_count = in_array($product->get_id(), $dgc_exclude_sale_ids) !== fa
             <?php echo wc_get_rating_html( $average, $rating_count ); ?>
         </div>
         <?php if ( $unique_features ) : ?>
-            <ul class="text start list-unstyled mb-4">
+            <ul class="text-start list-unstyled mb-4">
                 <?php foreach ( $unique_features as $key => $unique_feature ) : ?>
                     <li><i class="fa fa-check-circle text-success fa-fw"></i> <?php echo esc_html( $unique_feature ); ?></li>
                 <?php endforeach ?>
