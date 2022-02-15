@@ -4,6 +4,14 @@ Theme Name: digicart
 WooCommerce styles override
 */
 
+
+
+@import "pro/_blog.scss";
+@import "pro/_testimonial.scss";
+@import "pro/_foundation.scss";
+
+
+
 $box_shadow: -2px 5px 17px -4px rgba(2,40,72,0.5);
 
 body.woocommerce-cart section .woocommerce,

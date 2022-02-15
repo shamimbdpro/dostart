@@ -3,6 +3,642 @@ Theme Name: digicart
 
 WooCommerce styles override
 */
+/***************************
+        blog
+****************************/
+.dgc-blog {
+  display: grid;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.dgc-blog-item {
+  box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+  transition: 0.3s;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.dgc-blog-item-content {
+  padding: 20px;
+}
+
+.dgc-blog-item-content ul {
+  margin-bottom: 0;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.dgc-blog-item-content ul li i {
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.dgc-blog-item-img {
+  position: relative;
+}
+.dgc-blog-item-img img {
+  width: 100%;
+}
+
+.dgc-blog-item-img span {
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 0 15px;
+  font-size: 14px;
+}
+
+.dgc-blog-item-img span a {
+  color: #fff;
+}
+
+.dgc-blog-item-meta {
+  font-size: 16px;
+  border-top: 1px solid #eceef2;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+
+.dgc-blog-item-meta .avatar {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.dgc-blog-item-meta a {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.dgc-blog-item-meta .blog-meta-info {
+  position: relative;
+  margin: 0;
+}
+
+.dgc-blog-item-meta .blog-meta-info:last-child {
+  margin-right: 0;
+}
+
+.dgc-blog-item-meta .blog-meta-info {
+  position: relative;
+  padding-right: 20px;
+}
+
+.dgc-blog-item-meta .blog-meta-info:after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  background: #b7b2b2;
+  height: 16px;
+  width: 1px;
+}
+
+.dgc-blog-item-meta .blog-meta-info:last-child:after {
+  display: none;
+}
+
+.dgc-blog-item-content h4 {
+  font-size: 20px;
+  margin-bottom: 0;
+  margin: 0;
+  color: #333;
+  padding-bottom: 20px;
+}
+
+.dgc-blog-item-content p {
+  font-size: 16px;
+}
+
+.dgc-blog-item-content .blog-btn {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.blog-item-date {
+  margin: 0;
+}
+
+.front-date {
+  font-weight: 600;
+  margin: 10px 0 15px !important;
+}
+
+@media only screen and (min-width: 1025px) {
+  .dgc-post-grid-column-1 .dgc-blog {
+    grid-template-columns: 100%;
+  }
+
+  .dgc-post-grid-column-2 .dgc-blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dgc-post-grid-column-3 .dgc-blog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dgc-post-grid-column-4 .dgc-blog {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .dgc-post-grid-column-5 .dgc-blog {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .dgc-post-grid-column-6 .dgc-blog {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 766px) {
+  .dgc-post-grid-column-tablet-1 .dgc-blog {
+    grid-template-columns: 100%;
+  }
+
+  .dgc-post-grid-column-tablet-2 .dgc-blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dgc-post-grid-column-tablet-3 .dgc-blog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dgc-post-grid-column-tablet-4 .dgc-blog {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .dgc-post-grid-column-tablet-5 .dgc-blog {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .dgc-post-grid-column-tablet-6 .dgc-blog {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .dgc-post-grid-column-mobile-1 .dgc-blog {
+    grid-template-columns: 100%;
+  }
+
+  .dgc-post-grid-column-mobile-2 .dgc-blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dgc-post-grid-column-mobile-3 .dgc-blog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dgc-post-grid-column-mobile-4 .dgc-blog {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .dgc-post-grid-column-mobile-5 .dgc-blog {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .dgc-post-grid-column-mobile-6 .dgc-blog {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+/*--------------------------------------------------------------
+## testimonials
+--------------------------------------------------------------*/
+.testimonial-item {
+  background: #fff;
+  cursor: move;
+  border-radius: 6px;
+  box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+  margin: 50px 30px 30px;
+  padding: 70px 50px 70px;
+  text-align: center;
+}
+
+.testimonial-item img {
+  right: 0;
+  top: 0;
+  left: 0;
+  width: 100px;
+  border-radius: 50% !important;
+  margin: 0 auto 30px;
+}
+
+.testimonial-item p {
+  margin-bottom: 50px;
+  color: #2b2a5a;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.testimonial-item h5 {
+  font-size: 20px;
+  color: #2b2a5a;
+  margin-bottom: 5px;
+}
+
+.testimonial-item span {
+  color: #2b2a5a;
+  opacity: 0.8;
+}
+
+.testimonial-item ul {
+  margin: 0;
+  color: #ffe552;
+  margin-top: 20px;
+}
+
+.testimonials .slick-prev:before,
+.testimonials .slick-next:before {
+  font-size: 30px;
+}
+
+/*--------------------------------------------------------------
+# Pricing
+--------------------------------------------------------------*/
+.dgc-pricing-table {
+  text-align: center;
+  padding: 50px 30px;
+  border-radius: 6px;
+  box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+}
+
+.dgc-pricing-table h6 {
+  text-transform: uppercase;
+}
+
+.dgc-pricing-table.recommended {
+  position: relative;
+}
+
+.dgc-pricing-table.recommended:after {
+  position: absolute;
+  content: "Recommended";
+  left: 27%;
+  top: -15px;
+  color: #fff;
+  padding: 3px 15px;
+  box-shadow: 0px 10px 20px 0px rgba(142, 142, 142, 0.38);
+  border-radius: 20px;
+  background: #065FD4;
+}
+
+.dgc-pricing-table .dgc-currency {
+  font-size: 16px;
+}
+
+.dgc-pricing-table .dgc-price {
+  font-size: 52px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin: 30px 0;
+}
+
+.dgc-pricing-table > span {
+  color: #000;
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.dgc-pricing-table ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.dgc-pricing-table ul li {
+  line-height: 40px;
+  list-style: none;
+}
+
+.dgc-pricing-table .dgc-buy-button {
+  color: #fff;
+  padding: 12px 40px;
+  display: inline-block;
+  border-radius: 30px;
+  transition: 0.3s;
+  background: #065FD4;
+}
+
+.dgc-pricing-table .dgc-buy-button:hover {
+  box-shadow: 0px 10px 20px 0px rgba(125, 66, 202, 0.4);
+}
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.dgc-team {
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+}
+
+.dgc-team img {
+  border-bottom: 1px solid #fff !important;
+  width: 100%;
+}
+
+.dgc-team h4 {
+  margin-bottom: 1px;
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+.dgc-team span {
+  margin-bottom: 15px;
+  display: block;
+  font-size: 16px;
+}
+
+.dgc-team ul {
+  display: inline-block;
+  margin-bottom: 25px;
+  text-align: center;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+}
+
+.dgc-team ul li {
+  margin: 0;
+}
+
+.dgc-team li.list-inline-item a {
+  border: 1px solid #eee;
+  padding: 6px 7px;
+  margin: 0px 5px 29px 0px;
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Video
+--------------------------------------------------------------*/
+.dgc-video-popup {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: table;
+  text-align: center;
+}
+
+.dgc-video-popup-overlay {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.dgc-popup-video {
+  position: relative;
+  margin: auto;
+  width: 66px;
+  height: 66px;
+  border: 2px solid;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #fff;
+  -webkit-animation: 1.6s playShadow ease-out infinite;
+  animation: 1.6s playShadow ease-out infinite;
+  display: flex;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dgc-popup-video span {
+  margin: auto;
+  padding-left: 3px;
+}
+
+.dgc-popup-video:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+  transition: 0.35s;
+}
+
+/*--------------------------------------------------------------
+# Button
+--------------------------------------------------------------*/
+.dgc-btn {
+  border: none;
+  color: #ffffff;
+  display: inline-block;
+  padding: 15px 50px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: #065FD4;
+}
+
+.dgc-btn:hover {
+  color: #ffffff;
+}
+
+.dgc-btn i {
+  margin-right: 20px;
+}
+
+.dgc-btn.shadow {
+  transition: 0.3s;
+  box-shadow: 0 7px 10px 6px rgba(0, 0, 0, 0.08);
+}
+
+.dgc-play-btn > span {
+  display: inline-flex;
+  border-radius: inherit;
+  border-color: inherit;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.dgc-play-btn-txt {
+  font-weight: 700;
+  color: #000;
+}
+
+.dgc-play-btn-icon {
+  border-radius: 50%;
+  margin-top: -5%;
+  margin-bottom: -5%;
+  letter-spacing: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  width: 3.5em;
+  height: 3.5em;
+  order: -1;
+  margin-left: 0;
+  margin-right: 20px;
+  border: none;
+  color: #fff;
+}
+
+.dgc-btn.bordered {
+  background: #fff;
+  border: 2px solid;
+}
+
+.dgc-btn.bordered:hover {
+  color: #333;
+}
+
+@-webkit-keyframes rotate-90 {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-180deg);
+  }
+}
+@keyframes rotate-90 {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-180deg);
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+  100% {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+  100% {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+}
+/*--------------------------------------------------------------
+# Service
+--------------------------------------------------------------*/
+.dgc-service-item i {
+  font-size: 30px;
+  padding-bottom: 15px;
+}
+
+/*--------------------------------------------------------------
+# Product Search
+--------------------------------------------------------------*/
+.dgc-product-search {
+  display: flex;
+}
+
+.dgc-product-category {
+  width: 20%;
+}
+
+.dgc-product-category select {
+  border-radius: 6px 0px 0px 6px;
+  border-right: 0px;
+}
+
+.dgc-product-search-form {
+  display: flex;
+  width: 80%;
+}
+
+.dgc-product-search-button button {
+  border-radius: 0px 6px 6px 0px;
+  border-left: 0;
+}
+
+@media (max-width: 991px) {
+  .dgc-product-search {
+    display: block;
+  }
+
+  .dgc-product-category select {
+    border-radius: 6px;
+    border-right: 1px solid #eee;
+  }
+
+  .dgc-product-category {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  .dgc-product-search-form {
+    width: 100%;
+  }
+
+  .dgc-product-search-form input {
+    border-radius: 6px 0px 0px 6px;
+  }
+}
+@media (max-width: 480px) {
+  .dgc-product-search-form {
+    display: block;
+  }
+
+  .dgc-product-search-form input {
+    border-radius: 6px;
+  }
+
+  .dgc-product-search-button button {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 6px;
+  }
+}
+.checkout-button,
+.digicart-widget-woocommerce .single_add_to_cart_button {
+  display: inline-block;
+  padding: 15px 40px;
+  color: #fff;
+  border-radius: 60px;
+  cursor: pointer;
+  border: 1px solid;
+  touch-action: manipulation;
+  transition: all 0.3s ease 0s;
+  vertical-align: middle;
+}
+
+table {
+  width: 100%;
+}
+
+td, th {
+  border: 0.1rem solid #ddd;
+  line-height: 26px;
+  margin: 0;
+  overflow: visible;
+  padding: 0.5em;
+}
+
 body.woocommerce-cart section .woocommerce,
 body.woocommerce-checkout section .woocommerce,
 body.woocommerce-account section .woocommerce {
