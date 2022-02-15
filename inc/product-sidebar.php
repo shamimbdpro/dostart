@@ -44,7 +44,7 @@ $exclude_sale_count = in_array($product->get_id(), $dgc_exclude_sale_ids) !== fa
 
 <div class="digicart-widget-woocommerce">
     <div class="widget-product-details">
-        <ul class="list-inline text-left product-sidebar-stats">
+        <ul class="list-inline text-start product-sidebar-stats">
             <?php if ( 1 == $exclude_sale_count ) {?>
                 <li>
                     <i class="fa fa-shopping-cart"></i>

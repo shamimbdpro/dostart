@@ -130,7 +130,7 @@ blockquote {
 }
 
 .section-padding {
-  padding: 120px 0;
+  padding: 70px 0;
   background: #fafafa;
   overflow: hidden;
 }
@@ -168,7 +168,7 @@ a {
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
 .screen-reader-text {
-  clip: rect(1px, 1px, 1px, px);
+  clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
   height: 1px;
   width: 1px;
@@ -828,7 +828,7 @@ input#wp-comment-cookies-consent {
   }
   .dostart-mainmenu ul li a {
     display: block;
-    font-size: 15px;
+    font-size: 16px;
     color: #666;
     padding: 35px 15px 34px 15px;
   }
@@ -1213,7 +1213,7 @@ article.post {
 }
 
 .entry-content ul {
-  list-style: disc outside;
+  list-style: disc inside;
 }
 .entry-content ol {
   list-style: decimal;
@@ -1586,6 +1586,15 @@ body.page .comment-respond {
 
 section.error-404 {
   padding: 80px 0;
+}
+
+.error404 .dostart-breadcrumb-area {
+  padding: 90px 0 90px;
+}
+
+.error404 .dostart-breadcrumb-area h1 {
+  font-size: 35px;
+  margin-bottom: 10px;
 }
 
 .search-form {
