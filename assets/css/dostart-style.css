@@ -135,29 +135,6 @@ blockquote {
   overflow: hidden;
 }
 
-select {
-  color: #666;
-  border: 1px solid #eee;
-  padding: 8px 15px;
-  height: 55px;
-  width: 100%;
-  outline: none;
-}
-
-.nice-select.open .list {
-  width: unset;
-}
-
-.nice-select {
-  background: #f6f6f6;
-  padding: 15px;
-  width: auto;
-}
-
-.nice-select span.current {
-  margin-right: 20px;
-}
-
 /*-------[ Default Responsive ] ------*/
 @media (max-width: 767px) {
   body {
