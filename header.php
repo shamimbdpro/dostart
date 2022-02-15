@@ -38,7 +38,7 @@ if ( function_exists('wp_body_open') ) {
         <div class="dostart-main-header">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 logo_col">     
+                    <div class="col-md-2 logo_col">     
                         <div class="site-logo">
                             <?php
                             if ( has_custom_logo() ) {
@@ -55,7 +55,7 @@ if ( function_exists('wp_body_open') ) {
                             </div>
                         </div>                            
                     </div>
-                      <div class="col-md-9 menu_col">
+                    <div class="col-md-8 menu_col">
                       <div class="primary_header">
                          <a href="#" class="toggle"><span></span></a>
                          <div class="dostart-mainmenu">
@@ -83,6 +83,9 @@ if ( function_exists('wp_body_open') ) {
                               </nav>
                         </div>
                         
+                    </div>
+
+                    <div class="col-md-2">
                         <!-- Woocommere Cart Icon -->
                         <?php if ( function_exists('dostart_header_cart') && class_exists('WooCommerce') ) { ?>
                             <div class="dostart-header-cart" >
@@ -90,6 +93,8 @@ if ( function_exists('wp_body_open') ) {
                             </div>  
                         <?php } ?>
                     </div>
+
+
                     </div>
                 </div>
             </div>
