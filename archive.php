@@ -30,11 +30,21 @@ get_header(); ?>
                             */
                             get_template_part('template-parts/content', get_post_format());
 
-                        endwhile;
+                        endwhile; ?>
 
-                        the_posts_navigation();
+                        <div class="text-center">
+                        <?php
+                        the_posts_pagination(
+                            array(
+                                'mid_size'  => 2,
+                                'prev_text' => esc_html__( '&#10094; Prev', 'dostart' ),
+                                'next_text' => esc_html__( 'Next &#10095;', 'dostart' ),
+                            )
+                        );
+                        ?>
+                     </div>
 
-                        else :
+                      <?php  else :
 
                             get_template_part('template-parts/content', 'none');
 
