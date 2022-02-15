@@ -2347,12 +2347,6 @@ p.stars.selected a:not(.active):before {
   display: block;
 }
 
-.woocommerce-additional-fields .woocommerce-input-wrapper,
-.woocommerce-additional-fields label,
-.woocommerce-billing-fields label {
-  width: 100%;
-}
-
 .woocommerce-additional-fields .woocommerce-input-wrapper textarea {
   border-radius: 6px;
   height: 160px;
