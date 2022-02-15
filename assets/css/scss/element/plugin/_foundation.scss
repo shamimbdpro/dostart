@@ -1,0 +1,24 @@
+.checkout-button,
+ .digicart-widget-woocommerce .single_add_to_cart_button{
+    display: inline-block;
+    padding: 15px 40px;
+    color: #fff;
+    border-radius: 60px;
+    cursor: pointer;
+    border: 1px solid;
+    touch-action: manipulation;
+    transition: all .3s ease 0s;
+    vertical-align: middle;
+}
+
+table {
+    width: 100%;
+}
+
+td, th {
+    border: .1rem solid #ddd;
+    line-height: 26px;
+    margin: 0;
+    overflow: visible;
+    padding: .5em;
+}

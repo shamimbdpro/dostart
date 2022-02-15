@@ -1,0 +1,219 @@
+
+
+
+
+
+/***************************
+        blog
+****************************/
+.dgc-blog{
+    display: grid;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.dgc-blog-item {
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+    box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px
+}
+
+.dgc-blog-item-content {
+    padding: 20px;
+}
+
+.dgc-blog-item-content ul {
+    margin-bottom: 0;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.dgc-blog-item-content ul li i {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.dgc-blog-item-img {
+    position: relative;
+
+  img{
+    width:100%;
+  }
+}
+
+.dgc-blog-item-img span {
+    background: rgba(0, 0, 0, 0.50);
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+    box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+.dgc-blog-item-img span a {
+    color: #fff;
+}
+
+.dgc-blog-item-meta{
+    font-size: 16px;
+    border-top: 1px solid #eceef2;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.dgc-blog-item-meta .avatar {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.dgc-blog-item-meta a {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.dgc-blog-item-meta .blog-meta-info {
+    position: relative;
+    margin: 0;
+}
+
+.dgc-blog-item-meta .blog-meta-info:last-child {
+    margin-right: 0;
+}
+
+.dgc-blog-item-meta .blog-meta-info {
+    position: relative;
+    padding-right: 20px;
+}
+
+.dgc-blog-item-meta .blog-meta-info:after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    background: #b7b2b2;
+    height: 16px;
+    width: 1px;
+}
+
+.dgc-blog-item-meta .blog-meta-info:last-child:after {
+    display: none;
+}
+
+.dgc-blog-item-content h4 {
+   font-size: 20px;
+    margin-bottom: 0;
+    margin: 0;
+    color: #333;
+    padding-bottom: 20px
+}
+
+.dgc-blog-item-content p {
+    font-size: 16px
+}
+
+
+
+.dgc-blog-item-content .blog-btn {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.blog-item-date{
+  margin: 0;
+}
+.front-date {
+    font-weight: 600;
+    margin: 10px 0 15px !important;
+}
+
+
+@media only screen and (min-width: 1025px) {
+  .dgc-post-grid-column-1 .dgc-blog {
+    grid-template-columns: 100%;
+  }
+
+  .dgc-post-grid-column-2 .dgc-blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dgc-post-grid-column-3 .dgc-blog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dgc-post-grid-column-4 .dgc-blog {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .dgc-post-grid-column-5 .dgc-blog {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .dgc-post-grid-column-6 .dgc-blog {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 766px) {
+  .dgc-post-grid-column-tablet-1 .dgc-blog {
+    grid-template-columns: 100%;
+  }
+
+  .dgc-post-grid-column-tablet-2 .dgc-blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dgc-post-grid-column-tablet-3 .dgc-blog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dgc-post-grid-column-tablet-4 .dgc-blog {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .dgc-post-grid-column-tablet-5 .dgc-blog {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .dgc-post-grid-column-tablet-6 .dgc-blog {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .dgc-post-grid-column-mobile-1 .dgc-blog {
+    grid-template-columns: 100%;
+  }
+
+  .dgc-post-grid-column-mobile-2 .dgc-blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dgc-post-grid-column-mobile-3 .dgc-blog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dgc-post-grid-column-mobile-4 .dgc-blog {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .dgc-post-grid-column-mobile-5 .dgc-blog {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .dgc-post-grid-column-mobile-6 .dgc-blog {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+
+

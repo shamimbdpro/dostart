@@ -61,9 +61,17 @@
 
 @import "element/__widget.scss";
 
+/*--------------------------------------------------------------
+    8.Testimonial idgets CSS
+----------------------------------------------------------------*/
+
+@import "element/plugin/_blog.scss";
+@import "element/plugin/_testimonial.scss";
+@import "element/plugin/_foundation.scss";
+
 /*------------------------------------------------------------------------
    8.Woocommerce CSS
 /*------------------------------------------------------------------------*/
 
-@import "woocommerce.scss";
+/* @import "woocommerce.scss"; */
 

@@ -24,10 +24,6 @@ del span {
   color: #333;
 }
 
-.woocommerce label {
-  width: auto;
-}
-
 .woocommerce img,
 .woocommerce-page img {
   height: auto;
@@ -1583,6 +1579,12 @@ p.stars.selected a:not(.active):before {
  */
 .woocommerce-billing-fields .form-row {
   display: block;
+}
+
+.woocommerce-additional-fields .woocommerce-input-wrapper,
+.woocommerce-additional-fields label,
+.woocommerce-billing-fields label {
+  width: 100%;
 }
 
 .woocommerce-additional-fields .woocommerce-input-wrapper textarea {

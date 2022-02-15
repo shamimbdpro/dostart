@@ -1,89 +1,98 @@
 <?php
 
-if ( ! function_exists('dostart_cart_link') ) {
-
-    function dostart_cart_link() {
-        ?>    
-        <a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e('View your shopping cart', 'dostart'); ?>">
-            <i class="fa fa-shopping-bag"><span class="count"><?php echo wp_kses_data(WC()->cart->get_cart_contents_count()); ?></span></i>
-            <!-- <div class="amount-cart"><?php// echo wp_kses_data(WC()->cart->get_cart_subtotal()); ?></div>  -->
-        </a>
-        <?php
-    }
-}
-
-if ( ! function_exists('dostart_header_cart') ) {
-
-    function dostart_header_cart() {
-        ?>
-            <div class="header-cart">
-                <div class="header-cart-block">
-                    <div class="header-cart-inner">
-                        <?php dostart_cart_link(); ?>
-                       <!--  <ul class="site-header-cart menu list-unstyled text-center">
-                            <li>
-                               // the_widget('WC_Widget_Cart', 'title='); ?>
-                            </li>
-                        </ul> -->
-                    </div>
-                </div>
-            </div>
-    <?php }
-}
-
-if ( ! function_exists('dostart_header_add_to_cart_fragment') ) {
-    add_filter('woocommerce_add_to_cart_fragments', 'dostart_header_add_to_cart_fragment');
-
-    function dostart_header_add_to_cart_fragment( $fragments ) {
-        ob_start();
-
-        dostart_cart_link();
-
-        $fragments['a.cart-contents'] = ob_get_clean();
-
-        return $fragments;
-    }
-}
-
 
 /**
- * Products per page.
+ * WooCommerce Compatibility File
+ *
+ * @link https://woocommerce.com/
+ *
+ * @package digicart
+ */
+
+/**
+ * WooCommerce setup function.
+ *
+ * @link https://docs.woocommerce.com/document/third-party-custom-theme-compatibility/
+ * @link https://github.com/woocommerce/woocommerce/wiki/Enabling-product-gallery-features-(zoom,-swipe,-lightbox)-in-3.0.0
  *
  * @return void
  */
-function dostart_woocommerce_products_per_page() {
-	$products_per_page = ! empty( get_theme_mod( 'dostart_woo_product_per_page' ) ) ? get_theme_mod( 'dostart_woo_product_per_page' ) : '';
+function dostart_woocommerce_setup() {
+	add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'dostart_woocommerce_setup' );
+
+/**
+ * WooCommerce specific scripts & stylesheets.
+ *
+ * @return void
+ */
+function digicart_woocommerce_scripts() {
+	wp_enqueue_style( 'digicart-woocommerce-style', get_template_directory_uri() . '/assets/css/woocommerce.min.css' );
+
+	$font_path   = WC()->plugin_url() . '/assets/fonts/';
+	$inline_font = '@font-face {
+			font-family: "star";
+			src: url("' . $font_path . 'star.eot");
+			src: url("' . $font_path . 'star.eot?#iefix") format("embedded-opentype"),
+				url("' . $font_path . 'star.woff") format("woff"),
+				url("' . $font_path . 'star.ttf") format("truetype"),
+				url("' . $font_path . 'star.svg#star") format("svg");
+			font-weight: normal;
+			font-style: normal;
+		}';
+
+	wp_add_inline_style( 'digicart-woocommerce-style', $inline_font );
+}
+add_action( 'wp_enqueue_scripts', 'digicart_woocommerce_scripts' );
+
+/**
+ * Disable the default WooCommerce stylesheet.
+ *
+ * Removing the default WooCommerce stylesheet and enqueing your own will
+ * protect you during WooCommerce core updates.
+ *
+ * @link https://docs.woocommerce.com/document/disable-the-default-stylesheet/
+ */
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
+/**
+ * Add 'woocommerce-active' class to the body tag.
+ *
+ * @param  array $classes CSS classes applied to the body tag.
+ * @return array $classes modified to include 'woocommerce-active' class.
+ */
+function dostart_woocommerce_active_body_class( $classes ) {
+	$classes[] = 'woocommerce-active';
+
+	return $classes;
+}
+add_filter( 'body_class', 'dostart_woocommerce_active_body_class' );
+
+// Products per page.
+function digicart_woocommerce_products_per_page() {
+	global $digicart_opt;
+	$products_per_page = ! empty( get_theme_mod( 'digicart_woo_product_per_page' ) ) ? get_theme_mod( 'digicart_woo_product_per_page' ) : '';
 	return $products_per_page;
 }
-add_filter( 'loop_shop_per_page', 'dostart_woocommerce_products_per_page' );
+add_filter( 'loop_shop_per_page', 'digicart_woocommerce_products_per_page' );
 
-
-/**
- * Product gallery thumnbail columns.
- *
- * @return void
- */
-function dostart_woocommerce_thumbnail_columns() {
-	$products_per_page = ! empty( get_theme_mod( 'dostart_woo_product_per_page' ) ) ? get_theme_mod( 'dostart_woo_product_per_page' ) : '4';
-	return $products_per_page;
+// Product gallery thumnbail columns.
+function digicart_woocommerce_thumbnail_columns() {
+	global $digicart_opt;
+	$products_per_page = ! empty( get_theme_mod( 'digicart_woo_product_per_page' ) ) ? get_theme_mod( 'digicart_woo_product_per_page' ) : '';
+	return 4;
 }
-add_filter( 'woocommerce_product_thumbnails_columns', 'dostart_woocommerce_thumbnail_columns' );
+add_filter( 'woocommerce_product_thumbnails_columns', 'digicart_woocommerce_thumbnail_columns' );
 
 
-/**
- * Default loop columns on product archives.
- *
- * @return void
- */
-function dostart_woocommerce_loop_columns() {
-	$shop_columns = ! empty( get_theme_mod( 'dostart_shop_columns' ) ) ? get_theme_mod( 'dostart_shop_columns' ) : '4';
+// Default loop columns on product archives.
+function digicart_woocommerce_loop_columns() {
+	global $digicart_opt;
+	$shop_columns = ! empty( get_theme_mod( 'digicart_shop_columns' ) ) ? get_theme_mod( 'digicart_shop_columns' ) : '4';
 	return $shop_columns;
 }
-add_filter( 'loop_shop_columns', 'dostart_woocommerce_loop_columns' );
-
-
-
-
+add_filter( 'loop_shop_columns', 'digicart_woocommerce_loop_columns' );
 
 /**
  * Related Products Args.
@@ -91,9 +100,9 @@ add_filter( 'loop_shop_columns', 'dostart_woocommerce_loop_columns' );
  * @param array $args related products args.
  * @return array $args related products args.
  */
-function dostart_woocommerce_related_products_args( $args ) {
-	$related_products_per_page = ! empty( get_theme_mod( 'dostart_related_product_limit' ) ) ? get_theme_mod( 'dostart_related_product_limit' ) : '3';
-	$related_products_columns = ! empty( get_theme_mod( 'dostart_related_product_column' ) ) ? get_theme_mod( 'dostart_related_product_column' ) : '4';
+function digicart_woocommerce_related_products_args( $args ) {
+	$related_products_per_page = ! empty( get_theme_mod( 'digicart_related_product_limit' ) ) ? get_theme_mod( 'digicart_related_product_limit' ) : '3';
+	$related_products_columns = ! empty( get_theme_mod( 'digicart_related_product_column' ) ) ? get_theme_mod( 'digicart_related_product_column' ) : '4';
 	$defaults = array(
 		'posts_per_page' => $related_products_per_page,
 		'columns'        => $related_products_columns,
@@ -103,13 +112,7 @@ function dostart_woocommerce_related_products_args( $args ) {
 
 	return $args;
 }
-add_filter( 'woocommerce_output_related_products_args', 'dostart_woocommerce_related_products_args' );
-
-
-/**
- * Remove "You May Also Like" UPsell Products.
- */
-remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
+add_filter( 'woocommerce_output_related_products_args', 'digicart_woocommerce_related_products_args' );
 
 
 /**
@@ -119,7 +122,7 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_d
  *
  * Tutorial: http://skyver.ge/c
  */
-function dostart_free_checkout_fields() {
+function digicart_free_checkout_fields() {
 	// first, bail if WC isn't active since we're hooked into a general WP hook
 	if ( ! function_exists( 'WC' ) ) {
 		return;
@@ -131,7 +134,7 @@ function dostart_free_checkout_fields() {
 	// now continue only if we're at checkout
 	// is_checkout() was broken as of WC 3.2 in ajax context, double-check for is_ajax
 	// I would check WOOCOMMERCE_CHECKOUT but testing shows it's not set reliably
-	if ( function_exists( 'is_checkout' ) && ( is_checkout() || wp_doing_ajax () ) ) {
+	if ( function_exists( 'is_checkout' ) && ( is_checkout() || is_ajax() ) ) {
 		// remove coupon forms since why would you want a coupon for a free cart??
 		remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
 		// Remove the "Additional Info" order notes
@@ -161,7 +164,7 @@ function dostart_free_checkout_fields() {
 		);
 	}
 }
-add_action( 'wp', 'dostart_free_checkout_fields' );
+add_action( 'wp', 'digicart_free_checkout_fields' );
 
 /**
  * @snippet       Display &quot;FREE&quot; if WooCommerce Product Price is Zero or Empty - WooCommerce
@@ -173,14 +176,14 @@ add_action( 'wp', 'dostart_free_checkout_fields' );
  */
 
 
-function dostart_price_free_zero_empty( $price, $product ) {
+function digicart_price_free_zero_empty( $price, $product ) {
 
 	if ( '' === $product->get_price() || 0 == $product->get_price() ) {
-		$price = '<span class="woocommerce-Price-amount amount">' . esc_html__( 'Free', 'dostart' ) . '</span>';
+		$price = '<span class="woocommerce-Price-amount amount">' . esc_html__( 'Free', 'digicart' ) . '</span>';
 	}
 	return $price;
 }
-add_filter( 'woocommerce_get_price_html', 'dostart_price_free_zero_empty', 100, 2 );
+add_filter( 'woocommerce_get_price_html', 'digicart_price_free_zero_empty', 100, 2 );
 
 
 /**
@@ -254,8 +257,9 @@ function add_faq_product_tab_content() { ?>
 // Product Item
 function dostart_product_item() {
 
-	$digicart_product_hover_button = get_theme_mod( 'dostart_product_hover', 'ture' );
-	$product_live_preview_new_tab = 1 == get_theme_mod('dostart_product_live_preview_new_tab', true) ? '_blank' : '';
+	global $digicart_opt;
+	$digicart_product_hover_button = get_theme_mod( 'digicart_product_hover', 'ture' );
+	$product_live_preview_new_tab = 1 == get_theme_mod('digicart_product_live_preview_new_tab', true) ? '_blank' : '';
 	?>
   <div class="download-item">
 	<div class="download-item-image">
@@ -310,10 +314,33 @@ add_action( 'get_dostart_product_item', 'dostart_product_item' );
 
 
 
+// Header Add To Cart Button.
+if ( ! function_exists('dgc_cart_link') ) {
 
+    function dgc_cart_link() {
+        ?>
+        <a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e('View your shopping cart', 'digicart'); ?>">
+            <i class="fas fa-shopping-bag"><span class="count"><?php echo wp_kses_data(WC()->cart->get_cart_contents_count()); ?></span></i>
+        </a>
+        <?php
+    }
+}
 
+if ( ! function_exists('dgc_header_cart') ) {
+    function dgc_header_cart() {
+            dgc_cart_link();
+    }
+}
 
-
+if ( ! function_exists('dgc_header_add_to_cart_fragment') ) {
+    add_filter('woocommerce_add_to_cart_fragments', 'dgc_header_add_to_cart_fragment');
+    function dgc_header_add_to_cart_fragment( $fragments ) {
+        ob_start();
+        dgc_cart_link();
+        $fragments['a.cart-contents'] = ob_get_clean();
+        return $fragments;
+    }
+}
 
 
 // Pricing to woocommerce product
@@ -461,4 +488,4 @@ function digicart_variation_radio_buttons( $html, $args ) {
 
 	return $html . $radios;
 }
-add_filter( 'woocommerce_dropdown_variation_attribute_options_html', 'digicart_variation_radio_buttons', 20, 2 ); 
+add_filter( 'woocommerce_dropdown_variation_attribute_options_html', 'digicart_variation_radio_buttons', 20, 2 );

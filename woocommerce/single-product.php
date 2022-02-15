@@ -36,11 +36,8 @@ get_header( 'shop' ); ?>
 						setPostViews( get_the_id() );
 					}
 
-					if(function_exists('dostart_pro')){
-						include_once(DGC_PLUGIN_PATH .'inc/woocommerce/content-single-product.php');
-					}else{
-					    wc_get_template_part( 'content', 'single-product' );
-					}
+					wc_get_template_part( 'content', 'single-product' );
+				
 					
 					?>
 

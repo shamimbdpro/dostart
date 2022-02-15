@@ -127,15 +127,6 @@ if ( ! function_exists('dostart_theme_setup') ) :
         add_theme_support( 'responsive-embeds' );
 
         /**
-         * Woocommerce Support.
-         * Product Gallery | Product Lightbox | Product Slider
-         */
-        add_theme_support('woocommerce');
-        add_theme_support('wc-product-gallery-zoom');
-        add_theme_support('wc-product-gallery-lightbox');
-        add_theme_support('wc-product-gallery-slider');
-
-        /**
          * Post Excerpt Length
          **/
 
@@ -262,6 +253,11 @@ add_action('admin_enqueue_scripts', 'dostart_load_admin_script_callback');
  */
 require DOSTART_THEME_DIR . '/inc/class/helper.php';
 
+/**
+ * CMB 2 Conditional.
+ */
+require DOSTART_THEME_DIR . '/inc/cmb2-conditionals.php';
+
 
 /**
  * Hooks.
@@ -319,6 +315,7 @@ if ( class_exists('WooCommerce') ) {
  */
 require DOSTART_THEME_DIR . '/inc/walker/init.php';
 require DOSTART_THEME_DIR . '/inc/walker/menu-walker.php';
+
 
 /**
  * Dostart Theme Metabox.
