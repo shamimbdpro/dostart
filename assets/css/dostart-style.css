@@ -102,6 +102,7 @@ button[type=submit]:hover {
 .button {
   background: #065FD4 !important;
   color: #fff !important;
+  padding: 8px 20px;
 }
 
 blockquote {
