@@ -2731,6 +2731,7 @@ ul.woocommerce-error {
   background: #fff;
   margin: 10px 0;
   border: 1px solid #eee;
+  width: 100%;
 }
 
 .widget-product-details .widget-add-to-cart .variations .value .variation-radios [type=radio]:checked + label:before,
@@ -2756,6 +2757,7 @@ ul.woocommerce-error {
   left: 8px;
   border-radius: 100%;
   transition: all 0.2s ease;
+  background: #ff6d60;
 }
 
 .widget-product-details .widget-add-to-cart .variations .value .variation-radios [type=radio]:not(:checked) + label:after {
