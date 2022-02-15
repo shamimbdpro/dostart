@@ -30,18 +30,21 @@ get_header(); ?>
                             */
                             get_template_part('template-parts/content', get_post_format());
 
-                        endwhile;
+                        endwhile; ?>
 
-                        // Previous / Next Button.
-
-                        the_post_navigation(
-                                array(
-                                    'prev_text' => esc_html__( '&#171; Previous Post', 'dostart' ),
-                                    'next_text' => esc_html__( 'Next Post &#187;', 'dostart' ),
-                                )
-                            );
-
-                        else :
+                        <div class="text-center">
+                           <?php
+                           the_posts_pagination(
+                               array(
+                                   'mid_size'  => 2,
+                                   'prev_text' => esc_html__( '&#10094; Prev', 'dostart' ),
+                                   'next_text' => esc_html__( 'Next &#10095;', 'dostart' ),
+                               )
+                           );
+                           ?>
+                        </div>
+   
+                        <?php else :
 
                             get_template_part('template-parts/content', 'none');
 
