@@ -89,34 +89,19 @@ button[type=submit]:hover {
   background-color: #333333;
 }
 
+.wpcf7-form label {
+  width: 100%;
+}
+.wpcf7-form input, .wpcf7-form textarea {
+  width: 100%;
+}
+.wpcf7-form textarea {
+  height: 110px;
+}
+
 .button {
   background: #065FD4 !important;
   color: #fff !important;
-}
-
-.dostart-page-content .wpb_text_column ul {
-  margin: 0px 0 0 0;
-  padding: 0 !important;
-  list-style: none !important;
-}
-
-.dostart-page-content .wpb_text_column li {
-  position: relative;
-  margin-bottom: 15px;
-  padding: 0 0 0 28px;
-}
-
-.dostart-page-content .wpb_text_column li:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: center;
-  font-family: fontAwesome;
-  content: "\f138";
-  font-size: 15px;
-  line-height: 23px;
-  color: #000033;
-  font-weight: bold;
 }
 
 blockquote {
@@ -1418,6 +1403,7 @@ blockquote {
   display: flex;
   align-items: center;
   padding-right: 10px;
+  color: #333;
 }
 .dostart-blog-item-meta .avatar {
   border-radius: 50%;

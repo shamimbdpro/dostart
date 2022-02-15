@@ -2622,6 +2622,10 @@ ul.woocommerce-error {
 .widget-product-details .widget-price p ins {
   text-decoration: none;
   display: block;
+  background: transparent;
+  color: #333;
+  margin-top: -10px;
+  padding: 0;
 }
 
 .widget-product-details select,
