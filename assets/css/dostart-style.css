@@ -1213,7 +1213,7 @@ article.post {
 }
 
 .entry-content ul {
-  list-style: disc outside;
+  list-style: disc inside;
 }
 .entry-content ol {
   list-style: decimal;
