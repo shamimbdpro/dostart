@@ -39,6 +39,13 @@
   position: relative;
 }
 
+
+.menu_col{
+  display:flex;
+  align-items:center;
+  justify-content:end
+}
+
 /*-------[ Header Responsive ] ------*/
 
 
@@ -198,16 +205,24 @@
   }
 }
 
+/*------- WooCommerce Header Cart Style.------*/
+
+.dostart-wc-button {
+  display: flex;
+  justify-content: end;
+}
+
+.dostart-my-account-btn a{
+    border: 1px solid $brand-color;
+    padding: 7px 10px;
+    margin-left: 19px;
+}
 
 /*-------[ Navigation Responsive ] ------*/
 
 
 @media(max-width:991px) {
 
-
-  .dostart-header-cart {
-    display: none;
-  }
 
   .hc-nav-trigger.hc-nav-1 {
     position: absolute;
