@@ -36,8 +36,8 @@ if ( function_exists('wp_body_open') ) {
     <?php if ( 'disabled' !== $header_layout ) { ?>
     <header class="dostart-header-area">
         <div class="container">
-            <div class="row" style="align-items:center">
-                <div class="col-md-2 logo_col">     
+            <div class="row">
+                <div class="col-md-3 logo_col">     
                     <div class="site-logo">
                         <?php
                         if ( has_custom_logo() ) {
@@ -54,7 +54,7 @@ if ( function_exists('wp_body_open') ) {
                         </div>
                     </div>                            
                 </div>
-                <div class="col-md-10 menu_col">
+                <div class="col-md-9 menu_col">
                     <div class="primary_header">
                         <a href="#" class="toggle"><span></span></a>
                         <div class="dostart-mainmenu">
