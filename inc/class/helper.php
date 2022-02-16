@@ -198,28 +198,3 @@ function dostart_allowed_html() {
 
 	return $allowed_tags;
 }
-
-
-/**
- * Hide Dostart Theme Notice.
- */
-add_action( 'wp_ajax_dostart_admin_notice_ajax_object_save', 'dostart_admin_notice_ajax_object_callback' );
-
-function dostart_admin_notice_ajax_object_callback() {
-   
-
-	$data = isset($_POST['data']) ? sanitize_text_field(wp_unslash($_POST['data'])) : array();
-	if ( $data ) {
-		
-		// Check valid request form user.
-		check_ajax_referer('dostart_theme_notice_status');
-	
-		update_option('dostart_theme_notice', $data);  
-
-		$response['message'] = 'sucess';
-		wp_send_json_success($response);
-	}
-
-	wp_die();
-
-}

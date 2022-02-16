@@ -253,6 +253,12 @@ add_action('admin_enqueue_scripts', 'dostart_load_admin_script_callback');
  */
 require DOSTART_THEME_DIR . '/inc/class/helper.php';
 
+
+/**
+ * Load Hooks.
+ */
+require DOSTART_THEME_DIR . '/inc/hooks.php';
+
 /**
  * Breadcrumb.
  */
