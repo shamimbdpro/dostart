@@ -46,21 +46,6 @@
   justify-content:end
 }
 
-/*------- WooCommerce Header Cart Style.------*/
-
-.dostart-wc-button {
-  display: flex;
-  justify-content: end;
-  padding-left:35px;
-}
-
-.dostart-my-account-btn a{
-    border: 1px solid $brand-color;
-    padding: 7px 10px;
-    margin-left: 19px;
-}
-
-
 /*-------[ Header Responsive ] ------*/
 
 
@@ -220,17 +205,38 @@
   }
 }
 
+/*------- WooCommerce Header Cart Style.------*/
+
+.dostart-wc-button {
+  display: flex;
+  justify-content: end;
+}
+
+.dostart-my-account-btn a{
+    border: 1px solid $brand-color;
+    padding: 7px 10px;
+    margin-left: 19px;
+}
+
 /*-------[ Navigation Responsive ] ------*/
 
 
-@media(max-width:991px) {
+@media(max-width:1024px) {
 
+
+  .menu_col{
+    flex-direction: row-reverse;
+  }
+
+  .dostart-wc-button{
+    margin-right: 20px;
+  }
 
   .hc-nav-trigger.hc-nav-1 {
-    position: absolute;
-    right: 23px;
-    top: 30px;
-  }
+    position: inherit;
+    right: 0;
+    top: 1px;
+}
 
 
   .hc-nav.hc-nav-1 {
@@ -260,10 +266,19 @@
 }
 
 @media(max-width:767px) {
-  .hc-nav-trigger.hc-nav-1 {
-    top: -60px;
-  }
+ 
+  .dostart-header-area .row{
+    align-items: center;
+    justify-content: space-between;
 
+    .logo_col{
+      width: auto;
+    }
+
+    .menu_col{
+      width: auto;
+    }
+  }
 
 }
 

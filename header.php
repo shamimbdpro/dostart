@@ -36,7 +36,7 @@ if ( function_exists('wp_body_open') ) {
     <?php if ( 'disabled' !== $header_layout ) { ?>
     <header class="dostart-header-area">
         <div class="container">
-            <div class="row" style="align-items:center">
+            <div class="row">
                 <div class="col-md-2 logo_col">     
                     <div class="site-logo">
                         <?php
@@ -83,26 +83,27 @@ if ( function_exists('wp_body_open') ) {
                         </div>
                     </div>
 
-
+					<?php if(class_exists('WooCommerce')){?>
                     <div class="dostart-wc-button">
-                    <!-- Woocommere Cart Icon -->
-                    <?php if ( function_exists('dostart_header_cart') && class_exists('WooCommerce') ) { ?>
-                            <div class="dostart-header-cart" >
-                                <?php dostart_header_cart(); ?>
-                            </div>  
-                    <?php } ?>
+                        <!-- Woocommere Cart Icon -->
+                        <?php if ( function_exists('dostart_header_cart') ) { ?>
+                                <div class="dostart-header-cart" >
+                                    <?php dostart_header_cart(); ?>
+                                </div>  
+                        <?php } ?>
 
-                    <div class="dostart-my-account-btn">
-                        <a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>">
-                            <?php
-                            if ( is_user_logged_in() ) { ?>
-                            <span><?php   esc_html_e('My Account', 'digicart'); ?></span>
-                        <?php } else {  ?>
-                            <span><?php   esc_html_e('Login', 'digicart'); ?></span>
-                            <?php } ?>
-                        </a>
-                    </div> <!-- End my account button. -->
+                        <div class="dostart-my-account-btn">
+                            <a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>">
+                                <?php
+                                if ( is_user_logged_in() ) { ?>
+                                <span><?php   esc_html_e('My Account', 'dostart'); ?></span>
+                            <?php } else {  ?>
+                                <span><?php   esc_html_e('Login', 'dostart'); ?></span>
+                                <?php } ?>
+                            </a>
+                        </div> <!-- End my account button. -->
                     </div>
+					  <?php } ?>
 
                 </div>
 

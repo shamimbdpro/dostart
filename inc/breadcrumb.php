@@ -23,20 +23,20 @@
  */
 
 /**
- * Shows a breadcrumb for all types of pages.  This is a wrapper function for the digicart_Breadcrumb class,
+ * Shows a breadcrumb for all types of pages.  This is a wrapper function for the dostart_breadcrumb class,
  * which should be used in theme templates.
  *
  * @since  0.1.0
  * @access public
- * @param  array $args Arguments to pass to digicart_Breadcrumb.
+ * @param  array $args Arguments to pass to dostart_breadcrumb.
  * @return void
  */
-function digicart_breadcrumb( $args = array() ) {
+function dostart_breadcrumb( $args = array() ) {
 
-	$breadcrumb = apply_filters( 'digicart_Breadcrumb_object', null, $args );
+	$breadcrumb = apply_filters( 'dostart_breadcrumb_object', null, $args );
 
 	if ( ! is_object( $breadcrumb ) ) {
-		$breadcrumb = new digicart_Breadcrumb( $args );
+		$breadcrumb = new dostart_breadcrumb( $args );
 	}
 
 	return $breadcrumb->trail();
@@ -48,7 +48,7 @@ function digicart_breadcrumb( $args = array() ) {
  * @since  0.6.0
  * @access public
  */
-class digicart_Breadcrumb {
+class dostart_breadcrumb {
 
 	/**
 	 * Array of items belonging to the current breadcrumb trail.
@@ -101,7 +101,7 @@ class digicart_Breadcrumb {
 	}
 
 	/**
-	 * Sets up the breadcrumb trail properties.  Calls the `digicart_Breadcrumb::add_items()` method
+	 * Sets up the breadcrumb trail properties.  Calls the `dostart_breadcrumb::add_items()` method
 	 * to creat the array of breadcrumb items.
 	 *
 	 * @since  0.6.0
@@ -117,8 +117,8 @@ class digicart_Breadcrumb {
 	 *     @type bool      $network        Whether to link to the network main site (multisite only).
 	 *     @type bool      $show_title     Whether to show the title (last item) in the trail.
 	 *     @type bool      $show_browse    Whether to show the breadcrumb menu header.
-	 *     @type array     $labels         Text labels. @see digicart_Breadcrumb::set_labels()
-	 *     @type array     $post_taxonomy  Taxonomies to use for post types. @see digicart_Breadcrumb::set_post_taxonomy()
+	 *     @type array     $labels         Text labels. @see dostart_breadcrumb::set_labels()
+	 *     @type array     $post_taxonomy  Taxonomies to use for post types. @see dostart_breadcrumb::set_post_taxonomy()
 	 *     @type bool      $echo           Whether to print or return the breadcrumbs.
 	 * }
 	 * @return void
@@ -142,7 +142,7 @@ class digicart_Breadcrumb {
 		);
 
 		// Parse the arguments with the deaults.
-		$this->args = apply_filters( 'digicart_Breadcrumb_args', wp_parse_args( $args, $defaults ) );
+		$this->args = apply_filters( 'dostart_breadcrumb_args', wp_parse_args( $args, $defaults ) );
 
 		// Set the labels and post taxonomy properties.
 		$this->set_labels();
@@ -218,7 +218,7 @@ class digicart_Breadcrumb {
 
 			// Wrap the breadcrumb trail.
 			$breadcrumb = sprintf(
-				'<%1$s role="navigation" aria-label="%2$s" class="digicart breadcrumbs" itemprop="breadcrumb">%3$s%4$s%5$s</%1$s>',
+				'<%1$s role="navigation" aria-label="%2$s" class="dostart breadcrumbs" itemprop="breadcrumb">%3$s%4$s%5$s</%1$s>',
 				tag_escape( $this->args['container'] ),
 				esc_attr( $this->labels['aria_label'] ),
 				$this->args['before'],
@@ -228,7 +228,7 @@ class digicart_Breadcrumb {
 		}
 
 		// Allow developers to filter the breadcrumb trail HTML.
-		$breadcrumb = apply_filters( 'digicart_Breadcrumb', $breadcrumb, $this->args );
+		$breadcrumb = apply_filters( 'dostart_breadcrumb', $breadcrumb, $this->args );
 
 		if ( false === $this->args['echo'] ) {
 			return $breadcrumb;
@@ -249,21 +249,21 @@ class digicart_Breadcrumb {
 	protected function set_labels() {
 
 		$defaults = array(
-			'browse'              => esc_html__( 'Browse:', 'digicart' ),
-			'aria_label'          => esc_attr_x( 'Breadcrumbs', 'breadcrumbs aria label', 'digicart' ),
-			'home'                => esc_html__( 'Home', 'digicart' ),
-			'error_404'           => esc_html__( '404 Not Found', 'digicart' ),
-			'archives'            => esc_html__( 'Archives', 'digicart' ),
+			'browse'              => esc_html__( 'Browse:', 'dostart' ),
+			'aria_label'          => esc_attr_x( 'Breadcrumbs', 'breadcrumbs aria label', 'dostart' ),
+			'home'                => esc_html__( 'Home', 'dostart' ),
+			'error_404'           => esc_html__( '404 Not Found', 'dostart' ),
+			'archives'            => esc_html__( 'Archives', 'dostart' ),
 			// Translators: %s is the search query.
-			'search'              => esc_html__( 'Search results for: %s', 'digicart' ),
+			'search'              => esc_html__( 'Search results for: %s', 'dostart' ),
 			// Translators: %s is the page number.
-			'paged'               => esc_html__( 'Page %s', 'digicart' ),
+			'paged'               => esc_html__( 'Page %s', 'dostart' ),
 			// Translators: %s is the page number.
-			'paged_comments'      => esc_html__( 'Comment Page %s', 'digicart' ),
+			'paged_comments'      => esc_html__( 'Comment Page %s', 'dostart' ),
 			// Translators: Minute archive title. %s is the minute time format.
-			'archive_minute'      => esc_html__( 'Minute %s', 'digicart' ),
+			'archive_minute'      => esc_html__( 'Minute %s', 'dostart' ),
 			// Translators: Weekly archive title. %s is the week date format.
-			'archive_week'        => esc_html__( 'Week %s', 'digicart' ),
+			'archive_week'        => esc_html__( 'Week %s', 'dostart' ),
 
 			// "%s" is replaced with the translated date/time format.
 			'archive_minute_hour' => '%s',
@@ -273,7 +273,7 @@ class digicart_Breadcrumb {
 			'archive_year'        => '%s',
 		);
 
-		$this->labels = apply_filters( 'digicart_Breadcrumb_labels', wp_parse_args( $this->args['labels'], $defaults ) );
+		$this->labels = apply_filters( 'dostart_breadcrumb_labels', wp_parse_args( $this->args['labels'], $defaults ) );
 	}
 
 	/**
@@ -293,7 +293,7 @@ class digicart_Breadcrumb {
 			$defaults['post'] = 'category';
 		}
 
-		$this->post_taxonomy = apply_filters( 'digicart_Breadcrumb_post_taxonomy', wp_parse_args( $this->args['post_taxonomy'], $defaults ) );
+		$this->post_taxonomy = apply_filters( 'dostart_breadcrumb_post_taxonomy', wp_parse_args( $this->args['post_taxonomy'], $defaults ) );
 	}
 
 	/**
@@ -381,7 +381,7 @@ class digicart_Breadcrumb {
 		$this->add_paged_items();
 
 		// Allow developers to overwrite the items for the breadcrumb trail.
-		$this->items = array_unique( apply_filters( 'digicart_Breadcrumb_items', $this->items, $this->args ) );
+		$this->items = array_unique( apply_filters( 'dostart_breadcrumb_items', $this->items, $this->args ) );
 	}
 
 	/**
@@ -748,7 +748,7 @@ class digicart_Breadcrumb {
 
 		// Add the minute + hour item.
 		if ( true === $this->args['show_title'] ) {
-			$this->items[] = sprintf( $this->labels['archive_minute_hour'], get_the_time( esc_html_x( 'g:i a', 'minute and hour archives time format', 'digicart' ) ) );
+			$this->items[] = sprintf( $this->labels['archive_minute_hour'], get_the_time( esc_html_x( 'g:i a', 'minute and hour archives time format', 'dostart' ) ) );
 		}
 	}
 
@@ -766,7 +766,7 @@ class digicart_Breadcrumb {
 
 		// Add the minute item.
 		if ( true === $this->args['show_title'] ) {
-			$this->items[] = sprintf( $this->labels['archive_minute'], get_the_time( esc_html_x( 'i', 'minute archives time format', 'digicart' ) ) );
+			$this->items[] = sprintf( $this->labels['archive_minute'], get_the_time( esc_html_x( 'i', 'minute archives time format', 'dostart' ) ) );
 		}
 	}
 
@@ -784,7 +784,7 @@ class digicart_Breadcrumb {
 
 		// Add the hour item.
 		if ( true === $this->args['show_title'] ) {
-			$this->items[] = sprintf( $this->labels['archive_hour'], get_the_time( esc_html_x( 'g a', 'hour archives time format', 'digicart' ) ) );
+			$this->items[] = sprintf( $this->labels['archive_hour'], get_the_time( esc_html_x( 'g a', 'hour archives time format', 'dostart' ) ) );
 		}
 	}
 
@@ -801,9 +801,9 @@ class digicart_Breadcrumb {
 		$this->add_rewrite_front_items();
 
 		// Get year, month, and day.
-		$year  = sprintf( $this->labels['archive_year'], get_the_time( esc_html_x( 'Y', 'yearly archives date format', 'digicart' ) ) );
-		$month = sprintf( $this->labels['archive_month'], get_the_time( esc_html_x( 'F', 'monthly archives date format', 'digicart' ) ) );
-		$day   = sprintf( $this->labels['archive_day'], get_the_time( esc_html_x( 'j', 'daily archives date format', 'digicart' ) ) );
+		$year  = sprintf( $this->labels['archive_year'], get_the_time( esc_html_x( 'Y', 'yearly archives date format', 'dostart' ) ) );
+		$month = sprintf( $this->labels['archive_month'], get_the_time( esc_html_x( 'F', 'monthly archives date format', 'dostart' ) ) );
+		$day   = sprintf( $this->labels['archive_day'], get_the_time( esc_html_x( 'j', 'daily archives date format', 'dostart' ) ) );
 
 		// Add the year and month items.
 		$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_year_link( get_the_time( 'Y' ) ) ), $year );
@@ -831,8 +831,8 @@ class digicart_Breadcrumb {
 		$this->add_rewrite_front_items();
 
 		// Get the year and week.
-		$year = sprintf( $this->labels['archive_year'], get_the_time( esc_html_x( 'Y', 'yearly archives date format', 'digicart' ) ) );
-		$week = sprintf( $this->labels['archive_week'], get_the_time( esc_html_x( 'W', 'weekly archives date format', 'digicart' ) ) );
+		$year = sprintf( $this->labels['archive_year'], get_the_time( esc_html_x( 'Y', 'yearly archives date format', 'dostart' ) ) );
+		$week = sprintf( $this->labels['archive_week'], get_the_time( esc_html_x( 'W', 'weekly archives date format', 'dostart' ) ) );
 
 		// Add the year item.
 		$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_year_link( get_the_time( 'Y' ) ) ), $year );
@@ -871,8 +871,8 @@ class digicart_Breadcrumb {
 		$this->add_rewrite_front_items();
 
 		// Get the year and month.
-		$year  = sprintf( $this->labels['archive_year'], get_the_time( esc_html_x( 'Y', 'yearly archives date format', 'digicart' ) ) );
-		$month = sprintf( $this->labels['archive_month'], get_the_time( esc_html_x( 'F', 'monthly archives date format', 'digicart' ) ) );
+		$year  = sprintf( $this->labels['archive_year'], get_the_time( esc_html_x( 'Y', 'yearly archives date format', 'dostart' ) ) );
+		$month = sprintf( $this->labels['archive_month'], get_the_time( esc_html_x( 'F', 'monthly archives date format', 'dostart' ) ) );
 
 		// Add the year item.
 		$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_year_link( get_the_time( 'Y' ) ) ), $year );
@@ -899,7 +899,7 @@ class digicart_Breadcrumb {
 		$this->add_rewrite_front_items();
 
 		// Get the year.
-		$year  = sprintf( $this->labels['archive_year'], get_the_time( esc_html_x( 'Y', 'yearly archives date format', 'digicart' ) ) );
+		$year  = sprintf( $this->labels['archive_year'], get_the_time( esc_html_x( 'Y', 'yearly archives date format', 'dostart' ) ) );
 
 		// Add the year item.
 		if ( is_paged() ) {
@@ -1253,17 +1253,17 @@ class digicart_Breadcrumb {
 
 				// If using the %year% tag, add a link to the yearly archive.
 				if ( '%year%' == $tag ) {
-					$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_year_link( get_the_time( 'Y', $post_id ) ) ), sprintf( $this->labels['archive_year'], get_the_time( esc_html_x( 'Y', 'yearly archives date format', 'digicart' ) ) ) );
+					$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_year_link( get_the_time( 'Y', $post_id ) ) ), sprintf( $this->labels['archive_year'], get_the_time( esc_html_x( 'Y', 'yearly archives date format', 'dostart' ) ) ) );
 				}
 
 				// If using the %monthnum% tag, add a link to the monthly archive.
 				elseif ( '%monthnum%' == $tag ) {
-					$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_month_link( get_the_time( 'Y', $post_id ), get_the_time( 'm', $post_id ) ) ), sprintf( $this->labels['archive_month'], get_the_time( esc_html_x( 'F', 'monthly archives date format', 'digicart' ) ) ) );
+					$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_month_link( get_the_time( 'Y', $post_id ), get_the_time( 'm', $post_id ) ) ), sprintf( $this->labels['archive_month'], get_the_time( esc_html_x( 'F', 'monthly archives date format', 'dostart' ) ) ) );
 				}
 
 				// If using the %day% tag, add a link to the daily archive.
 				elseif ( '%day%' == $tag ) {
-					$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_day_link( get_the_time( 'Y', $post_id ), get_the_time( 'm', $post_id ), get_the_time( 'd', $post_id ) ) ), sprintf( $this->labels['archive_day'], get_the_time( esc_html_x( 'j', 'daily archives date format', 'digicart' ) ) ) );
+					$this->items[] = sprintf( '<a href="%s">%s</a>', esc_url( get_day_link( get_the_time( 'Y', $post_id ), get_the_time( 'm', $post_id ), get_the_time( 'd', $post_id ) ) ), sprintf( $this->labels['archive_day'], get_the_time( esc_html_x( 'j', 'daily archives date format', 'dostart' ) ) ) );
 				}
 
 				// If using the %author% tag, add a link to the post author archive.
