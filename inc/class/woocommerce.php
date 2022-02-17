@@ -23,7 +23,7 @@ function dostart_woocommerce_setup() {
          * Woocommerce Support.
          * Product Gallery | Product Lightbox | Product Slider
          */
-        add_theme_support('woocommerce');
+        add_theme_support('woocommerce'); 
         add_theme_support('wc-product-gallery-zoom');
         add_theme_support('wc-product-gallery-lightbox');
         add_theme_support('wc-product-gallery-slider');
