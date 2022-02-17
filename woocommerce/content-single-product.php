@@ -107,7 +107,7 @@ if ( post_password_required() ) {
 			<?php
 		} elseif ( $type == 'audio' ) {
 
-			get_template_part( 'template-parts/product-type/audio', 'item' );
+			include_once(DGC_PLUGIN_PATH . 'template-parts/product-type/audio-item.php');
 
 		} else {
 

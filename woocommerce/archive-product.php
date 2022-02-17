@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The Template for displaying product archives, including the main shop page which is a post type archive
  *
@@ -15,32 +16,32 @@
  * @version 3.7.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
-$shop_layout = ! empty( get_theme_mod( 'dostart_store_layouts' ) ) ? get_theme_mod( 'dostart_store_layouts' ) : 'full_width';
+$shop_layout = !empty(get_theme_mod('dostart_store_layouts')) ? get_theme_mod('dostart_store_layouts') : 'full_width';
 
 
-if ( ! empty( $_GET['shop_layout'] ) ) {
+if (!empty($_GET['shop_layout'])) {
 	$shop_layout = $_GET['shop_layout'];
 }
 // http://localhost/digicart/?shop_layout=left_sidebar
 
-get_header( 'shop' ); ?>
+get_header('shop'); ?>
 
 <section class="section-padding">
 	<div class="container">
-	<?php
-	if ( $shop_layout == 'full-width' ) {
-		get_template_part( 'template-parts/shop-layout/shop', 'fullwidth' );
-	} elseif ( $shop_layout == 'left-sidebar' ) {
-		get_template_part( 'template-parts/shop-layout/shop', 'left' );
-	} elseif ( $shop_layout == 'right-sidebar' ) {
-		get_template_part( 'template-parts/shop-layout/shop', 'right' );
-	} else {
-		get_template_part( 'template-parts/shop-layout/shop', 'fullwidth' );
-	}
-	?>
+		<?php
+		if ($shop_layout == 'full-width') {
+			include_once(DGC_PLUGIN_PATH . 'template-parts/shop-layout/shop-fullwidth.php');
+		} elseif ($shop_layout == 'left-sidebar') {
+			include_once(DGC_PLUGIN_PATH . 'template-parts/shop-layout/shop-left.php');
+		} elseif ($shop_layout == 'right-sidebar') {
+			include_once(DGC_PLUGIN_PATH . 'template-parts/shop-layout/shop-right.php');
+		} else {
+			include_once(DGC_PLUGIN_PATH . 'template-parts/shop-layout/shop-fullwidth.php');
+		}
+		?>
 	</div>
 </section>
 <?php
-get_footer( 'shop' );
+get_footer('shop');
