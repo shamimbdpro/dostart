@@ -41,7 +41,7 @@
             var $toggle = $('.toggle');
 
             var defaultData = {
-                disableAt: 991,
+                disableAt: 1024,
                 customToggle: $toggle,
                 //  levelOpen: 'expand',
                 disableBody: true,
