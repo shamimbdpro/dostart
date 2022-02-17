@@ -921,6 +921,7 @@ del span {
 .woocommerce-account .woocommerce-MyAccount-navigation li a {
   font-size: 18px;
   font-weight: 500;
+  color: #333;
 }
 .woocommerce-account .woocommerce-Address-title a {
   color: #333;
