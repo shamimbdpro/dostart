@@ -1,5 +1,37 @@
 <?php
 
+
+/**
+ * WooCommerce Compatibility File
+ *
+ * @link https://woocommerce.com/
+ *
+ * @package digicart
+ */
+
+/**
+ * WooCommerce setup function.
+ *
+ * @link https://docs.woocommerce.com/document/third-party-custom-theme-compatibility/
+ * @link https://github.com/woocommerce/woocommerce/wiki/Enabling-product-gallery-features-(zoom,-swipe,-lightbox)-in-3.0.0
+ *
+ * @return void
+ */
+function dostart_woocommerce_setup() {
+	
+        /**
+         * Woocommerce Support.
+         * Product Gallery | Product Lightbox | Product Slider
+         */
+        add_theme_support('woocommerce');
+        add_theme_support('wc-product-gallery-zoom');
+        add_theme_support('wc-product-gallery-lightbox');
+        add_theme_support('wc-product-gallery-slider');
+        
+}
+add_action( 'after_setup_theme', 'dostart_woocommerce_setup' );
+
+
 if ( ! function_exists('dostart_cart_link') ) {
 
     function dostart_cart_link() {
