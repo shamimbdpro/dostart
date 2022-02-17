@@ -933,6 +933,43 @@ input#wp-comment-cookies-consent {
   }
 }
 /*------- WooCommerce Header Cart Style.------*/
+/**
+ * Header Cart
+ */
+.primary_header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.dostart-header-cart {
+  padding-left: 25px;
+}
+
+.cart-contents {
+  position: relative;
+}
+
+.cart-contents i {
+  color: #333;
+  font-size: 18px;
+}
+
+.cart-contents .count {
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 5px;
+}
+
+.cart-contents .count {
+  position: absolute;
+  top: -30px;
+  left: 14px;
+  height: 13px;
+  padding: 0;
+  margin: 19px -7px 0 0;
+}
+
 .dostart-wc-button {
   display: flex;
   justify-content: end;
@@ -1734,43 +1771,6 @@ section.error-404 {
 /*------------------------------------------------------------------------
    8.Woocommerce CSS
 /*------------------------------------------------------------------------*/
-/**
- * Header Cart
- */
-.primary_header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.dostart-header-cart {
-  padding-left: 25px;
-}
-
-.cart-contents {
-  position: relative;
-}
-
-.cart-contents i {
-  color: #333;
-  font-size: 18px;
-}
-
-.cart-contents .count {
-  font-size: 16px;
-  font-weight: 600;
-  padding-left: 5px;
-}
-
-.cart-contents .count {
-  position: absolute;
-  top: -30px;
-  left: 14px;
-  height: 13px;
-  padding: 0;
-  margin: 19px -7px 0 0;
-}
-
 /**
  * checkout page
  */
