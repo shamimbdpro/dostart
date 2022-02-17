@@ -49,49 +49,6 @@ add_action( 'wp_enqueue_scripts', 'digicart_woocommerce_scripts' );
 
 
 
-// Header Add To Cart Button.
-if ( ! function_exists('dgc_cart_link') ) {
-
-    function dgc_cart_link() {
-        ?>
-        <a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e('View your shopping cart', 'digicart'); ?>">
-            <i class="fas fa-shopping-bag"><span class="count"><?php echo wp_kses_data(WC()->cart->get_cart_contents_count()); ?></span></i>
-        </a>
-        <?php
-    }
-}
-
-if ( ! function_exists('dgc_header_cart') ) {
-    function dgc_header_cart() {
-            dgc_cart_link();
-    }
-}
-
-if ( ! function_exists('dgc_header_add_to_cart_fragment') ) {
-    add_filter('woocommerce_add_to_cart_fragments', 'dgc_header_add_to_cart_fragment');
-    function dgc_header_add_to_cart_fragment( $fragments ) {
-        ob_start();
-        dgc_cart_link();
-        $fragments['a.cart-contents'] = ob_get_clean();
-        return $fragments;
-    }
-}
-
-
-
-
-if ( ! function_exists('dostart_cart_link') ) {
-
-    function dostart_cart_link() {
-        ?>    
-        <a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e('View your shopping cart', 'dostart'); ?>">
-            <i class="fa fa-shopping-bag"><span class="count"><?php echo wp_kses_data(WC()->cart->get_cart_contents_count()); ?></span></i>
-            <!-- <div class="amount-cart"><?php// echo wp_kses_data(WC()->cart->get_cart_subtotal()); ?></div>  -->
-        </a>
-        <?php
-    }
-}
-
 if ( ! function_exists('dostart_header_cart') ) {
 
     function dostart_header_cart() {
