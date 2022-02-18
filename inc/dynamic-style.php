@@ -43,10 +43,17 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
 		.search-form::before,
 		.woocommerce ul.products li.product .onsale,
         .download-item-image .onsale,
+        .preview-btn li a:hover,
         .button{
              background-color: <?php echo esc_attr($dostart_primary_color); ?> !important;
         }
+
+        .preview-btn li a{
+            border-color:<?php echo esc_attr($dostart_primary_color); ?> !important;
+        }
+
         article.post a,
+        .preview-btn li a
         {
              color: <?php echo esc_attr($dostart_primary_color); ?>
         }
