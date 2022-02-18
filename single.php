@@ -22,10 +22,14 @@ get_header(); ?>
                     while ( have_posts() ) :
                         the_post();
 
+                        do_action('before_single_post_content');
+
                         get_template_part(
                             'template-parts/content',
                             get_post_format()
                         );
+
+                        do_action('after_single_post_content');
 
                         // Previous / Next Button.
 
