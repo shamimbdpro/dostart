@@ -60,6 +60,11 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 == Changelog ==
 
 
+= Version 1.1.10 =
+* Search Page Updated.
+* WooCommerce Issue Fixed.
+
+
 = Version 1.1.9 =
 * WooCommerce Login/My Account Button Added
 * Header Updated.
