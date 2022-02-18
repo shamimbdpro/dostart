@@ -42,6 +42,7 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
         .pagination .nav-links .page-numbers:hover,
 		.search-form::before,
 		.woocommerce ul.products li.product .onsale,
+        .download-item-image .onsale,
         .button{
              background-color: <?php echo esc_attr($dostart_primary_color); ?> !important;
         }
