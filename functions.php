@@ -197,16 +197,16 @@ function dostart_load_style_and_scripts() {
     // Define Direcotry URI
     $dir = DOSTART_THEME_URI;
 
-    wp_enqueue_style('dostart-library', $dir . '/assets/css/library.min.css', array(), DOSTART_THEME_VERSION);
-    wp_enqueue_style('dostart-theme', $dir . '/assets/css/dostart-style.min.css', array(), DOSTART_THEME_VERSION);
+    wp_enqueue_style('dostart-library', $dir . 'assets/css/library.min.css', array(), DOSTART_THEME_VERSION);
+    wp_enqueue_style('dostart-theme', $dir . 'assets/css/dostart-style.min.css', array(), DOSTART_THEME_VERSION);
     
     wp_enqueue_style('dostart-style', get_stylesheet_uri(), array(), DOSTART_THEME_VERSION);
 
-    wp_enqueue_script('skip-link-focus-fix', $dir . '/assets/js/skip-link-focus-fix.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
-    wp_enqueue_script('navigation', $dir . '/assets/js/navigation.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
-    wp_enqueue_script('bootstrap', $dir . '/assets/js/bootstrap.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
-    wp_enqueue_script('hc-offcanvas', $dir . '/assets/js/hc-offcanvas-nav.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
-    wp_enqueue_script('dostart-active', $dir . '/assets/js/active.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
+    wp_enqueue_script('skip-link-focus-fix', $dir . 'assets/js/skip-link-focus-fix.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
+    wp_enqueue_script('navigation', $dir . 'assets/js/navigation.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
+    wp_enqueue_script('bootstrap', $dir . 'assets/js/bootstrap.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
+    wp_enqueue_script('hc-offcanvas', $dir . 'assets/js/hc-offcanvas-nav.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
+    wp_enqueue_script('dostart-active', $dir . 'assets/js/active.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
 
     if ( is_singular() && comments_open() && get_option('thread_comments') ) {
 
