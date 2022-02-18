@@ -232,6 +232,7 @@ function dostart_load_admin_script_callback() {
              'nonce'              => $admin_notice_nonce,
          )
      );
+     
 }
 add_action('admin_enqueue_scripts', 'dostart_load_admin_script_callback');
 
