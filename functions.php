@@ -174,32 +174,6 @@ function dostart_widgets_setup() {
         )
     );
 
-
-    register_sidebar(
-		array(
-			'name'          => esc_html__( 'WooCommerce Store Sidebar', 'digicart' ),
-			'id'            => 'digicart_woocommerce_store_sidebar',
-			'description'   => esc_html__( 'Add widgets here.', 'digicart' ),
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h4 class="widget-title">',
-			'after_title'   => '</h4>',
-		)
-	);
-
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'WooCommerce Product Sidebar', 'digicart' ),
-			'id'            => 'digicart_woocommerce_product_sidebar',
-			'description'   => esc_html__( 'Add widgets here.', 'digicart' ),
-			'before_widget' => '<div id="%1$s" class="digicart-widget-woocommerce %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h4 class="digicart-widget-woocommerce-title">',
-			'after_title'   => '</h4>',
-		)
-	);
-
-
     register_sidebar(
         array(
             'name' => esc_html__('Footer Widgets', 'dostart'),
