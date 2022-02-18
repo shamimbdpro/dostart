@@ -219,6 +219,19 @@ add_action('wp_enqueue_scripts', 'dostart_load_style_and_scripts');
 function dostart_load_admin_script_callback() {
     $dir = DOSTART_THEME_URI;
     wp_enqueue_style('dostart-admin-style', $dir . '/assets/css/dostart-admin.min.css', array(), DOSTART_THEME_VERSION);
+
+    wp_enqueue_script('dostart-admin', $dir . 'assets/js/admin.js', array( 'jquery' ), DOSTART_THEME_VERSION, true);
+
+    // Ajax admin localization.
+     $admin_notice_nonce = wp_create_nonce('dostart_theme_notice_status');
+     wp_localize_script(
+         'dostart-admin',
+         'dostart_admin_notice_ajax_object',
+         array(
+             'dostart_admin_notice_ajax_url' => admin_url('admin-ajax.php'),
+             'nonce'              => $admin_notice_nonce,
+         )
+     );
 }
 add_action('admin_enqueue_scripts', 'dostart_load_admin_script_callback');
 
