@@ -500,13 +500,13 @@ if ( class_exists('Kirki') ) {
     );
 
 
-	// ------Blog Social Share on / off -----*/
+	// ------Blog Post Navigation on / off -----*/
 	Kirki::add_field(
 		'theme_config_id',
 		array(
 			'type'     => 'switch',
-			'settings' => 'dostart_blog_social_share',
-			'label'    => esc_html__( 'Social Share', 'dostart' ),
+			'settings' => 'dostart_blog_navigation_switch',
+			'label'    => esc_html__( 'Post Navigation (Next/Previous)', 'dostart' ),
 			'section'  => 'dostart_blog_details',
 			'default'  => '1',
 			'priority' => 10,
