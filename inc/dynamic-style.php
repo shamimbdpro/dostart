@@ -52,7 +52,6 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
             border-color:<?php echo esc_attr($dostart_primary_color); ?> !important;
         }
 
-        article.post a,
         .preview-btn li a
         {
              color: <?php echo esc_attr($dostart_primary_color); ?>
