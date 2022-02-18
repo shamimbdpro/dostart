@@ -12,25 +12,7 @@ if ( ! defined('ABSPATH') ) {
 }
 get_header(); ?>
 
-    <div class="dostart-breadcrumb-area blog-breadcrumb-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="page-title">
-                        <?php
-                        /* translators: %s: search query. */
-                        printf(esc_html__('Search Results for: %s', 'dostart'), '<span>' . get_search_query() . '</span>');
-                        ?>
-                    </h1>
-                    <?php if ( function_exists('bcn_display') ) {
-                        bcn_display();
-                    } ?>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="dostart-internal-area dostart-v-composer-disabled">
+<div class="section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
