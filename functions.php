@@ -255,12 +255,6 @@ add_action('admin_enqueue_scripts', 'dostart_load_admin_script_callback');
 require DOSTART_THEME_DIR . '/inc/class/helper.php';
 
 /**
- * CMB 2 Conditional.
- */
-require DOSTART_THEME_DIR . '/inc/cmb2-conditionals.php';
-
-
-/**
  * Hooks.
  */
 require DOSTART_THEME_DIR . '/inc/hooks.php';
