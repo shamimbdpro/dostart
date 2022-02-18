@@ -19,7 +19,7 @@ if ( ! defined('ABSPATH') ) {
 
 get_header(); ?>
 
-<section class="dostart-page-content section-padding">
+<section class="section-padding">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
