@@ -16,7 +16,6 @@ if ( ! defined('ABSPATH') ) {
     exit; // Exit if accessed directly.
 }
 
-$blog_title = ! empty(get_theme_mod('dostart_blog_or_archive_title')) ? get_theme_mod('dostart_blog_or_archive_title') : 'Latest News';
 
 get_header(); ?>
 
