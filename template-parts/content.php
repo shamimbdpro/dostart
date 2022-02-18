@@ -31,6 +31,9 @@ $dostart_excerpt_length = !empty(get_theme_mod('dostart_blog_excerpt_length')) ?
 				<div class="entry-meta">
 
 					<ul class="list-inline">
+
+						<?php do_action('before_post_meta'); ?>
+
 						<li class="list-inline-item">
 							<i class="fa fa-user"></i> <?php echo esc_html__('by', 'dostart'); ?> <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>"><?php the_author(); ?></a>
 						</li>
@@ -46,6 +49,8 @@ $dostart_excerpt_length = !empty(get_theme_mod('dostart_blog_excerpt_length')) ?
 							}
 							?>
 						</li>
+
+						<?php do_action('after_post_meta'); ?>
 
 					</ul>
 
@@ -110,6 +115,9 @@ $dostart_excerpt_length = !empty(get_theme_mod('dostart_blog_excerpt_length')) ?
 			<div class="dostart-post-content">
 				<div class="entry-meta">
 					<ul class="list-inline">
+
+						<?php do_action('before_post_meta'); ?>
+
 						<li class="list-inline-item">
 							<i class="fa fa-user"></i> <?php echo esc_html__('by', 'dostart'); ?> <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>"><?php the_author(); ?></a>
 						</li>
@@ -125,6 +133,8 @@ $dostart_excerpt_length = !empty(get_theme_mod('dostart_blog_excerpt_length')) ?
 							}
 							?>
 						</li>
+
+						<?php do_action('after_post_meta'); ?>
 
 					</ul>
 				</div><!-- .entry-meta -->
