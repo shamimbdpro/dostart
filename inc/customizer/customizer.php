@@ -517,7 +517,6 @@ if ( class_exists('Kirki') ) {
 		)
 	);
 
-
 	// ------Releated Post on / off -----*/
 	Kirki::add_field(
 		'theme_config_id',
