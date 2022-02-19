@@ -1,14 +1,14 @@
 <?php 
 
 
-add_filter( 'comment_form_fields', 'digicart_comment_field_to_bottom' );
+add_filter( 'comment_form_fields', 'dostart_comment_field_to_bottom' );
 
 /**
  * Comment Field to Bottom
  * @param $fields
  * @return mixed
  */
-function digicart_comment_field_to_bottom( $fields ) {
+function dostart_comment_field_to_bottom( $fields ) {
 	$comment_field = $fields['comment'];
 	unset( $fields['comment'] );
 	$fields['comment'] = $comment_field;
@@ -42,4 +42,4 @@ function dostart_admin_notice_ajax_object_callback() {
 
 
 
-?>
+

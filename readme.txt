@@ -4,7 +4,7 @@ Tags: custom-menu,blog, e-commerce, custom-colors, theme-options, right-sidebar,
 Requires at least: 5.4
 Tested up to: 5.9
 Requires PHP: 5.6
-Version: 1.1.9
+Version: 1.1.10
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Free Multipurpose WordPress theme
 
 == Description ==
 
-Dostart is a dynamic multipurpose theme fitted for blogs, personal portfolios, business websites, consultancies, and WooCommerce storefront. It is armed with some mesmerizing features like Prebuild Megamenu, Box Layout, Social Icons, Multiple Layouts, vibrant colors, and is fully customizable. Further, it comprises an integrated plugin that enhances the value of this astonishing theme. Blended with functionalities like simple or complex WordPress user profiles, modular structure, different user profile sections and fields, this theme is beyond comparison. Apart from that, the Intelligent Responsiveness of this theme adjusts based on the content area size. Don’t just build a website, make it monetization ready with Dostart! Check out the Live Preview at http://codepopular.com/dostart
+Dostart is a dynamic multipurpose theme fitted for blogs, personal portfolios, business websites, consultancies, and WooCommerce storefront. It is armed with some mesmerizing features like Prebuild Megamenu, Box Layout, Social Icons, Multiple Layouts, vibrant colors, and is fully customizable. Further, it comprises an integrated plugin that enhances the value of this astonishing theme. Blended with functionalities like simple or complex WordPress user profiles, modular structure, different user profile sections and fields, this theme is beyond comparison. Apart from that, the Intelligent Responsiveness of this theme adjusts based on the content area size. Don’t just build a website, make it monetization ready with Dostart! Check out the Live Preview at http://codepopular.com
 
 
 == Installation ==
@@ -63,6 +63,7 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 = Version 1.1.10 =
 * Search Page Updated.
 * WooCommerce Issue Fixed.
+* Dynamic Breadcrumb
 
 
 = Version 1.1.9 =

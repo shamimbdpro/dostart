@@ -6,7 +6,7 @@
  *
  * @link https://woocommerce.com/
  *
- * @package digicart
+ * @package dostart
  */
 
 /**

@@ -1,5 +1,5 @@
 <?php
-if (1 != get_option('dostart_theme_notice')) {
+if ( 1 != get_option('dostart_theme_notice') ) {
 	add_action(
 		'load-index.php',
 		function () {
@@ -9,13 +9,12 @@ if (1 != get_option('dostart_theme_notice')) {
 }
 
 
-if (!function_exists('codepopular_promotions')) {
+if ( ! function_exists('codepopular_promotions') ) {
 
 	/**
 	 * Function to get dashboard widget data.
 	 */
-	function codepopular_promotions()
-	{ ?>
+	function codepopular_promotions() { ?>
 		<div class="notice notice-success is-dismissible hideThemeNotice">
 			<div class="codepopular_notice">
 				<h4>Thank you for using our theme Dostart!</h4>

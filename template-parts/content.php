@@ -8,19 +8,19 @@
  * @package dostart
  */
 
-if (!defined('ABSPATH')) {
+if ( ! defined('ABSPATH') ) {
 	exit; // Exit if accessed directly.
 }
 // $social_share = get_theme_mod( 'dostart_blog_social_share', true ); 
-$dostart_excerpt_length = !empty(get_theme_mod('dostart_blog_excerpt_length')) ? get_theme_mod('dostart_blog_excerpt_length') : '25';
+$dostart_excerpt_length = ! empty(get_theme_mod('dostart_blog_excerpt_length')) ? get_theme_mod('dostart_blog_excerpt_length') : '25';
 
 ?>
-<?php if (is_single()) : ?>
+<?php if ( is_single() ) : ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 		<div class="dostart-post">
 
-			<?php if (has_post_thumbnail()) : ?>
+			<?php if ( has_post_thumbnail() ) : ?>
 				<div class="post_thumbnail">
 					<?php the_post_thumbnail('full'); ?>
 					<span class="excerpt-date"><?php echo esc_html(get_the_date()); ?></span>
@@ -44,7 +44,7 @@ $dostart_excerpt_length = !empty(get_theme_mod('dostart_blog_excerpt_length')) ?
 							<i class="fa fa-tags"></i>
 							<?php
 							$categories = get_the_category();
-							if (!empty($categories)) {
+							if ( ! empty($categories) ) {
 								echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '">' . esc_html($categories[0]->name) . '</a>';
 							}
 							?>
@@ -83,7 +83,7 @@ $dostart_excerpt_length = !empty(get_theme_mod('dostart_blog_excerpt_length')) ?
 				</div><!-- .entry-content -->
 
 
-				<?php if (get_the_tags()) : ?>
+				<?php if ( get_the_tags() ) : ?>
 					<div class="tags">
 						<?php the_tags($before = 'Tags: ', ' ', ''); ?>
 					</div>
@@ -104,7 +104,7 @@ $dostart_excerpt_length = !empty(get_theme_mod('dostart_blog_excerpt_length')) ?
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 		<div class="dostart-post">
-			<?php if (has_post_thumbnail()) : ?>
+			<?php if ( has_post_thumbnail() ) : ?>
 				<div class="post_thumbnail">
 					<a href="<?php the_permalink(); ?>">
 						<?php the_post_thumbnail('full'); ?>
@@ -128,7 +128,7 @@ $dostart_excerpt_length = !empty(get_theme_mod('dostart_blog_excerpt_length')) ?
 							<i class="fa fa-tags"></i>
 							<?php
 							$categories = get_the_category();
-							if (!empty($categories)) {
+							if ( ! empty($categories) ) {
 								echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '">' . esc_html($categories[0]->name) . '</a>';
 							}
 							?>

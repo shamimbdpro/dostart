@@ -6,13 +6,12 @@
  * Related Posts
  * @return array|mixed
  */
-function dostart_related_posts()
-{
+function dostart_related_posts() {
 	$related_post = get_theme_mod('dostart_blog_related_post', true);
-	if (true === $related_post) {
-		$posts_per_page        = !empty(get_theme_mod('dostart_related_post_limit')) ? get_theme_mod('dostart_related_post_limit') : '3';
-		$related_posts_columns = !empty(get_theme_mod('dostart_blog_post_column')) ? get_theme_mod('dostart_blog_post_column') : '4';
-		$related_post_title    = !empty(get_theme_mod('dostart_related_post_title')) ? get_theme_mod('dostart_related_post_title') : 'Related Posts';
+	if ( true === $related_post ) {
+		$posts_per_page        = ! empty(get_theme_mod('dostart_related_post_limit')) ? get_theme_mod('dostart_related_post_limit') : '3';
+		$related_posts_columns = ! empty(get_theme_mod('dostart_blog_post_column')) ? get_theme_mod('dostart_blog_post_column') : '4';
+		$related_post_title    = ! empty(get_theme_mod('dostart_related_post_title')) ? get_theme_mod('dostart_related_post_title') : 'Related Posts';
 
 		global $post;
 
@@ -21,24 +20,24 @@ function dostart_related_posts()
 				'category__in'   => wp_get_post_categories($post->ID),
 				'posts_per_page' => $posts_per_page,
 				'post_type'      => 'post',
-				'post__not_in'   => array($post->ID),
+				'post__not_in'   => array( $post->ID ),
 			)
 		); ?>
 
-		<?php if ($related) : ?>
+		<?php if ( $related ) : ?>
 			<div class="related-posts">
 				<h4><?php echo esc_html($related_post_title); ?></h4>
 				<div class="row">
 					<?php
-					if ($related) {
-						foreach ($related as $post) {
+					if ( $related ) {
+						foreach ( $related as $post ) {
 							setup_postdata($post); ?>
 
 							<div class="col-md-<?php echo esc_attr($related_posts_columns); ?> col-xl-<?php echo esc_attr($related_posts_columns); ?>">
 								<div class="single-related-post">
 									<div class="dostart-blog-item">
 										<div class="dostart-blog-item-img">
-											<?php if (has_post_thumbnail()) : ?>
+											<?php if ( has_post_thumbnail() ) : ?>
 												<a href="<?php the_permalink(); ?>">
 													<?php the_post_thumbnail('dostart-thumb'); ?>
 												</a>
@@ -46,7 +45,7 @@ function dostart_related_posts()
 											<span>
 												<?php
 												$categories = get_the_category();
-												if (!empty($categories)) {
+												if ( ! empty($categories) ) {
 													echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '">' . esc_html($categories[0]->name) . '</a>';
 												}
 												?>
@@ -89,8 +88,7 @@ function dostart_related_posts()
  * Display Blog breadcrumb
  * @return string
  */
-function dostart_breadcrumb_display()
-{ ?>
+function dostart_breadcrumb_display() { ?>
 
 
 	<div class="dostart-breadcrumb">
@@ -101,11 +99,11 @@ function dostart_breadcrumb_display()
 						<div class="breadcrumb-inner-content">
 							<h1>
 								<?php
-								if (is_home() && is_front_page()) {
-									$title = !empty(get_theme_mod('dostart_blog_or_archive_title')) ? get_theme_mod('dostart_blog_or_archive_title') : esc_html__('Blog Posts', 'dostart');
-								} elseif (is_home()) {
-									$title = !empty(get_theme_mod('dostart_blog_or_archive_title')) ? get_theme_mod('dostart_blog_or_archive_title') : single_post_title();
-								} elseif (is_front_page()) {
+								if ( is_home() && is_front_page() ) {
+									$title = ! empty(get_theme_mod('dostart_blog_or_archive_title')) ? get_theme_mod('dostart_blog_or_archive_title') : esc_html__('Blog Posts', 'dostart');
+								} elseif ( is_home() ) {
+									$title = ! empty(get_theme_mod('dostart_blog_or_archive_title')) ? get_theme_mod('dostart_blog_or_archive_title') : single_post_title();
+								} elseif ( is_front_page() ) {
 									$title = single_post_title();
 								} else {
 									$title = wp_title('', false);
@@ -115,7 +113,7 @@ function dostart_breadcrumb_display()
 							</h1>
 
 							<?php
-							if (!is_front_page()) {
+							if ( ! is_front_page() ) {
 								dostart_breadcrumb();
 							}
 							?>
@@ -136,8 +134,7 @@ function dostart_breadcrumb_display()
  * Allowed html
  * @return array
  */
-function dostart_allowed_html()
-{
+function dostart_allowed_html() {
 	$allowed_tags = array(
 		'a'          => array(
 			'class' => array(),

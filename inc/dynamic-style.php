@@ -30,13 +30,12 @@ if ( ! function_exists('dostart_dynamic_styles') ) {
         .dostart-mainmenu ul li a{
             color: <?php echo esc_attr($primary_menu_color); ?>
         }
-        .dostart-breadcrumb,
+ 
         .excerpt-readmore a,
         .back-to-top,
         .dostart-post .excerpt-date,
         .widget-title:before,
         .search-form:after,
-        .dostart-single-blog-breadcrumb:before,
         .comment-form p > input[type="submit"],
         .pagination .nav-links .page-numbers.current,
         .pagination .nav-links .page-numbers:hover,
