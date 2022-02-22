@@ -102,19 +102,8 @@ $footer_layout = get_post_meta( get_the_ID(), 'dostart-footer-status', true );
                             <p> &copy; <?php echo esc_html_e(' Powered by ', 'dostart');?> <a rel="nofollow" target="_balnk" href="<?php echo esc_url('https://codepopular.com'); ?>"><?php esc_html_e('CodePopular', 'dostart');?></a> <?php echo esc_html(date_i18n(__('Y ', 'dostart'))); ?> </p>
                          <?php else : ?>
 
-                            <?php
-                             $footer_text = wp_kses( get_theme_mod('dostart_copyright_text'), array(
-                                 'a'   => array(
-									 'href'  => true,
-									 'title' => true,
-                                     'target' => true,
-								 ),
-                                 'div' => array(),
-                                 'p'   => array(),
-                                 'b'   => array(),
-                                 'i'   => array(),
-                             ));
-                             echo $footer_text; //phpcs:ignore ?>
+                            <?php echo wp_kses( get_theme_mod('dostart_copyright_text'), dostart_allowed_html()); ?>
+                            
                          <?php endif?>
                         </div>
                     </div>
