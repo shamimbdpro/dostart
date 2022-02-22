@@ -102,7 +102,7 @@ function dostart_breadcrumb_display() { ?>
 								if ( is_home() && is_front_page() ) {
 									$title = ! empty(get_theme_mod('dostart_blog_or_archive_title')) ? get_theme_mod('dostart_blog_or_archive_title') : esc_html__('Blog Posts', 'dostart');
 								} elseif ( is_home() ) {
-									$title = ! empty(get_theme_mod('dostart_blog_or_archive_title')) ? get_theme_mod('dostart_blog_or_archive_title') : 	$title = wp_title('', false);
+									$title = ! empty(get_theme_mod('dostart_blog_or_archive_title')) ? get_theme_mod('dostart_blog_or_archive_title') : $title = wp_title('', false);
 								} elseif ( is_front_page() ) {
 									$title = single_post_title();
 								} else {

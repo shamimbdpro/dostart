@@ -28,7 +28,7 @@ $dostart_google_adsense_publisher_id = get_theme_mod( 'dostart_google_adsense_pu
 
     <?php if ( $dostart_google_analytics_id ) {?>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo esc_html($dostart_google_analytics_id); ?>"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo esc_attr($dostart_google_analytics_id); ?>"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -37,13 +37,13 @@ $dostart_google_adsense_publisher_id = get_theme_mod( 'dostart_google_adsense_pu
         }
         gtag('js', new Date());
 
-        gtag('config', '<?php echo esc_html($dgc_google_analytics_id); ?>');
+        gtag('config', '<?php echo esc_attr($dostart_google_analytics_id); ?>');
     </script>
     <?php } ?>
 
     <?php if ( $dostart_google_adsense_publisher_id ) { ?>
     <!-- Google Adsense Code -->
-    <script data-ad-client="ca-<?php echo esc_html($dostart_google_adsense_publisher_id); ?>" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client="ca-<?php echo esc_attr($dostart_google_adsense_publisher_id); ?>" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <!-- Google Adsense Code -->
     <?php } ?>
 

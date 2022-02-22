@@ -4,7 +4,7 @@ Tags: custom-menu,blog, e-commerce, custom-colors, theme-options, right-sidebar,
 Requires at least: 5.4
 Tested up to: 5.9
 Requires PHP: 5.6
-Version: 1.1.10
+Version: 1.1.11
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -59,6 +59,9 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 == Changelog ==
 
+
+= Version 1.1.11 =
+* Google Analytics Issue Fixed.
 
 = Version 1.1.10 =
 * Search Page Updated.
