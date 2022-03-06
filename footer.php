@@ -18,8 +18,9 @@ $footer_layout = get_post_meta( get_the_ID(), 'dostart-footer-status', true );
 ?>
 
     </div><!-- #content -->
-    
+    <?php do_action('dostart_before_footer');?>
     <footer id="colophon" class="dostart-site-footer">
+        
         <?php if ( is_active_sidebar('footer-widgets') && 'disabled' !== $widget_layout ) : ?>
         <div class="footer-top-widgets">
             <div class="container">
@@ -112,6 +113,7 @@ $footer_layout = get_post_meta( get_the_ID(), 'dostart-footer-status', true );
         </div>
         <?php } ?>
     </footer><!-- #colophon -->
+    <?php do_action('dostart_after_footer');?>
 </div><!-- #page wrapper-->
 
 <div class="back-to-top"><i class="fa fa-angle-up"></i></div>

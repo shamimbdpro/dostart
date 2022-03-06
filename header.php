@@ -60,7 +60,7 @@ $dostart_google_adsense_publisher_id = get_theme_mod( 'dostart_google_adsense_pu
     ?>
     <div id="page-wrapper" class="site-wrapper <?php echo esc_html(false === get_theme_mod('dostart_theme_layout') ? '' : 'box-layout'); ?>">
         <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'dostart'); ?></a>
-
+        <?php do_action('dostart_before_header');?>
         <?php $header_layout = get_post_meta(get_the_ID(), 'dostart-header-status', true); ?>
         <?php if ( 'disabled' !== $header_layout ) { ?>
             <header class="dostart-header-area">
@@ -139,12 +139,16 @@ $dostart_google_adsense_publisher_id = get_theme_mod( 'dostart_google_adsense_pu
             </header>
         <?php } ?>
 
-        <?php
-        $breadcrumb_status = get_post_meta(get_the_ID(), 'dostart-breadcrumb-status', true);
+        <?php do_action('dostart_after_header');?>
+
+        <?php do_action('dostart_before_breadcrumb');?>
+        <?php $breadcrumb_status = get_post_meta(get_the_ID(), 'dostart-breadcrumb-status', true);
         if ( ! is_page_template('custom-homepage.php') || is_page_template('404.php') ) {
             if ( 'disabled' !== $breadcrumb_status ) {
                 dostart_breadcrumb_display();
             }
         }  ?>
+
+        <?php do_action('dostart_after_breadcrumb');?>
 
         <div id="content" class="site-content">

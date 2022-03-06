@@ -305,3 +305,39 @@ require DOSTART_THEME_DIR . '/inc/walker/menu-walker.php';
  * Dostart Theme Metabox.
  */
 require DOSTART_THEME_DIR . '/inc/class/dostart-metabox.php';
+
+
+/**
+ * Freemius User Data Tracker.
+ */
+if ( ! function_exists( 'dostart_tracker' ) ) {
+    // Create a helper function for easy SDK access.
+    function dostart_tracker() {
+        global $dostart_tracker;
+
+        if ( ! isset( $dostart_tracker ) ) {
+            // Include Freemius SDK.
+            require_once dirname(__FILE__) . '/freemius/start.php';
+
+            $dostart_tracker = fs_dynamic_init( array(
+                'id'                  => '9996',
+                'slug'                => 'dostart',
+                'type'                => 'theme',
+                'public_key'          => 'pk_bb28993d8df1d26bfe294429245dc',
+                'is_premium'          => false,
+                'has_addons'          => false,
+                'has_paid_plans'      => false,
+                'menu'                => array(
+                    'account'        => false,
+                ),
+            ) );
+        }
+
+        return $dostart_tracker;
+    }
+
+    // Init Freemius.
+    dostart_tracker();
+    // Signal that SDK was initiated.
+    do_action( 'dostart_tracker_loaded' );
+}
