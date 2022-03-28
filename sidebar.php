@@ -16,5 +16,11 @@ if ( ! is_active_sidebar('sidebar-1') ) {
 }
 ?>
 <div class="col-md-4 blog-sidebar">
+	
+    <?php do_action('dostart_before_sidebar');?>
+
     <?php dynamic_sidebar('sidebar-1'); ?>
+
+    <?php do_action('dostart_after_sidebar');?>
+
 </div>

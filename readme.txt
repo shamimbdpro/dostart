@@ -60,6 +60,11 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 == Changelog ==
 
 
+
+= Version 1.1.13 =
+* Action Added: dostart_before_sidebar.
+* Action Added: dostart_after_sidebar.
+
 = Version 1.1.12 =
 * Action Added: dostart_before_header.
 * Action Added: dostart_after_header.
