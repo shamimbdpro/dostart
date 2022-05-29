@@ -62,6 +62,8 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 
 = Version 1.1.13 =
+* Action Added: dostart_before_single_post_content.
+* Action Added: dostart_after_single_post_content.
 * Action Added: dostart_before_sidebar.
 * Action Added: dostart_after_sidebar.
 

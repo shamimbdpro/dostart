@@ -12,6 +12,10 @@ if ( ! defined('ABSPATH') ) {
 }
 $dostart_blog_details_post_navigation = get_theme_mod( 'dostart_blog_navigation_switch', true );
 $page_layout = get_theme_mod('dostart_blog_single_layout') ? get_theme_mod('dostart_blog_single_layout') : 'sidebar';
+
+global $wp;
+$current_url = home_url( add_query_arg( array(), $wp->request ) );
+
 get_header(); ?>
 
     <section class="section-padding">
@@ -31,6 +35,20 @@ get_header(); ?>
 
                         do_action('after_single_post_content');
 
+                    ?>
+
+                    <div class="dostart-post-share">
+                        <h2><?php echo esc_html__('Like this article? Spread the word', 'dostart'); ?></h2>
+                        <a class="btn btn-icon btn-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo esc_url($current_url);?>"><i class="fab fa-facebook"></i><span>Share</span></a>
+                        <a class="btn btn-icon btn-twitter" target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo esc_url($current_url);?>"><i class="fab fa-twitter"></i><span>Share</span></a>
+                        <a class="btn btn-icon btn-pinterest" target="_blank" href="http://pinterest.com/pin/create/link/?url=<?php echo esc_url($current_url);?>"><i class="fab fa-pinterest"></i><span>Share</span></a>
+                        <a class="btn btn-icon btn-linkedin" target="_blank" href="https://www.linkedin.com/cws/share?url=<?php echo esc_url($current_url);?>"><i class="fab fa-linkedin"></i><span>Share</span></a>
+                    </div>
+
+                    <?php
+
+                    do_action('dostart_before_post_navigation');
+
                         // Previous / Next Button.
 
                         if ( true == $dostart_blog_details_post_navigation ) {
@@ -41,6 +59,8 @@ get_header(); ?>
                                 )
                             );
                         }
+
+                    do_action('dostart_after_post_navigation');
                             
                         // If comments are open or we have at least one comment, load up the comment template.
                         if ( comments_open() || get_comments_number() ) :

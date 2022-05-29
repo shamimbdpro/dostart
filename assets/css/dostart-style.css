@@ -1408,6 +1408,57 @@ blockquote {
   text-decoration: underline;
 }
 
+/*---------------------------
+      Soical Share
+----------------------------*/
+.dostart-post-share {
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+.dostart-post-share h2 {
+  font-size: 25px;
+}
+.dostart-post-share .btn {
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #eee;
+  color: #fff;
+  padding: 8px 20px;
+  transition: all 0.5s;
+}
+.dostart-post-share .btn:focus, .dostart-post-share .btn:hover, .dostart-post-share .btn:active {
+  outline: 0;
+  box-shadow: none;
+}
+.dostart-post-share .btn span {
+  padding-left: 5px;
+}
+.dostart-post-share .btn-facebook {
+  background-color: #065fd4;
+}
+.dostart-post-share .btn-facebook:hover, .dostart-post-share .btn-facebook:focus, .dostart-post-share .btn-facebook:active {
+  background-color: #0e54af;
+}
+.dostart-post-share .btn-twitter {
+  background-color: #55acee;
+}
+.dostart-post-share .btn-twitter:hover, .dostart-post-share .btn-twitter:focus, .dostart-post-share .btn-twitter:active {
+  background-color: #2888d1;
+}
+.dostart-post-share .btn-pinterest {
+  background-color: #cb2028;
+}
+.dostart-post-share .btn-pinterest:hover, .dostart-post-share .btn-pinterest:focus, .dostart-post-share .btn-pinterest:active {
+  background-color: #aa181f;
+}
+.dostart-post-share .btn-linkedin {
+  background-color: #007bb6;
+}
+.dostart-post-share .btn-linkedin:hover, .dostart-post-share .btn-linkedin:focus, .dostart-post-share .btn-linkedin:active {
+  background-color: #096088;
+}
+
 /***************************
       Related  Post Grid
 ****************************/

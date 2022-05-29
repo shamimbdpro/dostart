@@ -208,6 +208,80 @@ blockquote {
 
 
 
+/*---------------------------
+      Soical Share
+----------------------------*/
+
+
+.dostart-post-share {
+  text-align:center;
+  overflow:hidden;
+  margin-bottom: 50px;
+
+h2{
+  font-size: 25px;
+}
+
+.btn{
+    display: inline-block;
+    background-color: #fff;
+    border:1px solid #eee;
+    color:#fff;
+    padding: 8px 20px;
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+    transition:all .5s;
+
+    &:focus, &:hover, &:active
+    {
+      outline: 0;
+      box-shadow: none;
+    }
+
+    span{
+        padding-left:5px
+    }
+}
+
+.btn-facebook{
+    background-color: #065fd4;
+
+    &:hover, &:focus, &:active{
+      background-color: #0e54af;
+    }
+}
+
+.btn-twitter{
+  background-color: #55acee;
+
+  &:hover, &:focus, &:active{
+      background-color: #2888d1;
+    }
+
+}
+
+.btn-pinterest{
+  background-color: #cb2028;
+
+  &:hover, &:focus, &:active{
+      background-color: #aa181f;
+    }
+
+}
+
+.btn-linkedin{
+  background-color: #007bb6;
+
+  &:hover, &:focus, &:active{
+      background-color: #096088;
+    }
+
+}
+
+
+}
+
+
 /***************************
       Related  Post Grid
 ****************************/
