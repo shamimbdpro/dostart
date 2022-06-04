@@ -4,7 +4,7 @@ Tags: custom-menu,blog, e-commerce, custom-colors, theme-options, right-sidebar,
 Requires at least: 5.4
 Tested up to: 5.9
 Requires PHP: 5.6
-Version: 1.1.12
+Version: 1.1.13
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
