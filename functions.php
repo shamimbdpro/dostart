@@ -1,6 +1,6 @@
 <?php
 /**
- * dostart functions and definitions
+ * DoStart functions and definitions
  */
 
 if ( ! defined('ABSPATH') ) {
@@ -194,7 +194,7 @@ add_action('widgets_init', 'dostart_widgets_setup');
  */
 function dostart_load_style_and_scripts() {
 
-    // Define Direcotry URI
+    // Define Directory URI
     $dir = DOSTART_THEME_URI;
 
     wp_enqueue_style('dostart-library', $dir . 'assets/css/library.min.css', array(), DOSTART_THEME_VERSION);

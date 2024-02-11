@@ -2,9 +2,9 @@
 Contributors: codepopular
 Tags: custom-menu,blog, e-commerce, custom-colors, theme-options, right-sidebar, custom-background, custom-logo, featured-images, translation-ready
 Requires at least: 5.4
-Tested up to: 5.9
+Tested up to: 6.4
 Requires PHP: 5.6
-Version: 1.1.13
+Version: 1.2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,12 +12,12 @@ Free Multipurpose WordPress theme
 
 == Description ==
 
-Dostart is a dynamic multipurpose theme fitted for blogs, personal portfolios, business websites, consultancies, and WooCommerce storefront. It is armed with some mesmerizing features like Prebuild Megamenu, Box Layout, Social Icons, Multiple Layouts, vibrant colors, and is fully customizable. Further, it comprises an integrated plugin that enhances the value of this astonishing theme. Blended with functionalities like simple or complex WordPress user profiles, modular structure, different user profile sections and fields, this theme is beyond comparison. Apart from that, the Intelligent Responsiveness of this theme adjusts based on the content area size. Don’t just build a website, make it monetization ready with Dostart! Check out the Live Preview at http://codepopular.com
+DoStart is a dynamic multipurpose theme fitted for blogs, personal portfolios, business websites, consultancies, and WooCommerce storefront. It is armed with some mesmerizing features like Prebuild Megamenu, Box Layout, Social Icons, Multiple Layouts, vibrant colors, and is fully customizable. Further, it comprises an integrated plugin that enhances the value of this astonishing theme. Blended with functionalities like simple or complex WordPress user profiles, modular structure, different user profile sections and fields, this theme is beyond comparison. Apart from that, the Intelligent Responsiveness of this theme adjusts based on the content area size. Don’t just build a website, make it monetization ready with Dostart! Check out the Live Preview at http://codepopular.com
 
 
 == Installation ==
 
-1. After login wordpress go to Appearance > Themes and click the Add New button.
+1. After login WordPress go to Appearance > Themes and click the Add New button.
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
@@ -33,13 +33,13 @@ License: CC0 1.0 Universal (CC0 1.0)
 Source: https://www.pexels.com/photo/white-apple-keyboard-near-white-cup-917463/
 
 Source: https://www.pexels.com/photo/man-and-woman-wearing-white-crew-neck-t-shirts-991511/
-WooCommerce, Copyright (C) Automattic, GPLv3, 
+WooCommerce, Copyright (C) Automattic, GPLv3,
 Source: https://github.com/woocommerce/woocommerce
 
 
 = Twitter Bootstrap =
-License: MIT License 
-Source - http://getbootstrap.com 
+License: MIT License
+Source - http://getbootstrap.com
 
 =glyphicons=
 Code licensed MIT, docs CC BY 3.0.
@@ -51,7 +51,7 @@ Source: https://www.fontawesome.io
 Code licensed under MIT License
 
 = HC Off-canvas Nav =
-License: MIT License 
+License: MIT License
 Source:https://github.com/somewebmedia/hc-offcanvas-nav
 
 All other resources and theme elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/gpl-2.0.txt), version 2 or later.

@@ -20,7 +20,7 @@ $footer_layout = get_post_meta( get_the_ID(), 'dostart-footer-status', true );
     </div><!-- #content -->
     <?php do_action('dostart_before_footer');?>
     <footer id="colophon" class="dostart-site-footer">
-        
+
         <?php if ( is_active_sidebar('footer-widgets') && 'disabled' !== $widget_layout ) : ?>
         <div class="footer-top-widgets">
             <div class="container">
@@ -31,7 +31,7 @@ $footer_layout = get_post_meta( get_the_ID(), 'dostart-footer-status', true );
         </div>
         <?php endif;?>
 
-        
+
 		<?php if ( 'disabled' !== $footer_layout ) { ?>
 
         <div class="dostart-footer-area">
@@ -39,8 +39,8 @@ $footer_layout = get_post_meta( get_the_ID(), 'dostart-footer-status', true );
                 <div class="row">
                     <div class="col-md-12 text-center">
                       <div class="footer-social-icon">
-                        <ul> 
-                          <?php  
+                        <ul>
+                          <?php
                             $social_facebook   = get_theme_mod('dostart_social_facebook');
                             $social_twitter    = get_theme_mod('dostart_social_twitter');
                             $social_youtube    = get_theme_mod('dostart_social_youtube');
@@ -81,7 +81,7 @@ $footer_layout = get_post_meta( get_the_ID(), 'dostart-footer-status', true );
                                <li><a target="<?php echo esc_attr($target_blank); ?>" href="<?php echo esc_url($social_behance); ?>">
                                 <i class="fab fa-behance"></i></a></li>
                            <?php endif ?>
- 
+
                            <!-- linkedin -->
                            <?php if ( ! empty($social_linkedin) ) : ?>
                                <li><a target="<?php echo esc_attr($target_blank); ?>" href="<?php echo esc_url($social_linkedin); ?>">
@@ -104,7 +104,7 @@ $footer_layout = get_post_meta( get_the_ID(), 'dostart-footer-status', true );
                          <?php else : ?>
 
                             <?php echo wp_kses( get_theme_mod('dostart_copyright_text'), dostart_allowed_html()); ?>
-                            
+
                          <?php endif?>
                         </div>
                     </div>

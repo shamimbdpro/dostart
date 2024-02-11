@@ -169,8 +169,8 @@ if ( ! class_exists('Dostart_Nav_Walker') ) {
             }
 
             /**
-    
-       * This filter is documented in wp-includes/post-template.php 
+
+       * This filter is documented in wp-includes/post-template.php
 */
             $title = apply_filters('the_title', $item->title, $item->ID);
 
@@ -349,18 +349,18 @@ if ( ! class_exists('Dostart_Nav_Walker') ) {
         /**
          * Icon if sub menu.
          */
-        public function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
+        public function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
 
             // Define vars
             $id_field     = $this->db_fields['id'];
-            
+
             if ( is_object($args[0]) ) {
                 $args[0]->has_children = ! empty($children_elements[ $element->$id_field ]);
             }
 
             // Down Arrows
             if ( ! empty($children_elements[ $element->$id_field ]) && (0 === $depth)
-                || '' !== $element->category_post 
+                || '' !== $element->category_post
             ) {
                 $element->classes[] = 'dropdown';
                 if ( true === get_theme_mod('dostart_menu_arrow_down', true) ) {
