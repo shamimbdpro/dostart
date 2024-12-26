@@ -51,7 +51,7 @@ if ( ! function_exists('dostart_cart_link') ) {
         ?>    
         <a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e('View your shopping cart', 'dostart'); ?>">
             <i class="fa fa-shopping-bag"><span class="count"><?php echo wp_kses_data(WC()->cart->get_cart_contents_count()); ?></span></i>
-            <!-- <div class="amount-cart"><?php// echo wp_kses_data(WC()->cart->get_cart_subtotal()); ?></div>  -->
+            <!-- <div class="amount-cart"><?php // echo wp_kses_data(WC()->cart->get_cart_subtotal()); ?></div>  -->
         </a>
         <?php
     }
