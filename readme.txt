@@ -2,7 +2,7 @@
 Contributors: codepopular
 Tags: custom-menu,blog, e-commerce, custom-colors, theme-options, right-sidebar, custom-background, custom-logo, featured-images, translation-ready
 Requires at least: 5.4
-Tested up to: 6.4
+Tested up to: 6.7
 Requires PHP: 5.6
 Version: 1.2.0
 License: GNU General Public License v2 or later
@@ -59,7 +59,9 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 == Changelog ==
 
-
+= Version 1.2.0 =
+* PHP version 8.3 compatiblity check.
+* WordPress version 6.7 compatiblity check.
 
 = Version 1.1.13 =
 * Action Added: dostart_before_single_post_content.
