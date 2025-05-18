@@ -56,6 +56,9 @@ $dostart_excerpt_length = ! empty(get_theme_mod('dostart_blog_excerpt_length')) 
 
 				</div><!-- .entry-meta -->
 
+                <header class="entry-header">
+                    <h1><?php wp_title('', true); ?></h1>
+                </header><!-- .entry-header -->
 				<div class="entry-content">
 					<?php
 					the_content(
