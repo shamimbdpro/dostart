@@ -23,7 +23,7 @@ $dostart_excerpt_length = ! empty(get_theme_mod('dostart_blog_excerpt_length')) 
 			<?php if ( has_post_thumbnail() ) : ?>
 				<div class="post_thumbnail">
 					<?php the_post_thumbnail('full'); ?>
-					<span class="excerpt-date"><?php echo esc_html(get_the_date()); ?></span>
+					<span class="excerpt-date"><?php echo esc_html(the_modified_date()); ?></span>
 				</div>
 			<?php endif ?>
 
@@ -56,6 +56,9 @@ $dostart_excerpt_length = ! empty(get_theme_mod('dostart_blog_excerpt_length')) 
 
 				</div><!-- .entry-meta -->
 
+                <header class="entry-header">
+                    <h1><?php wp_title('', true); ?></h1>
+                </header><!-- .entry-header -->
 				<div class="entry-content">
 					<?php
 					the_content(
@@ -109,7 +112,7 @@ $dostart_excerpt_length = ! empty(get_theme_mod('dostart_blog_excerpt_length')) 
 					<a href="<?php the_permalink(); ?>">
 						<?php the_post_thumbnail('full'); ?>
 					</a>
-					<span class="excerpt-date"><?php echo esc_html(get_the_date()); ?></span>
+					<span class="excerpt-date"><?php echo esc_html(the_modified_date()); ?></span>
 				</div>
 			<?php endif ?>
 			<div class="dostart-post-content">
