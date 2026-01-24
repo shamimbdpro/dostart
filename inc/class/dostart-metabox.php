@@ -107,10 +107,10 @@ class Dostart_Meta
 
 
         // Sanitize user input.
-        $header_data = sanitize_text_field($_POST['dostart-header-status']);
-        $breadcrumb_data = sanitize_text_field($_POST['dostart-breadcrumb-status']); 
-        $widget_data = sanitize_text_field($_POST['dostart-widget-status']);
-        $footer_data = sanitize_text_field($_POST['dostart-footer-status']);
+        $header_data = isset($_POST['dostart-header-status']) ? sanitize_text_field(wp_unslash($_POST['dostart-header-status'])) : '';
+        $breadcrumb_data = isset($_POST['dostart-breadcrumb-status']) ? sanitize_text_field(wp_unslash($_POST['dostart-breadcrumb-status'])) : '';
+        $widget_data = isset($_POST['dostart-widget-status']) ? sanitize_text_field(wp_unslash($_POST['dostart-widget-status'])) : '';
+        $footer_data = isset($_POST['dostart-footer-status']) ? sanitize_text_field(wp_unslash($_POST['dostart-footer-status'])) : '';
 
         // Update the meta field in the database.
         update_post_meta($post_id, 'dostart-header-status', $header_data);

@@ -58,7 +58,7 @@ $dostart_google_adsense_publisher_id = get_theme_mod( 'dostart_google_adsense_pu
         do_action('wp_body_open');
     }
     ?>
-    <div id="page-wrapper" class="site-wrapper <?php echo esc_html(false === get_theme_mod('dostart_theme_layout') ? '' : 'box-layout'); ?>">
+    <div id="page-wrapper" class="site-wrapper <?php echo esc_attr('on' === get_theme_mod('dostart_theme_layout', '') ? 'box-layout' : ''); ?>">
         <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'dostart'); ?></a>
         <?php do_action('dostart_before_header');?>
         <?php $header_layout = get_post_meta(get_the_ID(), 'dostart-header-status', true); ?>
@@ -74,11 +74,11 @@ $dostart_google_adsense_publisher_id = get_theme_mod( 'dostart_google_adsense_pu
                                 } ?>
                                 <div class="site-text-logo">
                                     <?php if ( is_front_page() && is_home() ) :  ?>
-                                        <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php echo esc_html(bloginfo('name')); ?></a></h1>
+                                        <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
                                     <?php
                                     else :
                                     ?>
-                                        <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php echo esc_html(bloginfo('name')); ?></a></h1>
+                                        <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
                                     <?php endif; ?>
                                 </div>
                             </div>

@@ -2,9 +2,9 @@
 Contributors: codepopular
 Tags: custom-menu,blog, e-commerce, custom-colors, theme-options, right-sidebar, custom-background, custom-logo, featured-images, translation-ready
 Requires at least: 5.4
-Tested up to: 6.7
-Requires PHP: 5.6
-Version: 1.2.0
+Tested up to: 6.9
+Requires PHP: 7.4
+Version: 1.2.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -59,9 +59,15 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 == Changelog ==
 
+= Version 1.2.1 =
+* WordPress version 6.9 compatibility check.
+* WooCommerce template compatibility updates.
+* Security improvements.
+* Code quality improvements.
+
 = Version 1.2.0 =
-* PHP version 8.3 compatiblity check.
-* WordPress version 6.7 compatiblity check.
+* PHP version 8.3 compatibility check.
+* WordPress version 6.7 compatibility check.
 
 = Version 1.1.13 =
 * Action Added: dostart_before_single_post_content.
@@ -178,7 +184,7 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 * Social click Target Added
 * Style Moved
 * Dynamic Footer Text Color
-* KirKi Customizer Framework Added
+* Native WordPress Customizer Implementation
 
 = Version 1.0.6 =
 * Megamenu Added

@@ -197,6 +197,9 @@ function dostart_load_style_and_scripts() {
     // Define Directory URI
     $dir = DOSTART_THEME_URI;
 
+    // Enqueue Google Fonts
+    dostart_enqueue_google_fonts();
+
     wp_enqueue_style('dostart-library', $dir . 'assets/css/library.min.css', array(), DOSTART_THEME_VERSION);
     wp_enqueue_style('dostart-theme', $dir . 'assets/css/dostart-style.min.css', array(), DOSTART_THEME_VERSION);
 
@@ -215,6 +218,38 @@ function dostart_load_style_and_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'dostart_load_style_and_scripts');
+
+/**
+ * Enqueue Google Fonts based on customizer selection
+ */
+function dostart_enqueue_google_fonts() {
+	$font_family = get_theme_mod( 'dostart_typography_font_family', 'Source Sans Pro' );
+	
+	// If no font selected or default system font, don't enqueue
+	if ( empty( $font_family ) ) {
+		return;
+	}
+	
+	// Convert font name to Google Fonts URL format (replace spaces with +)
+	$font_url_name = str_replace( ' ', '+', $font_family );
+	
+	// Build Google Fonts URL
+	$font_url = add_query_arg(
+		array(
+			'family' => $font_url_name . ':300,400,500,600,700,800,900',
+			'display' => 'swap',
+		),
+		'https://fonts.googleapis.com/css'
+	);
+	
+	// Enqueue the Google Font
+	wp_enqueue_style(
+		'dostart-google-fonts',
+		$font_url,
+		array(),
+		DOSTART_THEME_VERSION
+	);
+}
 
 function dostart_load_admin_script_callback() {
     $dir = DOSTART_THEME_URI;
@@ -265,16 +300,11 @@ require DOSTART_THEME_DIR . '/inc/codepopular-promotion.php';
  */
 require DOSTART_THEME_DIR . '/inc/dynamic-style.php';
 
-
 /**
  * Custom template tags for this theme.
  */
 require DOSTART_THEME_DIR . '/inc/template-tags.php';
 
-/**
- * Required plugin installer
- */
-require DOSTART_THEME_DIR . '/inc/required-plugins.php';
 
 /**
  * Custom Header
